@@ -1,30 +1,28 @@
 # Introdução
 
-A educação financeira é reconhecida internacionalmente como uma competência essencial para o exercício da cidadania e para a tomada de decisões conscientes ao longo da vida. No Brasil, entretanto, esse tema ainda ocupa um espaço marginal na formação escolar, resultando em gerações de crianças e jovens despreparados para lidar com orçamento pessoal, crédito, investimentos e planejamento de longo prazo.  
+Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
 
-Ao mesmo tempo, a gamificação tem se consolidado como uma das abordagens mais eficazes para engajamento em ambientes de aprendizagem digital, utilizando mecânicas como pontuação, desafios, recompensas e progressão para motivar e reter o interesse dos usuários. Este projeto propõe unir essas duas frentes, a urgência da educação financeira e o potencial da gamificação, em uma plataforma web interativa, acessível e inclusiva, voltada para crianças e jovens adultos em fase de formação de hábitos financeiros. 
+A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
+
+Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
 
 ## Problema
 
-A educação financeira raramente faz parte da formação escolar brasileira de forma estruturada e prática. Crianças e jovens chegam à vida adulta sem os conhecimentos básicos para gerenciar renda, controlar gastos, poupar ou tomar decisões de consumo consciente. Esse despreparo se manifesta em comportamentos como endividamento precoce, ausência de reserva financeira e dificuldade em planejar o futuro.
+Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
 
-
-As ferramentas digitais disponíveis para suprir essa lacuna são, em sua maioria, voltadas para adultos já inseridos no mercado financeiro, com linguagem técnica e pouco apelo lúdico. Para o público infantojuvenil, faltam soluções que combinem conteúdo financeiro relevante com uma experiência de aprendizagem engajante, progressiva e adaptada às diferentes faixas etárias. O resultado é uma geração que cresce familiarizada com tecnologia, mas sem autonomia para tomar decisões financeiras saudáveis. 
-
-*“Como uma solução digital pode promover educação financeira de forma eficaz e engajante para crianças e jovens brasileiros?”*
-
+Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+> **Links Úteis**:
+> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
+> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
+> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Objetivo geral: Desenvolver uma plataforma web de educação financeira baseada em gamificação, que torne o aprendizado sobre finanças pessoais acessível, engajante e inclusivo para crianças e jovens adultos. 
-
-Objetivos específicos:<br>
-
-* Criar trilhas de aprendizado gamificadas sobre orçamento, poupança, crédito, consumo consciente e investimentos básicos, com níveis de conteúdo e linguagem adaptados por faixa etária;
-* Implementar mecânicas de jogo: Pontuação, níveis, conquistas, rankings e desafios que estimulem a progressão e o engajamento contínuo;
-* Oferecer feedback imediato a cada interação do usuário, reforçando conceitos financeiros de forma prática e contextualizada;
-* Garantir acessibilidade conforme WCAG 2.1, com suporte a tecnologias assistivas para inclusão de estudantes com deficiência;
-* Permitir que educadores acompanhem o progresso dos alunos e personalizem conteúdos conforme o contexto pedagógico.
+Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima.
+Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+ 
+> **Links Úteis**:
+> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
