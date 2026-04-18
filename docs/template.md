@@ -11,7 +11,8 @@ Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo d
 
 ## Cores
 
-Apresente a paleta de cores que será utilizada. Uma ferramenta interessante para a criação de palestas de cores é o *Adobe Color* ([https://color.adobe.com/pt/create/color-wheel](https://color.adobe.com/pt/create/color-wheel)).
+<img width="1600" height="1200" alt="Paleta de cores Moneta GO" src="https://github.com/user-attachments/assets/b726a1e3-c4b9-4592-b0cb-c634bc85a939" />
+
 
 
 ## Tipografia
