@@ -13,7 +13,7 @@ Trilhas de Aprendizado: Sequência de conteúdos e desafios gamificados.
 
 Área de Gestão (Cofre/Simuladores): Espaço para prática financeira. 
 
-<span style="color:red"> Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>. <span style="color:red">
+Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>. <span style="color:red">
 
 ## User Flow
 <img width="1206" height="587" alt="Opera Instantâneo_2026-04-18_094514_www figma com" src="https://github.com/user-attachments/assets/74fd92da-e3b2-4a8d-9c27-46bb5fe31170" />
