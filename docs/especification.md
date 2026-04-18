@@ -22,57 +22,53 @@ Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos 
 >
 Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
 
-## Histórias de Usuários
+## Histórias de usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
-
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
-
-## Requisitos
-
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
-
-### Requisitos Funcionais
-
-|ID    | Descrição do Requisito  | Prioridade | 
-|------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
+|                               Eu como …                               |                                 … quero/desejo …                                  |                                                    … para ....                                                    |
+|:---------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|
+| Lucas, 9 anos (Criança), morador do bairro Castelo em BH.             | Depositar moedas virtuais em um "Cofre Mágico" dentro do jogo.                    | Visualizar meu progresso e aprender a poupar para comprar meu álbum de dinossauros.                               |
+| Vinícius, 16 anos (Adolescente), morador da Brasilândia em SP.        | Utilizar simuladores de probabilidade e risco dentro da plataforma.               | Entender que apostas (bets) não são investimentos e focar em guardar dinheiro para meu curso técnico.             |
+| Bia, 22 anos (Jovem Adulta), moradora de Ipanema no RJ.               | Visualizar o rastreamento automático dos meus "gastos formiga" (cafés e ubers).   | Identificar para onde meu salário está sumindo e conseguir pagar minhas contas sem entrar no vermelho.            |
+| André, 24 anos (Autônomo), morador da Ceilândia em DF.                | Navegar em uma interface 100% compatível com leitores de tela e comandos de voz.  | Ter autonomia para registrar meus ganhos da massoterapia e organizar minha reserva de emergência sem ajuda.       |
+| Kauã, 17 anos (Jovem Aprendiz), morador de Ribeirão das Neves em MG.  | Acessar trilhas sobre planejamento de compras e consumo consciente.               | Ajudar minha mãe a administrar o orçamento doméstico e fazer o dinheiro render mais no supermercado.              |
+| Ricardo, 40 anos (Professor), morador de Venda Nova em BH.            | Acompanhar o engajamento e o desempenho da minha turma em um painel docente.      | Identificar as dificuldades dos meus alunos e transformar a educação financeira em um projeto de vida para eles.  |
 
 
-### Requisitos não Funcionais
+# Requisitos do Projeto
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+## Requisitos Funcionais
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+|   ID     |                                                                Descrição                                                                 | Prioridade  |
+|:--------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:-----------:|
+| RF⎻01   | O sistema deve permitir cadastro e login com perfis distintos: criança, adolescente, jovem adulto, autônomo e educador.                  | Alta        |
+| RF-02    | O sistema deve permitir que educadores criem turmas, adicionem alunos e vinculem perfis de aprendizado à conta docente.                  | Alta        |
+| RF-03    | O sistema deve ajustar automaticamente a linguagem, visual e complexidade do conteúdo conforme a faixa etária do perfil cadastrado.      | Alta        |
+| RF-04    | O sistema deve disponibilizar trilhas de aprendizado sobre orçamento, poupança, crédito, consumo consciente e investimentos básicos.     | Alta        |
+| RF-05    | O sistema deve implementar mecânicas de gamificação: pontuação, níveis, conquistas, rankings e desafios progressivos.                    | Alta        |
+| RF-06    | O sistema deve incluir simuladores de probabilidade e risco para ilustrar a diferença entre investimento e apostas.                      | Média       |
+| RF-07    | O sistema deve oferecer um "Cofre Mágico" virtual onde o usuário deposita moedas e visualiza o progresso da meta de poupança.            | Média       |
+| RF-08    | O sistema deve oferecer feedback imediato a cada interação, reforçando conceitos financeiros de forma contextualizada.                   | Média       |
+| RF-09    | O sistema deve rastrear e categorizar automaticamente "gastos formiga" (pequenas despesas recorrentes como cafés e transporte).          | Média       |
+| RF-10    | O sistema deve permitir registro manual de ganhos e despesas, com suporte a categorias personalizadas e metas de reserva de emergência   | Média       |
+| RF-11    | O sistema deve exibir relatórios visuais de fluxo financeiro pessoal com gráficos de entradas, saídas e progresso de metas.              | Média       |
+| RF-12    |   O sistema deve disponibilizar um painel docente com métricas de engajamento, desempenho por aluno e progresso por trilha.              | Alta        |
+| RF-13    | O sistema deve permitir que educadores personalizem trilhas, atribuam desafios específicos e adicionem contextos pedagógicos às turmas.  | Média       |
+| RF-14    |   O sistema deve oferecer trilhas e simulações de planejamento de compras e consumo consciente voltadas ao contexto doméstico.           | Média       |
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+## Requisitos não funcionais
+
+|    ID     |                                                                 Descrição                                                                 | Prioridade  |
+|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|:-----------:|
+| RNF⎻01    |   A plataforma deve ser 100% compatível com leitores de tela (NVDA, VoiceOver) e navegação por comandos de voz, conforme WCAG 2.1.        | Alta        |
+| RNF-02   | Todos os elementos interativos devem ser acessíveis por teclado, com foco visível e descrições adequadas.                                 | Alta        |
+| RNF-03    | A interface deve ser responsiva e funcional em dispositivos móveis (smartphones a partir de 360px) e desktops.                            | Alta        |
+| RNF-04    | A arquitetura deve permitir adição de novas trilhas e mecânicas de gamificação sem refatoração do core da plataforma.                     | Alta        |
+| RNF-05    | O sistema deve manter disponibilidade de 99,5% mensais, com janelas de manutenção programadas fora do horário escolar (8h–18h).           | Média       |
+| RNF-06    | Dados financeiros pessoais (gastos, metas, renda) devem ser armazenados com criptografia e isolados por usuário.                          | Alta        |
+| RNF-07    | Todas as comunicações entre cliente e servidor devem ser criptografadas                                                                   | Alta        |
+| RNF-08    | Dados de menores de 18 anos devem ser tratados em conformidade com a LGPD e o Marco Civil da Internet, com consentimento do responsável.  | Alta        |
+| RNF-09    | O tempo de carregamento inicial da plataforma deve ser inferior a 3 segundos em conexões 4G (≥10 Mbps).                                   | Média       |
+
 
 ## Restrições
 
