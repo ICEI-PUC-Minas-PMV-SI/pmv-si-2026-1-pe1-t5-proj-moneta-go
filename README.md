@@ -10,16 +10,17 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
+* Henrique Rocha Guimarães 
+* Gustavo Rezende da Silva 
 * Letica do Carmo Barbosa
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* Lucas Henrique Fernandes 
+* Patrícia Maria Alves da Silva
+* Wilson Luiz de Jesus 
 
 
 ## Orientador
 
-* Nome completo do professor 1
+* Roberto Felipe Dias Ferreira da Rocha
 
 # Planejamento
 
