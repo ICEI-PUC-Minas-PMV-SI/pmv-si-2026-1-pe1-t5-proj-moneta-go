@@ -29,10 +29,6 @@ O header é a barra superior fixa da plataforma. Ele contém o logotipo da marca
 
 A área de conteúdo principal é o espaço central da tela onde cada página exibe suas informações e funcionalidades. Na página inicial, ela é organizada em duas partes. A primeira é um bloco hero que apresenta a proposta da plataforma com uma ilustração e serve como boas-vindas ao usuário. A segunda parte exibe os cards das funcionalidades principais da plataforma, dando acesso rápido às trilhas, ao cofre e ao progresso do usuário, assim como os dashboards de informações.
 
-## Design
-
-Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
-
 
 ## Cores
 
