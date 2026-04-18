@@ -1,4 +1,4 @@
-<img width="570" height="68" alt="image" src="https://github.com/user-attachments/assets/2b95135f-c625-47da-9760-885e023e3021" /># Template padrão do site
+# Template padrão do site
 
 
 
