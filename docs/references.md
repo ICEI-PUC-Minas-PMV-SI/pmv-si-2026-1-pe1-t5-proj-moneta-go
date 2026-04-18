@@ -7,13 +7,18 @@ Inclua todas as referências (livros, artigos, sites, etc) utilizadas no desenvo
 
 Exemplos de referências bibliográficas:
 
-**[1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
+**[1]** - _Jeduca | 27/06/2024: Relatório da OCDE traça panorama do letramento financeiro entre adolescentes._
 
-**[2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
+**[2]** - _CNDL | 47% dos jovens da Geração Z não realizam o controle das finanças, aponta pesquisa CNDL/ SPC Brasil._
 
-**[3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
+**[3]** - _Hamari, J., Koivisto, J., & Sarsa, H. (2014). Does gamification work? A literature review of empirical studies on gamification._
 
-**[4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
+**[4]** - _AIRFOCUS. User story mistakes: common pitfalls to avoid. [S. l.]: Airfocus, 2023. Disponível em: https://airfocus.com/blog/user-story-mistakes/. Acesso em: 27 mar. 2026. ._
 
-**[5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
+**[5]** - _BRASIL. Ministério da Gestão e da Inovação em Serviços Públicos. User Story e práticas de engenharia de software. Brasília, DF: Governo Digital, 2023. Disponível em:https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/startupgovbr/guia-gps/pages/5-saiba-mais/praticas-de-engenharia-de-software/user-story. Acesso em: 27 mar. 2026 ._
 
+**[6]** - _https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534._
+
+**[7]** - _https://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/._
+
+**[8]** - _https://www.puc-rio.br/ensinopesq/ccpg/pibic/relatorio_resumo2020/download/relatorios/CTCH/DAD/DAD-Lucas%20Sampaio%20Magalh%C3%A3es%20Cardoso.pdf)._
