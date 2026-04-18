@@ -17,6 +17,7 @@ A sidebar é o menu de navegação lateral da plataforma. Sua função é permit
 
 
 
+<img width="525" height="192" alt="image" src="https://github.com/user-attachments/assets/0bca71f4-d160-43e2-8cd7-cd50e673b94a" />
 
 ### Área de Conteúdo Principal
 A área de conteúdo principal é o espaço central da tela onde cada página exibe suas informações e funcionalidades. Na página inicial, ela é organizada em duas partes. A primeira é um bloco hero que apresenta a proposta da plataforma com uma ilustração e serve como boas-vindas ao usuário. A segunda parte exibe os cards das funcionalidades principais da plataforma, dando acesso rápido às trilhas, ao cofre e ao progresso do usuário, assim como os dashboards de informações.
