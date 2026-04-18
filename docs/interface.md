@@ -3,15 +3,15 @@
 
 O fluxo de usuário (User Flow) do Moneta Go foi projetado para ser intuitivo, considerando a diversidade do público-alvo (de crianças a educadores). O caminho principal consiste em: 
 
-  Landing Page: Apresentação da plataforma e chamada para login/cadastro. 
+* Landing Page: Apresentação da plataforma e chamada para login/cadastro. 
 
-Onboarding: Escolha do perfil (Criança, Jovem, Adulto ou Educador) para adaptação da linguagem. 
+* Onboarding: Escolha do perfil (Criança, Jovem, Adulto ou Educador) para adaptação da linguagem. 
 
-Dashboard: Visão geral do progresso, saldo de "moedas virtuais" e acesso às trilhas. 
+* Dashboard: Visão geral do progresso, saldo de "moedas virtuais" e acesso às trilhas. 
 
-Trilhas de Aprendizado: Sequência de conteúdos e desafios gamificados. 
+* Trilhas de Aprendizado: Sequência de conteúdos e desafios gamificados. 
 
-Área de Gestão (Cofre/Simuladores): Espaço para prática financeira. 
+* Área de Gestão (Cofre/Simuladores): Espaço para prática financeira. 
 
 ```  Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>. ``` 
 
