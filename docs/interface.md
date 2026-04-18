@@ -16,7 +16,7 @@ O fluxo de usuário (User Flow) do Moneta Go foi projetado para ser intuitivo, c
 ```  Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>. ``` 
 
 ## User Flow
-<img width="1206" height="587" alt="Opera Instantâneo_2026-04-18_094514_www figma com" src="https://github.com/user-attachments/assets/74fd92da-e3b2-4a8d-9c27-46bb5fe31170" />
+<img width="1375" height="734" alt="Opera Instantâneo_2026-04-18_182421_www figma com" src="https://github.com/user-attachments/assets/adefe3d8-9ad8-4b7c-ba0d-b314fc4cb69e" />
 
 link do figma https://www.figma.com/design/IudQpArSmhYWeVCYtxnaak/Sem-título?node-id=0-1&p=f&t=v1nfBjpbUjTUvnyU-0
 
@@ -30,9 +30,16 @@ Os wireframes foram desenvolvidos focando na hierarquia de informações e na ac
 
 A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+pagina inicial <img width="1008" height="716" alt="Opera Instantâneo_2026-04-18_183341_www figma com" src="https://github.com/user-attachments/assets/74319a1d-8fd3-4ed8-b99e-220b510d6573" />
 
- 
+login<img width="1008" height="716" alt="Opera Instantâneo_2026-04-18_183322_www figma com" src="https://github.com/user-attachments/assets/1736ff72-0fca-481b-9c23-8613310e3377" />
+
+Cadastro Novo usúario<img width="1009" height="717" alt="Opera Instantâneo_2026-04-18_183307_www figma com" src="https://github.com/user-attachments/assets/74b75eb3-34b6-440b-9101-b8a111cc3fe3" />
+
+remanificação<img width="1007" height="716" alt="Opera Instantâneo_2026-04-18_180357_www figma com" src="https://github.com/user-attachments/assets/86f1fe00-ec95-401e-9a86-d575d03854ba" />
+
+Categorias de Aprendizado <img width="1005" height="717" alt="Opera Instantâneo_2026-04-18_180526_www figma com" src="https://github.com/user-attachments/assets/7e97df4e-948e-4519-8656-55ef1a5f0afa" />
+
 > **Links Úteis**:
 > - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
 > - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
