@@ -1,4 +1,4 @@
-# Título do Projeto
+# Moneta GO
 
 `CURSO: Sistemas de Informação`
 
