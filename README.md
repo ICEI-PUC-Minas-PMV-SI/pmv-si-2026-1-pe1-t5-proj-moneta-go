@@ -5,8 +5,7 @@
 `DISCIPLINA: Projeto - Aplicações Web`
 
 `SEMESTRE: 1º`
-
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Moneta Go é uma plataforma web de educação financeira baseada em gamificação, que torna o aprendizado sobre finanças pessoais acessível, engajante e inclusivo para crianças e jovens adultos brasileiros.
 
 ## Integrantes
 
