@@ -31,8 +31,16 @@ A área de conteúdo principal é o espaço central da tela onde cada página ex
 
 
 ## Cores
+**Paleta de cores Moneta GO**
 
-<img width="1600" height="1200" alt="Paleta de cores Moneta GO" src="https://github.com/user-attachments/assets/b726a1e3-c4b9-4592-b0cb-c634bc85a939" />
+
+<img width="1600" height="505" alt="image" src="https://github.com/user-attachments/assets/b9ce430b-0ef4-4bd5-811f-e4a5eec00064" />  
+
+
+
+
+**Codigos HEX e utilização da cores**
+
 
 | COD HEX |                 NOME DA   COR                 |                              Utilização                              |                                                                    Por que                                                                     |
 |:-------:|:---------------------------------------------:|:--------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -45,8 +53,9 @@ A área de conteúdo principal é o espaço central da tela onde cada página ex
 | #ECF0F1 |      Cinza Claro (Clouds /   Light Gray)      |            Fundo do site, cards   de conteúdo e divisores.           |                    É   um branco levemente acinzentado que não agride os olhos, ele faz o site   parecer limpo e organizado.                   |
 
 ## Tipografia
+**Fontes padrão**
 
-Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
+<img width="1600" height="725" alt="WhatsApp Image 2026-04-18 at 11 42 18" src="https://github.com/user-attachments/assets/b72bcdff-08a7-49c7-818b-7a8df89564ce" />
 
 
 ## Iconografia
