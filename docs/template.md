@@ -16,10 +16,10 @@ O header é a barra superior fixa da plataforma. Ele contém o logotipo da marca
 A sidebar é o menu de navegação lateral da plataforma. Sua função é permitir que o usuário acesse as principais seções do sistema a qualquer momento, independente da página em que estiver. Ela contém os itens de navegação principal, como Página Inicial, Jornada, Minha Conta e Configurações. No rodapé da sidebar aparece o link para os Termos de Uso. Em dispositivos móveis, a sidebar se transforma em um menu drawer acionado pelo botão hambúrguer.
 
 
+### Área de Conteúdo Principal
 
 <img width="525" height="192" alt="image" src="https://github.com/user-attachments/assets/0bca71f4-d160-43e2-8cd7-cd50e673b94a" />
 
-### Área de Conteúdo Principal
 A área de conteúdo principal é o espaço central da tela onde cada página exibe suas informações e funcionalidades. Na página inicial, ela é organizada em duas partes. A primeira é um bloco hero que apresenta a proposta da plataforma com uma ilustração e serve como boas-vindas ao usuário. A segunda parte exibe os cards das funcionalidades principais da plataforma, dando acesso rápido às trilhas, ao cofre e ao progresso do usuário, assim como os dashboards de informações.
 
 ## Design
