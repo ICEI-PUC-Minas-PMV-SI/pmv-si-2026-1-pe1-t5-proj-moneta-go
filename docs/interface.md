@@ -30,7 +30,8 @@ Os wireframes foram desenvolvidos focando na hierarquia de informações e na ac
 
 A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
 
-pagina inicial <img width="1008" height="716" alt="Opera Instantâneo_2026-04-18_183341_www figma com" src="https://github.com/user-attachments/assets/74319a1d-8fd3-4ed8-b99e-220b510d6573" />
+pagina inicial <img width="645" height="460" alt="Opera Instantâneo_2026-04-18_190351_www figma com" src="https://github.com/user-attachments/assets/40193494-1bf7-4c80-84a0-9aba321ff34e" />
+
 
 login<img width="1008" height="716" alt="Opera Instantâneo_2026-04-18_183322_www figma com" src="https://github.com/user-attachments/assets/1736ff72-0fca-481b-9c23-8613310e3377" />
 
