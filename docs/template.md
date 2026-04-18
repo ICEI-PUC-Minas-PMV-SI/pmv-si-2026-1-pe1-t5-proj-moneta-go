@@ -5,9 +5,12 @@ O header é a barra superior fixa da plataforma. Ele contém o logotipo da marca
 
 
 ### Sidebar
-A sidebar é o menu de navegação lateral da plataforma. Sua função é permitir que o usuário acesse as principais seções do sistema a qualquer momento, independente da página em que estiver. Ela contém os itens de navegação principal, como Página Inicial, Jornada, Minha Conta e Configurações. No rodapé da sidebar aparece o link para os Termos de Uso. Em dispositivos móveis, a sidebar se transforma em um menu drawer acionado pelo botão hambúrguer.
 
 <img width="107" height="295" alt="image" src="https://github.com/user-attachments/assets/f39a34c3-fdfc-4057-99a0-4337af42b15a" />
+
+A sidebar é o menu de navegação lateral da plataforma. Sua função é permitir que o usuário acesse as principais seções do sistema a qualquer momento, independente da página em que estiver. Ela contém os itens de navegação principal, como Página Inicial, Jornada, Minha Conta e Configurações. No rodapé da sidebar aparece o link para os Termos de Uso. Em dispositivos móveis, a sidebar se transforma em um menu drawer acionado pelo botão hambúrguer.
+
+
 
 
 ### Área de Conteúdo Principal
