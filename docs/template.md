@@ -4,7 +4,7 @@
 
 ### Header
 
-<img width="570" height="200" alt="image" src="https://github.com/user-attachments/assets/74cc2e14-6ff4-4c85-a324-43b7a2c5cea8" />
+<img width="570" height="68" alt="image" src="https://github.com/user-attachments/assets/74cc2e14-6ff4-4c85-a324-43b7a2c5cea8" />
 
 O header é a barra superior fixa da plataforma. Ele contém o logotipo da marca, que identifica o sistema em todas as páginas. Do lado direito ficam os botões de acesso à conta, permitindo que o usuário faça login ou se cadastre. Há também um botão de ajuda rápida, que oferece suporte ou recursos de acessibilidade ao usuário. Abaixo do header aparece o breadcrumb, que indica em qual página o usuário está navegando no momento.
 
