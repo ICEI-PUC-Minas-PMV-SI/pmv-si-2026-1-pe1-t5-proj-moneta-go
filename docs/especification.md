@@ -8,19 +8,28 @@ Caso deseje atribuir uma imagem a sua persona, utilize o site https://thisperson
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+! Para que o Moneta Go cumpra seu propósito de transformar a educação financeira em uma jornada acessível e engajadora, o desenvolvimento do projeto baseia-se no estudo sobre o seu público alvo. Esta abordagem prioriza as necessidades, as limitações e as aspirações reais das pessoas que interagem com a plataforma.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+Nesta etapa, apresentamos o mapeamento das nossas Personas: personagens fictícios criados a partir de um estudo profundo sobre as dores e comportamentos do público-alvo brasileiro. Elas não são apenas perfis demográficos, mas representações humanizadas que guiam desde a escolha da linguagem visual até a complexidade das mecânicas de gamificação.!
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+**Persona 1:**
+Nome: Lucas, 9 anos.
+Localização: Bairro Castelo, Belo Horizonte (MG).
+Perfil: Estudante do ensino fundamental, curioso e fã de tecnologia. Começou a ganhar as primeiras moedas para gastar na banca de revistas.
+Dores: Não entende o valor do dinheiro físico; acha economia um assunto "chato" de adulto; tem pressa para consumir (quer tudo agora).
+Necessidades: Uma interface colorida e simples; recompensas imediatas que pareçam um jogo; ferramentas que mostrem o progresso de forma visual (como um cofre que enche).
+Tom de Voz para Comunicação: Brincalhão, simples, incentivador e focado em "aventura".
+
+**Persona 2:** 
+Nome: Vinícius, 16 anos.
+Localização: Brasilândia, São Paulo (SP).
+Perfil: Aluno de escola pública e entregador eventual. Busca independência, mas é bombardeado por anúncios de "dinheiro fácil" e apostas online.
+Dores: Medo de ser enganado por golpes; falta de perspectiva sobre como fazer o pouco dinheiro que ganha render; pressão social para consumir marcas caras.
+Necessidades: Simuladores que mostrem a realidade das apostas vs. investimentos; conteúdos sobre como planejar o primeiro curso técnico ou intercâmbio.
+Tom de Voz para Comunicação: Descolado, direto, transparente e que trate o jovem com maturidade.
+
+
+
 
 ## Histórias de usuários
 
