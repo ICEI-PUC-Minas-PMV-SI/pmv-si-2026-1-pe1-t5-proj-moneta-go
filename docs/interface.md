@@ -40,6 +40,16 @@ remanificação<img width="1007" height="716" alt="Opera Instantâneo_2026-04-18
 
 Categorias de Aprendizado <img width="1005" height="717" alt="Opera Instantâneo_2026-04-18_180526_www figma com" src="https://github.com/user-attachments/assets/7e97df4e-948e-4519-8656-55ef1a5f0afa" />
 
+Painel educador<img width="1008" height="715" alt="Opera Instantâneo_2026-04-18_180445_www figma com" src="https://github.com/user-attachments/assets/498adf74-8d1e-412b-b215-93993c64efed" />
+
+Painel de controle e Gestão - aluno<img width="1004" height="731" alt="Opera Instantâneo_2026-04-18_180549_www figma com" src="https://github.com/user-attachments/assets/64d6ad38-a966-49f8-808f-600a77e85e7f" />
+
+O Grande Tesouro do cofre mágico <img width="1007" height="716" alt="Opera Instantâneo_2026-04-18_180728_www figma com" src="https://github.com/user-attachments/assets/94fcd60e-716a-400d-baa2-c750a0653734" />
+
+Termos de uso<img width="1006" height="715" alt="Opera Instantâneo_2026-04-18_182045_www figma com" src="https://github.com/user-attachments/assets/f517d87e-5b49-4bd1-9fd5-5043fbfed02e" />
+
+
+
 > **Links Úteis**:
 > - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
 > - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
