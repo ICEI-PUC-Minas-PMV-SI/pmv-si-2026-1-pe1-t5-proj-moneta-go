@@ -5,7 +5,7 @@
 `DISCIPLINA: Projeto - Aplicações Web`
 
 `SEMESTRE: 1º`
-Moneta Go é uma plataforma web de educação financeira baseada em gamificação, que torna o aprendizado sobre finanças pessoais acessível, engajante e inclusivo para crianças e jovens adultos brasileiros.
+Moneta Go é uma plataforma web de educação financeira baseada em gamificação, que torna o aprendizado sobre finanças pessoais acessível, engajante e inclusivo para crianças, jovens e adultos brasileiros.
 
 ## Integrantes
 
