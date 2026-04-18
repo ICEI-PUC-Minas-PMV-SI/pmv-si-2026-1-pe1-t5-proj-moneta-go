@@ -60,10 +60,17 @@ A área de conteúdo principal é o espaço central da tela onde cada página ex
 
 ## Iconografia
 
-Defina os ícones que serão utilizados e suas respectivas funções.
+<img width="1000" height="300" alt="Imagem3" src="https://github.com/user-attachments/assets/61760f2f-2f61-4e5e-8f31-03ff7e908b81" />
+<p>
 
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
+  
+</p>
+    
+<img width="1000" height="400" alt="Imagem5" src="https://github.com/user-attachments/assets/f6f823ec-5616-45bc-90fb-6cb3b7ecd79f" />
+<p>
+
+  
+</p>
 
 
 > **Links Úteis**:
