@@ -38,3 +38,30 @@ A plataforma é destinada a crianças e jovens adultos em fase de formação de 
 * Adolescentes (13–17 anos): Começando a lidar com mesada, primeiros gastos autônomos e decisões de consumo; beneficiam-se de desafios progressivos e narrativas que conectem finanças ao cotidiano;
 * Jovens adultos (18–25 anos): Ingressando no mercado de trabalho e na vida financeira independente; demandam conteúdos sobre orçamento, crédito, investimentos básicos e planejamento de metas;
 * Professores e educadores: Utilizam a plataforma como ferramenta pedagógica complementar, acompanhando o progresso dos alunos e adaptando os conteúdos ao contexto escolar.
+
+# Especificação do Projeto
+
+## Perfis de Usuários
+
+
+|Perfil 1: | **Criança (Aprendiz Lúdico)** |
+|----------------|--------------|
+| **Descrição:** | Lucas, 9 anos, morador do bairro Castelo (BH). Está na fase inicial de contato com o dinheiro e possui desejos de consumo imediato, como álbuns de figurinhas e brinquedos. |
+| **Necessidades:** | Interface visualmente atraente e simplificada, com mecânicas de recompensa imediata (gamificação) e ferramentas que materializem o conceito de poupar de forma lúdica. |
+
+|Perfil 2: | **Adolescente (Explorador de Autonomia)** |
+|----------------|--------------|
+| **Descrição:** | Vinícius 16 anos, morador da Brasilândia (SP). Estudante de escola pública que faz bicos como entregador e busca independência financeira, mas é vulnerável a promessas de ganhos rápidos online (apostas). |
+| **Necessidades:** | Simuladores de risco e probabilidade, conteúdos que conectem finanças a objetivos de carreira/lazer e linguagem que trate a educação financeira como uma ferramenta de liberdade.  |
+
+|Perfil 3: | **Jovem Adulto (Gestor em Formação)** |
+|----------------|--------------|
+| **Descrição:** | Beatriz, 22 anos, moradora de Ipanema (RJ). Jovem profissional que possui renda própria, mas sofre com o "consumo invisível" e pequenos gastos impulsivos que comprometem o orçamento mensal. |
+| **Necessidades:** | Rastreamento automático e categorização de gastos, visualização clara de fluxo de caixa e alertas de limite de orçamento para evitar o endividamento. |
+
+|Perfil 4: | **Usuário com Deficiência (Perfil Transversal)** |
+|----------------|--------------|
+| **Descrição:** | André, 24 anos, morador da Ceilândia (DF). Massoterapeuta autônomo com deficiência visual que lida com renda variável e busca gerir seus ganhos com total privacidade. |
+| **Necessidades:** | Aprender sobre educação financeira com navegação 100% compatível com leitores de tela (leitura de gráficos e tabelas), comandos de voz e interface que respeite padrões de acessibilidade sem depender de ajuda externa. |
+
+
