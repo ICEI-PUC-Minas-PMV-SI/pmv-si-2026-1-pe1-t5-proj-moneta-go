@@ -4,7 +4,9 @@
 
 ### Header
 
-<img width="570" height="68" alt="image" src="https://github.com/user-attachments/assets/74cc2e14-6ff4-4c85-a324-43b7a2c5cea8" />
+<p align="center">
+  <img width="570" height="68" alt="image" src="https://github.com/user-attachments/assets/74cc2e14-6ff4-4c85-a324-43b7a2c5cea8" />
+</p>
 
 O header é a barra superior fixa da plataforma. Ele contém o logotipo da marca, que identifica o sistema em todas as páginas. Do lado direito ficam os botões de acesso à conta, permitindo que o usuário faça login ou se cadastre. Há também um botão de ajuda rápida, que oferece suporte ou recursos de acessibilidade ao usuário. Abaixo do header aparece o breadcrumb, que indica em qual página o usuário está navegando no momento.
 
@@ -25,7 +27,7 @@ O header é a barra superior fixa da plataforma. Ele contém o logotipo da marca
 
 ### Área de Conteúdo Principal
 
-<img width="525" height="192" alt="image" src="https://github.com/user-attachments/assets/0bca71f4-d160-43e2-8cd7-cd50e673b94a" />
+<p align="center"><img width="525" height="192" alt="image" src="https://github.com/user-attachments/assets/0bca71f4-d160-43e2-8cd7-cd50e673b94a" /></p>
 
 A área de conteúdo principal é o espaço central da tela onde cada página exibe suas informações e funcionalidades. Na página inicial, ela é organizada em duas partes. A primeira é um bloco hero que apresenta a proposta da plataforma com uma ilustração e serve como boas-vindas ao usuário. A segunda parte exibe os cards das funcionalidades principais da plataforma, dando acesso rápido às trilhas, ao cofre e ao progresso do usuário, assim como os dashboards de informações.
 
