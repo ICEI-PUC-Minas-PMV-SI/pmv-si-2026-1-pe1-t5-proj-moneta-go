@@ -8,7 +8,7 @@ Caso deseje atribuir uma imagem a sua persona, utilize o site https://thisperson
 
 ## Personas
 
-Para que o Moneta Go cumpra seu propósito de transformar a educação financeira em uma jornada acessível e engajadora, o desenvolvimento do projeto baseia-se no estudo sobre o seu público alvo. Nesta etapa, apresentamos o mapeamento das nossas Personas: personagens fictícios criados a partir de um estudo profundo sobre as dores e comportamentos do público-alvo brasileiro. Elas não são apenas perfis demográficos, mas representações humanizadas que guiam desde a escolha da linguagem visual até a complexidade das mecânicas de gamificação.!
+Para que o Moneta Go cumpra seu propósito de transformar a educação financeira em uma jornada acessível e engajadora, o desenvolvimento do projeto baseia-se no estudo sobre o seu público alvo. Nesta etapa, apresentamos o mapeamento das nossas Personas: personagens fictícios criados a partir de um estudo profundo sobre as dores e comportamentos do público-alvo brasileiro. Elas não são apenas perfis demográficos, mas representações humanizadas que guiam desde a escolha da linguagem visual até a complexidade das mecânicas de gamificação.
 
 **Persona 1:**
 Nome: Lucas, 9 anos.
