@@ -4,16 +4,23 @@
 
 ### Header
 
-<img width="570" height="68" alt="image" src="https://github.com/user-attachments/assets/74cc2e14-6ff4-4c85-a324-43b7a2c5cea8" />
+<img width="570" height="200" alt="image" src="https://github.com/user-attachments/assets/74cc2e14-6ff4-4c85-a324-43b7a2c5cea8" />
 
 O header é a barra superior fixa da plataforma. Ele contém o logotipo da marca, que identifica o sistema em todas as páginas. Do lado direito ficam os botões de acesso à conta, permitindo que o usuário faça login ou se cadastre. Há também um botão de ajuda rápida, que oferece suporte ou recursos de acessibilidade ao usuário. Abaixo do header aparece o breadcrumb, que indica em qual página o usuário está navegando no momento.
 
 
 ### Sidebar
 
-| | |
-|---|---|
-| <img width="107" height="295" alt="image" src="https://github.com/user-attachments/assets/f39a34c3-fdfc-4057-99a0-4337af42b15a" /> | A sidebar é o menu de navegação lateral da plataforma. Sua função é permitir que o usuário acesse as principais seções do sistema a qualquer momento, independente da página em que estiver. Ela contém os itens de navegação principal, como Página Inicial, Jornada, Minha Conta e Configurações. No rodapé da sidebar aparece o link para os Termos de Uso. Em dispositivos móveis, a sidebar se transforma em um menu drawer acionado pelo botão hambúrguer. |
+<table>
+  <tr>
+    <td>
+      <img width="300" alt="Sidebar" src="https://github.com/user-attachments/assets/f39a34c3-fdfc-4057-99a0-4337af42b15a" />
+    </td>
+    <td>
+      A sidebar é o menu de navegação lateral da plataforma. Sua função é permitir que o usuário acesse as principais seções do sistema a qualquer momento, independente da página em que estiver. Ela contém os itens de navegação principal, como Página Inicial, Jornada, Minha Conta e Configurações. No rodapé da sidebar aparece o link para os Termos de Uso. Em dispositivos móveis, a sidebar se transforma em um menu drawer acionado pelo botão hambúrguer.
+    </td>
+  </tr>
+</table>
 
 
 ### Área de Conteúdo Principal
