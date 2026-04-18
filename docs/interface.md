@@ -33,21 +33,25 @@ A tela inicial apresenta um menu lateral com as principais seções do portal, e
 pagina inicial <img width="645" height="460" alt="Opera Instantâneo_2026-04-18_190351_www figma com" src="https://github.com/user-attachments/assets/40193494-1bf7-4c80-84a0-9aba321ff34e" />
 
 
-login<img width="1008" height="716" alt="Opera Instantâneo_2026-04-18_183322_www figma com" src="https://github.com/user-attachments/assets/1736ff72-0fca-481b-9c23-8613310e3377" />
+login<img width="645" height="458" alt="Opera Instantâneo_2026-04-18_190510_www figma com" src="https://github.com/user-attachments/assets/d621bfce-7ae2-4978-baaf-f795d5bc6f30" />
 
-Cadastro Novo usúario<img width="1009" height="717" alt="Opera Instantâneo_2026-04-18_183307_www figma com" src="https://github.com/user-attachments/assets/74b75eb3-34b6-440b-9101-b8a111cc3fe3" />
 
-remanificação<img width="1007" height="716" alt="Opera Instantâneo_2026-04-18_180357_www figma com" src="https://github.com/user-attachments/assets/86f1fe00-ec95-401e-9a86-d575d03854ba" />
+Cadastro Novo usúario<img width="643" height="458" alt="Opera Instantâneo_2026-04-18_190559_www figma com" src="https://github.com/user-attachments/assets/7905f45e-b067-4cad-87b8-c88bda7a2567" />
 
-Categorias de Aprendizado <img width="1005" height="717" alt="Opera Instantâneo_2026-04-18_180526_www figma com" src="https://github.com/user-attachments/assets/7e97df4e-948e-4519-8656-55ef1a5f0afa" />
 
-Painel educador<img width="1008" height="715" alt="Opera Instantâneo_2026-04-18_180445_www figma com" src="https://github.com/user-attachments/assets/498adf74-8d1e-412b-b215-93993c64efed" />
+remanificação<img width="645" height="460" alt="Opera Instantâneo_2026-04-18_191125_www figma com" src="https://github.com/user-attachments/assets/e4709f52-10d0-447a-9274-abcfc2171aa3" />
 
-Painel de controle e Gestão - aluno<img width="1004" height="731" alt="Opera Instantâneo_2026-04-18_180549_www figma com" src="https://github.com/user-attachments/assets/64d6ad38-a966-49f8-808f-600a77e85e7f" />
+Categorias de Aprendizado <img width="648" height="459" alt="Opera Instantâneo_2026-04-18_191151_www figma com" src="https://github.com/user-attachments/assets/9cc02816-9796-4593-8f1c-992473f86c74" />
 
-O Grande Tesouro do cofre mágico <img width="1007" height="716" alt="Opera Instantâneo_2026-04-18_180728_www figma com" src="https://github.com/user-attachments/assets/94fcd60e-716a-400d-baa2-c750a0653734" />
 
-Termos de uso<img width="1006" height="715" alt="Opera Instantâneo_2026-04-18_182045_www figma com" src="https://github.com/user-attachments/assets/f517d87e-5b49-4bd1-9fd5-5043fbfed02e" />
+Painel educador<img width="646" height="459" alt="Opera Instantâneo_2026-04-18_191209_www figma com" src="https://github.com/user-attachments/assets/baaf1ece-1c46-471e-8258-4e9526181613" />
+
+Painel de controle e Gestão - aluno<img width="647" height="469" alt="Opera Instantâneo_2026-04-18_191229_www figma com" src="https://github.com/user-attachments/assets/606fc5a5-9762-45f5-b775-f9ad6964d9fd" />
+
+O Grande Tesouro do cofre mágico <img width="646" height="459" alt="Opera Instantâneo_2026-04-18_191246_www figma com" src="https://github.com/user-attachments/assets/273811cf-67b4-4f32-83bf-5cddc4f4bad1" />
+
+
+Termos de uso<img width="649" height="461" alt="Opera Instantâneo_2026-04-18_191303_www figma com" src="https://github.com/user-attachments/assets/3d9c3f11-ca9e-4882-836c-e8e4084ccfef" />
 
 
 
