@@ -62,6 +62,15 @@ A plataforma é destinada a crianças e jovens adultos em fase de formação de 
 |Perfil 4: | **Usuário com Deficiência (Perfil Transversal)** |
 |----------------|--------------|
 | **Descrição:** | André, 24 anos, morador da Ceilândia (DF). Massoterapeuta autônomo com deficiência visual que lida com renda variável e busca gerir seus ganhos com total privacidade. |
-| **Necessidades:** | Aprender sobre educação financeira com navegação 100% compatível com leitores de tela (leitura de gráficos e tabelas), comandos de voz e interface que respeite padrões de acessibilidade sem depender de ajuda externa. |
+| **Necessidades:** | Aprender sobre educação financeira com navegação 100% compatível com leitores de tela (leitura de gráficos e tabelas), comandos de voz e interface que respeite padrões de acessibilidade sem depender de ajuda externa. |  
 
+|Perfil 5: | **Jovem de baixa renda (Pilar Doméstico)** |  
+|---------------|---------------|  
+|**Descrição:** | Kauã, 17 anos, morador de Ribeirão das Neves (MG). Jovem aprendiz que auxilia ativamente na administração das contas básicas da casa e busca fazer o dinheiro da família render mais. |  
+|**Necessidades:** | Conteúdos sobre economia doméstica, ferramentas de planejamento de compras e orientações sobre como evitar juros e taxas abusivas de serviços financeiros. |  
+
+|Perfil 6: | **Educador (Facilitador Pedagógico)** |  
+|---------------|----------------|  
+| **Descrição:** | Professor Ricardo, 40 anos, morador de Venda Nova (BH). Docente que utiliza a tecnologia para engajar alunos em temas de cidadania e matemática financeira. |  
+|**Necessidades:** | Painel de controle (dashboard) para acompanhar o progresso dos alunos, ferramentas para criar dinâmicas de grupo e relatórios de engajamento pedagógico. |  
 
