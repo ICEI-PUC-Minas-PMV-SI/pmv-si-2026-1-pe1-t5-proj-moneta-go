@@ -13,19 +13,18 @@ Trilhas de Aprendizado: Sequência de conteúdos e desafios gamificados.
 
 Área de Gestão (Cofre/Simuladores): Espaço para prática financeira. 
 
-** Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>. **
+```  Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>. ``` 
 
 ## User Flow
 <img width="1206" height="587" alt="Opera Instantâneo_2026-04-18_094514_www figma com" src="https://github.com/user-attachments/assets/74fd92da-e3b2-4a8d-9c27-46bb5fe31170" />
 
 link do figma https://www.figma.com/design/IudQpArSmhYWeVCYtxnaak/Sem-título?node-id=0-1&p=f&t=v1nfBjpbUjTUvnyU-0
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
+ Detalhamento do Fluxo de Usuário - Link arquivo DOC: https://sgapucminasbr.sharepoint.com/:w:/r/sites/PROJETOAPLICAESWEB-2244105-SISTEMASDEINFORMAO-EAD-VIRTUAL-PMG-Grupo2quarta-19-30s20-0/_layouts/15/Doc.aspx?sourcedoc=%7B4438C71A-27D0-46FE-BD66-018F8F44F066%7D&file=Modelo%20-%20Projeto%20Eixo%202%20-%20Moneta%20GO.docx&action=default&mobileredirect=true&DefaultItemOpen=1&wdOrigin=APPHOME-WEB.DIRECT%2CAPPHOME-WEB.JUMPBACKIN&wdPreviousSession=d0cf269c-4d1c-4fd1-8451-4b3c1d15750f&wdPreviousSessionSrc=AppHomeWeb&ct=1776515946098
 
 ## Wireframes
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface e é fundamental sempre relacionar cada wireframe com o(s) requisito(s) que ele atende.
+Os wireframes foram desenvolvidos focando na hierarquia de informações e na acessibilidade (RNF-01 e RNF-02). .
 
 ### Exemplo
 
