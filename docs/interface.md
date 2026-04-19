@@ -12,16 +12,12 @@ O fluxo de usuário (User Flow) do Moneta Go foi projetado para ser intuitivo, c
 * Trilhas de Aprendizado: Sequência de conteúdos e desafios gamificados. 
 
 * Área de Gestão (Cofre/Simuladores): Espaço para prática financeira. 
-
-```  Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>. ``` 
+ 
 
 ## User Flow
 <img width="1375" height="734" alt="Opera Instantâneo_2026-04-18_182421_www figma com" src="https://github.com/user-attachments/assets/adefe3d8-9ad8-4b7c-ba0d-b314fc4cb69e" />
 
-link do figma https://www.figma.com/design/IudQpArSmhYWeVCYtxnaak/Sem-título?node-id=0-1&p=f&t=v1nfBjpbUjTUvnyU-0
-
- Detalhamento do Fluxo de Usuário - Link arquivo DOC: https://sgapucminasbr.sharepoint.com/:w:/r/sites/PROJETOAPLICAESWEB-2244105-SISTEMASDEINFORMAO-EAD-VIRTUAL-PMG-Grupo2quarta-19-30s20-0/_layouts/15/Doc.aspx?sourcedoc=%7B4438C71A-27D0-46FE-BD66-018F8F44F066%7D&file=Modelo%20-%20Projeto%20Eixo%202%20-%20Moneta%20GO.docx&action=default&mobileredirect=true&DefaultItemOpen=1&wdOrigin=APPHOME-WEB.DIRECT%2CAPPHOME-WEB.JUMPBACKIN&wdPreviousSession=d0cf269c-4d1c-4fd1-8451-4b3c1d15750f&wdPreviousSessionSrc=AppHomeWeb&ct=1776515946098
-
+ 
 ## Wireframes
 
 Os wireframes foram desenvolvidos focando na hierarquia de informações e na acessibilidade (RNF-01 e RNF-02). .
@@ -44,27 +40,44 @@ Cadastro Novo usúario<img width="643" height="458" alt="Opera Instantâneo_2026
 
 ### Remificação
 
+A tela de remificação, no topo, uma barra com espaço para o logotipo à esquerda e um botão de “Ajuda” à direita, facilitando o acesso ao suporte. Logo abaixo, há o título central “Como você vai usar o moneta go?”, que orienta a tomada de decisão do usuário logo no primeiro contato com a plataforma. Na área principal, são exibidas duas opções de uso: “Jornada (Trilhas e jogos)”, voltada para a experiência gamificada do usuário, e “Pedagogo / Educador (Gerenciar turmas, atribuir desafios)”, destinada à gestão e acompanhamento educacional. Abaixo, a interface apresenta três cards de segmentação por faixa etária: “Crianças (6 a 12 anos)” com foco no “Mundo Lúdico”, “Adolescente (13 a 17 anos)” com o “Mundo Desafio” e “Jovem adulto (18–25 anos)” com o “Mundo Fintech”, cada um com ícones representativos.
+
 remanificação<img width="645" height="460" alt="Opera Instantâneo_2026-04-18_191125_www figma com" src="https://github.com/user-attachments/assets/e4709f52-10d0-447a-9274-abcfc2171aa3" />
+
+### Categorias de Aprendizado
+
+Nessa página, além do cabeçalho padrão, a interface é organizada em duas linhas de conteúdo. Na primeira, são apresentados três cards: “Orçamento”, “Poupança” e “Crédito”, cada um com ícone, subtítulo adaptável ao perfil do usuário e botão “Começar”, que inicia a interação com o conteúdo. Passando segunda linha, há dois cards maiores: “Consumo Consciente” e “Investimentos Básicos”, que seguem o mesmo padrão visual, com descrição e botão de ação, facilitando a navegação e o início da jornada do usuário. 
 
 Categorias de Aprendizado <img width="648" height="459" alt="Opera Instantâneo_2026-04-18_191151_www figma com" src="https://github.com/user-attachments/assets/9cc02816-9796-4593-8f1c-992473f86c74" />
 
 
+### Painel educador
+
+Na primeira, há cards com métricas como “Nº Turmas”, “Alunos Ativos”, “Ranking” e “Nível de XP”, além de um gráfico de tendência de engajamento, um gráfico circular e uma lista de alunos à direita. Já segunda, aparecem cards de resumo (“Engajamento Global” e “Tempo Médio/Sessão”) e a seção “Configuração e Customização”, com três opções — “Orçamento”, “Poupança” e “Consumo Consciente” — com botões de ativar/desativar, ao lado de um card maior para anotações
+
 Painel educador<img width="646" height="459" alt="Opera Instantâneo_2026-04-18_191209_www figma com" src="https://github.com/user-attachments/assets/baaf1ece-1c46-471e-8258-4e9526181613" />
+
+### Painel  de Controle e Gestão
+
+Nessa etapa, o objetivo é que os alunos visualizem como está sua vida financeira, por meio de métricas que indicam se sua saúde financeira está boa ou precisa de atenção. Como vemos na primeira linha, há um card com “XP Global e Nível” junto aos distintivos recentes, ao lado de um card maior de “Distintivos e Conquistas”, com ícones representativos. Em nossa segunda linha, aparecem três áreas: um card de “Moedas/Valor Virtual Total” com botão “Ir para Metas”, um card de “Meu Progresso de Missões”, com status de “Orçamento” e “Poupança”, e um gráfico à direita que ilustra a evolução do desempenho do usuário.
 
 Painel de controle e Gestão - aluno<img width="647" height="469" alt="Opera Instantâneo_2026-04-18_191229_www figma com" src="https://github.com/user-attachments/assets/606fc5a5-9762-45f5-b775-f9ad6964d9fd" />
 
+### O Grande Tesouro do cofre mágico
+
+No centro, há a atividade “Atividade Gamificada – Criança (6 a 12 anos)”, com ícones de moedas distribuídos na tela, sugerindo uma dinâmica de clique ou coleta, reforçada por um cursor indicando ação. Nessa etapa, a proposta é demonstrar que, quanto mais se guarda, maior será o patrimônio, incentivando o hábito de poupar de forma lúdica.
+
 O Grande Tesouro do cofre mágico <img width="646" height="459" alt="Opera Instantâneo_2026-04-18_191246_www figma com" src="https://github.com/user-attachments/assets/273811cf-67b4-4f32-83bf-5cddc4f4bad1" />
 
+### Termos de uso
+
+Aqui, organizamos em seções informativas que apresentam os “Termos de Uso” de forma clara e acessível.Encontramos, a seção “Quem somos nós”, que explica o propósito da plataforma e sua proposta educacional. Em seguida, “Missões e aprendizados” descreve como funcionam as atividades, metas e a evolução do usuário dentro do sistema. Na sequência, a seção “Moedas e progresso” detalha o uso da moeda virtual, acúmulo de recompensas e acompanhamento de desempenho. Por fim, há as seções de “Suporte técnico” e “Acessibilidade”, que orientam o usuário sobre como obter ajuda e destacam recursos inclusivos da plataforma,
 
 Termos de uso<img width="649" height="461" alt="Opera Instantâneo_2026-04-18_191303_www figma com" src="https://github.com/user-attachments/assets/3d9c3f11-ca9e-4882-836c-e8e4084ccfef" />
 
 
 
 > **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+> - [User Flow - Figma](https://www.figma.com/design/IudQpArSmhYWeVCYtxnaak/Sem-título?node-id=0-1&p=f&t=v1nfBjpbUjTUvnyU-0)
+> - [Ferramentas de Wireframes](https://www.figma.com/design/IudQpArSmhYWeVCYtxnaak/Projeto-WEB---Etapa-2?node-id=0-1&p=f&m=draw)
+> - [Detalhamento do Fluxo de Usuário - Word](https://hipl.at/b-p4)
