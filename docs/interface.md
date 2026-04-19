@@ -53,7 +53,7 @@ Categorias de Aprendizado <img width="648" height="459" alt="Opera Instantâneo_
 
 ### Painel educador
 
-Na primeira, há cards com métricas como “Nº Turmas”, “Alunos Ativos”, “Ranking” e “Nível de XP”, além de um gráfico de tendência de engajamento, um gráfico circular e uma lista de alunos à direita. Já segunda, aparecem cards de resumo (“Engajamento Global” e “Tempo Médio/Sessão”) e a seção “Configuração e Customização”, com três opções — “Orçamento”, “Poupança” e “Consumo Consciente” — com botões de ativar/desativar, ao lado de um card maior para anotações
+Na primeira, há cards com métricas como “Nº Turmas”, “Alunos Ativos”, “Ranking” e “Nível de XP”, além de um gráfico de tendência de engajamento, um gráfico circular e uma lista de alunos à direita. Já segunda, aparecem cards de resumo (“Engajamento Global” e “Tempo Médio/Sessão”) e a seção “Configuração e Customização”, com três opções: “Orçamento”, “Poupança” e “Consumo Consciente”,  com botões de ativar/desativar, ao lado de um card maior para anotações
 
 Painel educador<img width="646" height="459" alt="Opera Instantâneo_2026-04-18_191209_www figma com" src="https://github.com/user-attachments/assets/baaf1ece-1c46-471e-8258-4e9526181613" />
 
