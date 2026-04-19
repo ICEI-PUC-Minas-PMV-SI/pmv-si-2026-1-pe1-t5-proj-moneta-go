@@ -65,11 +65,19 @@ A área de conteúdo principal é o espaço central da tela onde cada página ex
 <img width="1000" height="300" alt="Imagem3" src="https://github.com/user-attachments/assets/61760f2f-2f61-4e5e-8f31-03ff7e908b81" />
 <p>
 
-  
+  ## Utilização icones
 </p>
     
-<img width="1000" height="400" alt="Imagem5" src="https://github.com/user-attachments/assets/f6f823ec-5616-45bc-90fb-6cb3b7ecd79f" />
-<p>
+| Ícone | Função                     | Contexto de Uso                                      | Biblioteca       |
+|------|---------------------------|------------------------------------------------------|------------------|
+|<img width="44" height="43" alt="controle" src="https://github.com/user-attachments/assets/29f35faa-52a1-492b-8480-74922939f863" /> |Trilhas Gamificadas        |Navegação principal, menus, cards de trilha          | Font Awesome     |
+| <img width="43" height="43" alt="moeda" src="https://github.com/user-attachments/assets/d3c04407-c9a1-49f0-8aa3-d14df88ea17f" />| Cofre Mágico / Moedas     | Sistema de recompensas, depósitos, saldo virtual| Font Awesome     |
+| <img width="43" height="43" alt="grafico" src="https://github.com/user-attachments/assets/eca751ef-0e6e-4f82-9a42-d85792ff5db1" />| Progresso / Simuladores   | Gráficos de evolução, simulador de risco  | Font Awesome     |
+| <img width="43" height="43" alt="estrela" src="https://github.com/user-attachments/assets/9122c145-8239-4ace-bb53-d440e408d0f9" />| Conquistas / Feedback     | Badges, desbloqueios, notificações de sucesso| Font Awesome     |
+| <img width="43" height="43" alt="escudo" src="https://github.com/user-attachments/assets/7ffd9e80-035d-4fef-92b9-5f3c74387ee5" />| Segurança / Proteção      | Configurações de privacidade, dados protegidos| Font Awesome     |
+| <img width="43" height="43" alt="chapeu" src="https://github.com/user-attachments/assets/acd1c5ba-1d1e-4a03-820b-505ef363241c" />| Educação / Conteúdo       | Módulos de aprendizado, lições, tutoriais            | Font Awesome     |
+|<img width="43" height="43" alt="docente" src="https://github.com/user-attachments/assets/de20fedf-81cd-45c1-9381-74dbffd0ad26" />| Painel Docente| Dashboard do educador, métricas, relatórios| Material Design  |
+|<img width="43" height="43" alt="acessibilidade" src="https://github.com/user-attachments/assets/970a1492-46e0-428e-b8ff-f0ba93ec49f4" />|Acessibilidade|Configurações assistivas, modo alto contraste| Material Design  |
 
   
 </p>
