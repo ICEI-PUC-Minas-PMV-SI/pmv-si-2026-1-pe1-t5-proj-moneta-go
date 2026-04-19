@@ -26,18 +26,23 @@ link do figma https://www.figma.com/design/IudQpArSmhYWeVCYtxnaak/Sem-título?no
 
 Os wireframes foram desenvolvidos focando na hierarquia de informações e na acessibilidade (RNF-01 e RNF-02). .
 
-### Exemplo
+### Pagina inicial
 
-A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
+A tela inicial apresenta um menu lateral à esquerda com as principais seções do sistema, como “Página inicial”, “Jornada”, “Minha conta”, “Configurações” e “Termos de uso”. No topo, a barra de navegação oferece opções de “Entrar”, “Cadastrar-se”, acesso à ajuda e um recurso de acessibilidade para ajustes da interface. A área central exibe conteúdos em destaque organizados em blocos, enquanto na parte inferior há o botão “Começar a jornada”, que orienta o início da interação do usuário. (RF-01, RF-03,, RF-04, RF-012) e (RNF- 01, RNF- 02).
 
 pagina inicial <img width="645" height="460" alt="Opera Instantâneo_2026-04-18_190351_www figma com" src="https://github.com/user-attachments/assets/40193494-1bf7-4c80-84a0-9aba321ff34e" />
 
+### Login
+Na tela login apresentamos uma interface simples e centralizada, com foco na autenticação do usuário. No topo, há acesso à área de ajuda e, ao lado, a opção “Cadastre-se” para novos usuários. No centro, destaca-se o logotipo da plataforma, seguido pelos campos de entrada de e-mail e senha. Abaixo dos campos, há a opção “esqueceu a senha?”, permitindo a recuperação de acesso. O botão “Entrar” realiza a autenticação, e, logo abaixo, são exibidas alternativas de login por meio de outras plataformas (como redes sociais). (RF-01).
 
 login<img width="645" height="458" alt="Opera Instantâneo_2026-04-18_190510_www figma com" src="https://github.com/user-attachments/assets/d621bfce-7ae2-4978-baaf-f795d5bc6f30" />
 
+### Cadastro
+Já na tela de cadastro do sistema. No topo, há a identificação da plataforma, seguida por um formulário centralizado que reúne os principais campos para autenticação e registro do usuário. O formulário solicita informações como e-mail, senha e data de nascimento, além de incluir um botão “Avançar” para dar continuidade ao processo. Há também uma opção de confirmação de aceite dos “Termos de Uso e LGPD”, garantindo que o usuário concorde com as políticas da plataforma.
 
 Cadastro Novo usúario<img width="643" height="458" alt="Opera Instantâneo_2026-04-18_190559_www figma com" src="https://github.com/user-attachments/assets/7905f45e-b067-4cad-87b8-c88bda7a2567" />
 
+### Remificação
 
 remanificação<img width="645" height="460" alt="Opera Instantâneo_2026-04-18_191125_www figma com" src="https://github.com/user-attachments/assets/e4709f52-10d0-447a-9274-abcfc2171aa3" />
 
