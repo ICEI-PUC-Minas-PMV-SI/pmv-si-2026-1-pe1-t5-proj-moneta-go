@@ -29,12 +29,12 @@ A tela inicial apresenta um menu lateral à esquerda com as principais seções 
 pagina inicial <img width="645" height="460" alt="Opera Instantâneo_2026-04-18_190351_www figma com" src="https://github.com/user-attachments/assets/40193494-1bf7-4c80-84a0-9aba321ff34e" />
 
 ### Login
-Na tela login apresentamos uma interface simples e centralizada, com foco na autenticação do usuário. No topo, há acesso à área de ajuda e, ao lado, a opção “Cadastre-se” para novos usuários. No centro, destaca-se o logotipo da plataforma, seguido pelos campos de entrada de e-mail e senha. Abaixo dos campos, há a opção “esqueceu a senha?”, permitindo a recuperação de acesso. O botão “Entrar” realiza a autenticação, e, logo abaixo, são exibidas alternativas de login por meio de outras plataformas (como redes sociais). (RF-01).
+Na tela login apresentamos uma interface simples e centralizada, com foco na autenticação do usuário. No topo, há acesso à área de ajuda e, ao lado, a opção “Cadastre-se” para novos usuários. No centro, destaca-se o logotipo da plataforma, seguido pelos campos de entrada de e-mail e senha. Abaixo dos campos, a opção “esqueceu a senha?”, permitindo a recuperação de acesso. O botão “Entrar” realiza a autenticação, e, logo abaixo, são exibidas alternativas de login por meio de outras plataformas (como redes sociais). (RF-01).
 
 login<img width="645" height="458" alt="Opera Instantâneo_2026-04-18_190510_www figma com" src="https://github.com/user-attachments/assets/d621bfce-7ae2-4978-baaf-f795d5bc6f30" />
 
 ### Cadastro
-Já na tela de cadastro do sistema. No topo, há a identificação da plataforma, seguida por um formulário centralizado que reúne os principais campos para autenticação e registro do usuário. O formulário solicita informações como e-mail, senha e data de nascimento, além de incluir um botão “Avançar” para dar continuidade ao processo. Há também uma opção de confirmação de aceite dos “Termos de Uso e LGPD”, garantindo que o usuário concorde com as políticas da plataforma.
+Já na tela de cadastro do sistema. No topo, há a identificação da plataforma, seguida por um formulário centralizado que reúne os principais campos para autenticação e registro do usuário. O formulário solicita informações como e-mail, senha e data de nascimento, além de incluir um botão “Avançar” para dar continuidade ao processo.Temos também uma opção de confirmação de aceite dos “Termos de Uso e LGPD”, garantindo que o usuário concorde com as políticas da plataforma.
 
 Cadastro Novo usúario<img width="643" height="458" alt="Opera Instantâneo_2026-04-18_190559_www figma com" src="https://github.com/user-attachments/assets/7905f45e-b067-4cad-87b8-c88bda7a2567" />
 
@@ -46,14 +46,14 @@ remanificação<img width="645" height="460" alt="Opera Instantâneo_2026-04-18_
 
 ### Categorias de Aprendizado
 
-Nessa página, além do cabeçalho padrão, a interface é organizada em duas linhas de conteúdo. Na primeira, são apresentados três cards: “Orçamento”, “Poupança” e “Crédito”, cada um com ícone, subtítulo adaptável ao perfil do usuário e botão “Começar”, que inicia a interação com o conteúdo. Passando segunda linha, há dois cards maiores: “Consumo Consciente” e “Investimentos Básicos”, que seguem o mesmo padrão visual, com descrição e botão de ação, facilitando a navegação e o início da jornada do usuário. 
+Nessa página, além do cabeçalho padrão, a interface é organizada em duas linhas de conteúdo. Na primeira, são apresentados três cards: “Orçamento”, “Poupança” e “Crédito”, cada um com ícone, subtítulo adaptável ao perfil do usuário e botão “Começar”, que inicia a interação com o conteúdo. Passando segunda linha, com dois cards maiores: “Consumo Consciente” e “Investimentos Básicos”, que seguem o mesmo padrão visual, com descrição e botão de ação, facilitando a navegação e o início da jornada do usuário. 
 
 Categorias de Aprendizado <img width="648" height="459" alt="Opera Instantâneo_2026-04-18_191151_www figma com" src="https://github.com/user-attachments/assets/9cc02816-9796-4593-8f1c-992473f86c74" />
 
 
 ### Painel educador
 
-Na primeira, há cards com métricas como “Nº Turmas”, “Alunos Ativos”, “Ranking” e “Nível de XP”, além de um gráfico de tendência de engajamento, um gráfico circular e uma lista de alunos à direita. Já segunda, aparecem cards de resumo (“Engajamento Global” e “Tempo Médio/Sessão”) e a seção “Configuração e Customização”, com três opções: “Orçamento”, “Poupança” e “Consumo Consciente”,  com botões de ativar/desativar, ao lado de um card maior para anotações
+Na primeira, terá cards com métricas como “Nº Turmas”, “Alunos Ativos”, “Ranking” e “Nível de XP”, além de um gráfico de tendência de engajamento, um gráfico circular e uma lista de alunos à direita. Já segunda, aparecem cards de resumo (“Engajamento Global” e “Tempo Médio/Sessão”) e a seção “Configuração e Customização”, com três opções: “Orçamento”, “Poupança” e “Consumo Consciente”,  com botões de ativar/desativar, ao lado de um card maior para anotações
 
 Painel educador<img width="646" height="459" alt="Opera Instantâneo_2026-04-18_191209_www figma com" src="https://github.com/user-attachments/assets/baaf1ece-1c46-471e-8258-4e9526181613" />
 
@@ -65,7 +65,7 @@ Painel de controle e Gestão - aluno<img width="647" height="469" alt="Opera Ins
 
 ### O Grande Tesouro do cofre mágico
 
-No centro, há a atividade “Atividade Gamificada – Criança (6 a 12 anos)”, com ícones de moedas distribuídos na tela, sugerindo uma dinâmica de clique ou coleta, reforçada por um cursor indicando ação. Nessa etapa, a proposta é demonstrar que, quanto mais se guarda, maior será o patrimônio, incentivando o hábito de poupar de forma lúdica.
+No centro, encontramos a atividade “Atividade Gamificada – Criança (6 a 12 anos)”, com ícones de moedas distribuídos na tela, sugerindo uma dinâmica de clique ou coleta, reforçada por um cursor indicando ação. Nessa etapa, a proposta é demonstrar que, quanto mais se guarda, maior será o patrimônio, incentivando o hábito de poupar de forma lúdica.
 
 O Grande Tesouro do cofre mágico <img width="646" height="459" alt="Opera Instantâneo_2026-04-18_191246_www figma com" src="https://github.com/user-attachments/assets/273811cf-67b4-4f32-83bf-5cddc4f4bad1" />
 
