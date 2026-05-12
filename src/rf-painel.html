@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO MONETA - Painel</title>
+    <link rel="stylesheet" href="Estilos/estilo.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2 class="brand">
+                <span class="moneta">MONETA</span><span class="go">GO</span>
+            </h2>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Visão Geral</a></li>
+                    <li><a href="#criar-turma">Minhas Turmas</a></li>
+                    <li><a href="#adicionar-aluno">Alunos</a></li>
+                    <li><a href="#vincular-perfil">Perfis de Aprendizado</a></li>
+                    <li><a href="rf-financeiros.html">Financeiros</a></li>
+                </ul>
+            </nav>
+            
+            <div class="achievement-highlight">
+                <span class="star">★</span>
+                <p>Nível Pro</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Painel do Educador</h1>
+                <div class="status-bar">
+                    <span>Progresso do Período:</span>
+                    <div class="progress-container">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cards-grid">
+                <section id="criar-turma" class="card">
+                    <h3>Criar Nova Turma</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Nome da Turma</label>
+                            <input type="text" placeholder="Ex: Economia 101">
+                        </div>
+                        <button type="submit" class="btn-confirmar">Confirmar Criação</button>
+                    </form>
+                </section>
+
+                <section id="adicionar-aluno" class="card">
+                    <h3>Adicionar Aluno</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Nome Completo</label>
+                            <input type="text" placeholder="Nome do aluno">
+                        </div>
+                        <button type="submit" class="btn-confirmar">Confirmar Aluno</button>
+                    </form>
+                </section>
+
+                <section id="vincular-perfil" class="card">
+                    <h3>Vincular Perfil</h3>
+                    <p class="desc">Defina o perfil de aprendizado do estudante.</p>
+                    <button type="button" class="btn-secundario">Selecionar Perfil</button>
+                    <div class="alert-box">
+                        <span class="icon-alert">!</span> Atenção aos dados.
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

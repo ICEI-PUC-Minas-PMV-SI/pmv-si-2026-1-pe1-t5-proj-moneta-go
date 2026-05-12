@@ -1,0 +1,193 @@
+/* Variáveis de Cores GO MONETA */
+:root {
+    --emerald: #2ECC71;    /* Confirmar / Sucesso */
+    --turquoise: #1ABC9C;  /* Detalhes / Modernidade */
+    --belize-blue: #2980B9; /* Seriedade / MONETA */
+    --midnight: #2C3E50;    /* Menu / Textos / Bordas */
+    --gold: #F1C40F;       /* Moeda / Vitória */
+    --carrot: #E67E22;     /* Alerta / Sombras */
+    --clouds: #ECF0F1;     /* Fundo / Cards / Divisores */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--clouds); /* Fundo limpo e organizado */
+    color: var(--midnight); /* Texto principal para contraste */
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar - Azul Petróleo */
+.sidebar {
+    width: 260px;
+    background-color: var(--midnight);
+    color: var(--clouds);
+    padding: 30px 20px;
+}
+
+/* Logotipo Estilizado */
+.brand {
+    font-size: 26px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.brand .go { color: var(--emerald); }      /* Verde Vibrante */
+.brand .moneta { color: var(--belize-blue); } /* Azul Sério */
+
+.sidebar nav ul { list-style: none; }
+
+.sidebar nav ul li a {
+    color: var(--clouds);
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    transition: background 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.sidebar nav ul li a:hover, .sidebar nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--turquoise); /* Detalhe moderno */
+    color: var(--turquoise);
+}
+
+/* Destaque de Conquista (Estrela/Ouro) */
+.achievement-highlight {
+    margin-top: auto;
+    background-color: rgba(241, 196, 15, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px dashed var(--gold);
+}
+
+.achievement-highlight .star {
+    color: var(--gold);
+    font-size: 24px;
+    display: block;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: var(--midnight);
+    margin-bottom: 10px;
+}
+
+/* Barras de Progresso - Azul Belize */
+.progress-container {
+    width: 200px;
+    height: 10px;
+    background-color: #d0d7de;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--belize-blue);
+    border-radius: 5px;
+}
+
+/* Cards - Usando Cinza Claro */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #ffffff; /* Branco puro no card para destacar do fundo clouds */
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--clouds);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.card h3 {
+    color: var(--midnight);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--turquoise); /* Divisor modernizado */
+    padding-bottom: 10px;
+}
+
+/* Formulários */
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--midnight);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--clouds);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Botões de Ação - Verde Esmeralda */
+.btn-confirmar {
+    background-color: var(--emerald);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #27ae60; /* Sombra sólida para efeito de botão de jogo */
+    transition: transform 0.1s;
+}
+
+.btn-confirmar:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #27ae60;
+}
+
+/* Botão Secundário - Turquesa */
+.btn-secundario {
+    background: linear-gradient(135deg, var(--turquoise), var(--belize-blue));
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Alertas - Laranja Cenoura */
+.alert-box {
+    margin-top: 20px;
+    background-color: rgba(230, 126, 34, 0.1);
+    color: var(--carrot);
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid var(--carrot);
+    font-size: 14px;
+}
+
+.icon-alert {
+    font-weight: bold;
+    margin-right: 5px;
+}

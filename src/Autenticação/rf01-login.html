@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Moneta Go</title>
+  <link rel="stylesheet" href="../Estilos/estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../Estilos/rf01-login.css">
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="page-header">
+  <a href="../rf-painel.html" class="logo-link" aria-label="Moneta Go – página inicial">
+    <img src="../Logo.jpeg" alt="Logotipo Moneta Go">
+    <span class="brand-text">
+      <span class="moneta">MONETA</span><span class="go">GO</span>
+    </span>
+  </a>
+  <nav class="header-nav">
+    <button class="btn-ajuda" aria-label="Ajuda e acessibilidade">
+      <i class="fa-solid fa-circle-question"></i> Ajuda
+    </button>
+    <a href="./rf01-cadastro.html" class="btn-cadastrar">
+      <i class="fa-solid fa-user-plus"></i> Cadastre-se
+    </a>
+  </nav>
+</header>
+
+<!-- ── Main ── -->
+<main class="page-main">
+
+  <nav class="breadcrumb" aria-label="Navegação estrutural">
+    <a href="../rf-painel.html"><i class="fa-solid fa-house"></i> Início</a>
+    <i class="fa-solid fa-chevron-right" style="font-size:11px"></i>
+    <span>Entrar</span>
+  </nav>
+
+  <div class="form-card" role="main">
+
+    <!-- ── Formulário ── -->
+    <div id="form-area">
+      <h1 class="card-title">Entrar</h1>
+      <p class="card-subtitle">Bem-vindo(a) de volta à sua jornada!</p>
+
+      <div class="alert alert-erro" id="alert-erro"    role="alert"  aria-live="assertive"></div>
+      <div class="alert alert-ok"   id="alert-sucesso" role="status" aria-live="polite"></div>
+
+      <form id="form-login" novalidate>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <input type="email" id="email" placeholder="seu@email.com"
+                   autocomplete="email" aria-required="true" aria-describedby="err-email">
+          </div>
+          <span class="err-msg" id="err-email" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> Informe um e-mail válido
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <input type="password" id="senha" placeholder="Sua senha"
+                   autocomplete="current-password" aria-required="true" aria-describedby="err-senha">
+          </div>
+          <div class="forgot">
+            <a href="#" aria-label="Recuperar senha">Esqueceu a senha?</a>
+          </div>
+          <span class="err-msg" id="err-senha" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> Informe sua senha
+          </span>
+        </div>
+
+        <button type="submit" class="btn-confirmar" style="margin-top:8px">
+          <i class="fa-solid fa-right-to-bracket"></i> Entrar
+        </button>
+      </form>
+
+      <div class="divider">ou</div>
+
+      <div class="bottom-link">
+        Não tem conta? <a href="./rf01-cadastro.html">Cadastre-se grátis</a>
+      </div>
+    </div>
+
+    <!-- ── Pós-login ── -->
+    <div id="pos-login" aria-live="assertive">
+      <div class="perfil-coin" id="pl-icon" aria-hidden="true"></div>
+      <div class="perfil-badge" id="pl-badge"></div>
+      <h2 id="pl-nome"></h2>
+      <p id="pl-msg"></p>
+      <button class="btn-sair" onclick="sair()">
+        <i class="fa-solid fa-right-from-bracket"></i> Sair
+      </button>
+    </div>
+
+  </div><!-- /.form-card -->
+</main>
+
+<script src="./rf01-login.js"></script>
+<script src="../componentes/rf08-feedback.js"></script>
+</body>
+</html>
