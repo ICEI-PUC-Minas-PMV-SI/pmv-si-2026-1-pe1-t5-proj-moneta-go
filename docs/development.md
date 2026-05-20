@@ -27,7 +27,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-01| O sistema deve permitir cadastro e login com perfis distintos: criança, adolescente, jovem adulto, independente e educador. | Lucas | login.html |
+|RF-01| O sistema deve permitir cadastro e login com perfis distintos: criança, adolescente, jovem adulto, independente e educador. | Lucas | rf01-login.html |
 |RF-02| O sistema deve permitir que educadores criem turmas, adicionem alunos e vinculem perfis de aprendizagem ao contato docente. | Leticia | rf-painel.hetml OK |
 |RF-03| O sistema deve ajustar automaticamente a linguagem, visual e complexidade do conteúdo conforme a faixa etária do perfil cadastrado. | Patrícia | dashboard.html |
 |RF-04| O sistema deve disponibilizar trilhas de aprendizado sobre orçamento, poupança, crédito, consumo consciente e investimentos básicos. | Wilson | trilhas.html |
