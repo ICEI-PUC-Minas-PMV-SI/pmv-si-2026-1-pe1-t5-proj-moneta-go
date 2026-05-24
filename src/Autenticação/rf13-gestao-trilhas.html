@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moneta Go - Central da Arena e Gestão Pedagógica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-rf13-gestao-trilhas.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="main-header">
+            <a href="../rf-painel.html" class="logo-link">
+                <img src="https://moneta-go.vercel.app/Logo.jpeg" alt="Logotipo Moneta Go">
+                <span class="brand-text">
+                    <span class="moneta">MONETA</span><span class="go">GO</span>
+                </span>
+            </a>
+            
+            <div class="player-stats">
+                <div class="stats-info">
+                    <span class="rank-label">SISTEMA INTEGRADO</span>
+                    <span class="rank-name">Prof. Administrador</span>
+                </div>
+                <div class="xp-bar-container"><div class="xp-bar-fill"></div></div>
+            </div>
+
+            <button class="help-button">AJUDA</button>
+        </header>
+
+        <div class="panel-title-strip">
+            <h2>🏟️ CENTRAL DA ARENA DE SIMULAÇÃO & MONITOR PEDAGÓGICO <small>Controle de Ativos, Cenários de Impacto e Métricas de Alunos</small></h2>
+        </div>
+
+        <main class="main-content">
+            
+            <div class="top-stats-row">
+                <div class="stat-card">
+                    <div class="card-inner">
+                        <span class="stat-icon icon-blue">👥</span>
+                        <div class="stat-data"><span class="stat-label">Nº Turmas Ativas</span><span class="stat-number">6 Turmas</span></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-inner">
+                        <span class="stat-icon icon-teal">👨‍🎓</span>
+                        <div class="stat-data"><span class="stat-label">Total de Alunos</span><span class="stat-number">42 Ativos</span></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-inner">
+                        <span class="stat-icon icon-orange">💰</span>
+                        <div class="stat-data"><span class="stat-label">Capital Movimentado</span><span class="stat-number">R$ 245.500,00</span></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-inner">
+                        <span class="stat-icon icon-gold">⚡</span>
+                        <div class="stat-data"><span class="stat-label">Ativo Mais Negociado</span><span class="stat-number">CryptoMoneta</span></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-inner">
+                        <span class="stat-icon icon-green">⏱️</span>
+                        <div class="stat-data"><span class="stat-label">Frequência de Logons</span><span class="stat-number">4.8 dias / sem</span></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-inner">
+                        <span class="stat-icon icon-cyan">🎯</span>
+                        <div class="stat-data"><span class="stat-label">Conclusão de Missões</span><span class="stat-number">85% Global</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workspace-grid grid-superior">
+                
+                <section class="workspace-col col-65">
+                    <div class="col-header">
+                        <h3 class="section-title">🛡️ MATRIZ DE ATIVOS DISPONÍVEIS NA ARENA (CONTROLE DE PARÂMETROS)</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="panel-table">
+                            <thead>
+                                <tr>
+                                    <th>[Classe do Ativo]</th>
+                                    <th>[Garantia/Risco]</th>
+                                    <th>[Liquidez]</th>
+                                    <th>[Ganho Estimado]</th>
+                                    <th>[Perda Limite]</th>
+                                    <th>[Alocação Máx]</th>
+                                    <th style="text-align: center;">[Status]</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row-safe">
+                                    <td><strong>Tesouro Selic (Renda Fixa)</strong></td>
+                                    <td>Governo Federal</td>
+                                    <td>Imediata (D+0)</td>
+                                    <td class="txt-profit">+0,95% m|m</td>
+                                    <td class="txt-profit">0,00%</td>
+                                    <td>100% da Carteira</td>
+                                    <td class="center-txt"><span class="badge-status status-safe">LIBERADO</span></td>
+                                </tr>
+                                <tr class="row-safe">
+                                    <td><strong>CDB Digital Premium</strong></td>
+                                    <td>Fundo Garantidor (FGC)</td>
+                                    <td>No Vencimento</td>
+                                    <td class="txt-profit">+1,12% m|m</td>
+                                    <td class="txt-profit">0,00%</td>
+                                    <td>80% da Carteira</td>
+                                    <td class="center-txt"><span class="badge-status status-safe">LIBERADO</span></td>
+                                </tr>
+                                <tr class="row-risk">
+                                    <td><strong>Ações de Tecnologia (Variável)</strong></td>
+                                    <td>Oscilação de Mercado</td>
+                                    <td>Padrão (D+2)</td>
+                                    <td class="txt-profit">+15,00% máx</td>
+                                    <td class="txt-loss">-25,00%</td>
+                                    <td>40% da Carteira</td>
+                                    <td class="center-txt"><span class="badge-status status-safe">LIBERADO</span></td>
+                                </tr>
+                                <tr class="row-risk">
+                                    <td><strong>CryptoMoneta (Volatilidade)</strong></td>
+                                    <td>Risco Extremo</td>
+                                    <td>Imediata (24/7)</td>
+                                    <td class="txt-profit">+40,00% máx</td>
+                                    <td class="txt-loss">-60,00%</td>
+                                    <td>15% da Carteira</td>
+                                    <td class="center-txt"><span class="badge-status status-warn">RESTRITO</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="workspace-col col-34">
+                    <div class="col-header">
+                        <h3 class="section-title">👤 DESEMPENHO INDIVIDUAL (VISÃO TURMA A)</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="panel-table">
+                            <thead>
+                                <tr>
+                                    <th>Aluno</th>
+                                    <th>Progresso</th>
+                                    <th>Último Logon</th>
+                                    <th>XP Real</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Ana Paula</strong></td><td><span class="txt-profit">95%</span></td><td class="txt-muted">Hoje às 10:24</td><td>1100 XP</td></tr>
+                                <tr><td><strong>Andre Luiz</strong></td><td><span class="txt-profit">92%</span></td><td class="txt-muted">Hoje às 08:15</td><td>800 XP</td></tr>
+                                <tr><td><strong>Matheus Silva</strong></td><td><span class="txt-profit">88%</span></td><td class="txt-muted">Ontem</td><td>1100 XP</td></tr>
+                                <tr><td><strong>Beatriz Ramos</strong></td><td><span class="txt-profit">74%</span></td><td class="txt-muted">Ontem</td><td>650 XP</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div class="workspace-grid grid-inferior">
+                
+                <section class="workspace-col col-65">
+                    <div class="col-header">
+                        <h3 class="section-title">📊 GRÁFICOS DA ARENA E EVOLUÇÃO DE RENDIMENTOS</h3>
+                    </div>
+                    <div class="charts-inner-layout">
+                        <div class="charts-top-row">
+                            <div class="chart-block">
+                                <h4>Tendência de Engajamento Global vs Tempo</h4>
+                                <div class="draw-chart line-chart-svg"></div>
+                            </div>
+                            <div class="chart-block">
+                                <h4>Distribuição de Ativos por Carteira</h4>
+                                <div class="draw-chart pie-chart-svg"></div>
+                            </div>
+                            <div class="chart-block">
+                                <h4>Nível de Alocação em Risco (Média)</h4>
+                                <div class="simulated-bar-rows">
+                                    <div class="bar-row-item"><span>Crypto</span><div class="bar-bg"><div class="bar-fill-orange" style="width: 78%"></div></div></div>
+                                    <div class="bar-row-item"><span>Ações</span><div class="bar-bg"><div class="bar-fill-orange" style="width: 45%"></div></div></div>
+                                    <div class="bar-row-item"><span>Muted</span><div class="bar-bg"><div class="bar-fill-orange" style="width: 12%"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="charts-bottom-row">
+                            <div class="chart-block b-long">
+                                <h4>Curva de Aprendizado e Acúmulo de Patrimônio Fictício</h4>
+                                <div class="draw-chart long-line-svg"></div>
+                            </div>
+                            <div class="chart-block b-short">
+                                <h4>Média de XP Alocado / Semana</h4>
+                                <div class="draw-chart bars-vertical-svg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="workspace-col col-34">
+                    <div class="col-header">
+                        <h3 class="section-title">⚙️ SIMULADOR DE IMPACTO E PARÂMETROS</h3>
+                    </div>
+                    
+                    <div class="config-modules-stack">
+                        <div class="config-section-card">
+                            <h4>Visibilidade de Módulos (Visão Aluno)</h4>
+                            <div class="toggles-inline-group">
+                                <div class="toggle-item-box"><span>Orçamento</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                                <div class="toggle-item-box"><span>Poupança</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                                <div class="toggle-item-box bg-highlight-green"><span>Arena Real</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                            </div>
+                        </div>
+
+                        <div class="config-section-card layout-scenarios-box">
+                            <h4>Simulador de Projeções (Aporte Base de Aluno: R$ 1.000,00)</h4>
+                            <div class="scenarios-wrapper">
+                                <div class="scen-item safe-bg">
+                                    <strong>Cenário Conservador:</strong>
+                                    <p>Rendimento: <span class="txt-profit">+ R$ 9,50</span></p>
+                                    <p>Impostos/Taxas: <span class="txt-profit">R$ 0,00</span></p>
+                                </div>
+                                <div class="scen-item risk-bg">
+                                    <strong>Cenário Agressivo:</strong>
+                                    <p>Mês de Alta: <span class="txt-profit">+ R$ 150,00</span></p>
+                                    <p>Mês de Baixa: <span class="txt-loss">- R$ 250,00</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="config-section-card">
+                            <h4>Disparar Desafios Customizados</h4>
+                            <div class="challenge-buttons-grid">
+                                <button class="btn-ch btn-ch-blue">Desafio Troco</button>
+                                <button class="btn-ch btn-ch-orange">Desafio Energia</button>
+                                <button class="btn-ch btn-ch-green">Investimento Inicial</button>
+                                <button class="btn-ch btn-ch-more">...</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="bottom-action-bar">
+            <button class="main-btn">AVANÇAR PARA RELATÓRIO DE RISCOS DA ARENA</button>
+        </footer>
+    </div>
+
+</body>
+</html>
