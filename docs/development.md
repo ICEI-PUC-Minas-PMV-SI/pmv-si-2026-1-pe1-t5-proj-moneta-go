@@ -38,7 +38,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-09| O sistema deve rastrear e categorizar automaticamente “gastos formigas” (pequenas despesas recorrentes como cafés e transporte). | Henrique | rf09-gastos-formiga.html OK |
 |RF-10| O sistema deve permitir o registro manual de ganhos e despesas, com suporte a categorias personalizadas e metas de reserva de emergência. | Leticia | rf-financeiros.html OK |
 |RF-11| O sistema deve exibir relatórios de fluxo financeiro pessoal com gráficos de entradas, saídas e progresso de metas. | Wilson | relatórios.html |
-|RF-12| O sistema deve disponibilizar um painel docente com estatísticas de engajamento, desempenho por aluno e progresso por trilha. | Gustavo | painel-docente.html |
+|RF-12| O sistema deve disponibilizar um painel docente com estatísticas de engajamento, desempenho por aluno e progresso por trilha. | Gustavo | rf12-painel-docente.html OK |
 |RF-13| O sistema deve permitir que os educadores personalizem trilhas, atribuam desafios específicos e adicionem contextos pedagógicos às turmas. | Gustavo | rf13-gestao-trilhas.html OK|
 |RF-14| O sistema deve oferecer trilhas e simulações de planejamento de compras e consumo conscientes ao contexto doméstico. | Patrícia | planejamento-compras.html |
 
