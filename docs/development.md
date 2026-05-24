@@ -32,7 +32,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-03| O sistema deve ajustar automaticamente a linguagem, visual e complexidade do conteúdo conforme a faixa etária do perfil cadastrado. | Patrícia | dashboard.html |
 |RF-04| O sistema deve disponibilizar trilhas de aprendizado sobre orçamento, poupança, crédito, consumo consciente e investimentos básicos. | Wilson | trilhas.html |
 |RF-05| O sistema deve implementar mecânicas de gamificação: pontuação, níveis, conquistas, rankings e desafios progressivos. | Wilson | ranking.html |
-|RF-06| O sistema deve incluir simuladores de probabilidade e risco para ilustrar a diferença entre investimento e apostas. | Gustavo | simulador-risco.html |
+|RF-06| O sistema deve incluir simuladores de probabilidade e risco para ilustrar a diferença entre investimento e apostas. | Gustavo | rf06-simulador.html OK|
 |RF-07| O sistema deve oferecer um "Cofre Mágico" virtual onde o usuário deposita moedas e visualiza o progresso da meta de poupança. | Henrique | rf07-cofre-magico.html OK |
 |RF-08| O sistema deve oferecer feedback imediato a cada interação, reforçando conceitos financeiros de forma contextualizada. | Lucas | rf08-feedback.js OK |
 |RF-09| O sistema deve rastrear e categorizar automaticamente “gastos formigas” (pequenas despesas recorrentes como cafés e transporte). | Henrique | rf09-gastos-formiga.html OK |
