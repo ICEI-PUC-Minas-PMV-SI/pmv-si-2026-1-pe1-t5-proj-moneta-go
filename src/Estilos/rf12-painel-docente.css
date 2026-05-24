@@ -1,0 +1,309 @@
+/* ==========================================================================
+   PALETA DE CORES OFICIAL MONETA GO (ATUALIZADA CONFORME MANUAL DA MARCA)
+   ========================================================================== */
+:root {
+    --header-bg-blue: #0d1b2a;     /* Azul Escuro Cabeçalho */
+    --logo-cyan: #1ABC9C;          /* Ciano Oficial do Manual da Marca */
+    --logo-green: #2ECC71;         /* Verde Vibrante Oficial do Manual da Marca */
+    
+    --primary-blue: #1A237E;       /* Azul padrão de seções */
+    --primary-green: #00C853;      /* Verde de progresso positivo */
+    --danger-red: #FF3D00;         /* Vermelho para atenção/risco */
+    --white: #FFFFFF;
+    --border-color: #CFD8DC;
+    --bg-page: #F4F7F9;            /* Fundo fluido leve */
+    --text-dark: #263238;
+    --text-gray: #78909C;
+}
+
+/* ==========================================================================
+   RESET RADICAL - BORDA A BORDA REAL
+   ========================================================================== */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+    display: flex;
+    overflow: hidden; 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, Arial;
+}
+
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   HEADER 100% INFINITO (FULL WIDTH)
+   ========================================================================== */
+.main-header {
+    flex: 0 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg-blue);
+    padding: 15px 30px;
+    width: 100vw;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.logo-link img { height: 35px; width: auto; }
+
+.brand-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 20pt;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.brand-text .moneta { color: var(--logo-cyan); }
+.brand-text .go { color: var(--logo-green); }
+
+.player-stats { flex: 1; max-width: 300px; margin: 0 30px; color: white; }
+.stats-info { display: flex; justify-content: space-between; font-size: 8pt; margin-bottom: 4px; }
+.xp-bar-container { height: 6px; background: #37474f; border-radius: 10px; overflow: hidden; }
+.xp-bar-fill { width: 80%; height: 100%; background: linear-gradient(to right, var(--logo-green), var(--logo-cyan)); }
+
+.help-button {
+    background: transparent;
+    color: white;
+    border: 2px solid var(--logo-cyan);
+    padding: 6px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.help-button:hover {
+    background: rgba(26, 188, 156, 0.15);
+}
+
+/* ==========================================================================
+   CONTEÚDO DA INTERFACE E GRIDS COM SUPORTE A ROLAGEM (SCROLL)
+   ========================================================================== */
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 30px; 
+    min-height: 0;
+}
+
+.page-title-box {
+    flex: 0 0 auto;
+    padding: 10px 15px;
+    background: var(--white);
+    border-left: 6px solid var(--primary-blue);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.page-title-box h1 { font-size: 14pt; color: var(--primary-blue); margin: 0; }
+.page-title-box h1 small { font-size: 10pt; color: var(--text-gray); font-weight: normal; margin-left: 8px; }
+
+/* CARTÕES PEDAGÓGICOS SUPERIORES */
+.summary-cards-container {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+.summary-card {
+    flex: 1;
+    background: var(--white);
+    border: 1px solid rgba(207, 216, 220, 0.5);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+.card-icon {
+    font-size: 18pt;
+    background: #F1F4F6;
+    padding: 6px;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-data h3 { font-size: 13pt; color: var(--primary-blue); margin: 0; font-weight: 700; }
+.card-data p { font-size: 8.5pt; color: var(--text-gray); margin: 0; }
+
+/* ESTRUTURA DE GRIDS DO WORKSPACE */
+.workspace-grid { display: flex; gap: 15px; min-height: 0; }
+.grid-superior { flex: 1.3; }
+.grid-inferior { flex: 1; }
+
+.workspace-col {
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    background: var(--white);
+    border: 1px solid rgba(207, 216, 220, 0.5);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+.col-esquerda-60 { flex: 6; }
+.col-direita-40 { flex: 4; }
+
+.section-label {
+    flex: 0 0 auto;
+    font-size: 8.5pt;
+    font-weight: 800;
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ATIVAÇÃO DE SCROLL BAR INTERNA PARA NÃO QUEBRAR O DESIGN */
+.table-container {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 2px;
+}
+.table-container::-webkit-scrollbar { width: 5px; }
+.table-container::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+
+/* FORMATAÇÃO DE TABELAS */
+.panel-table { width: 100%; border-collapse: collapse; }
+.panel-table th {
+    text-align: left;
+    font-size: 8pt;
+    color: var(--primary-blue);
+    padding: 8px;
+    background: #F8F9FA;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid var(--border-color);
+    z-index: 10;
+}
+.panel-table td { font-size: 9pt; padding: 8px; border-bottom: 1px solid #ECEFF1; vertical-align: middle; }
+
+.score-txt { font-weight: 700; color: #37474F; }
+.badge-xp { background: #E8EAF6; color: var(--primary-blue); font-size: 7.5pt; font-weight: bold; padding: 2px 6px; border-radius: 4px; }
+
+.mini-progress-bar {
+    border-radius: 12px;
+    color: white;
+    font-size: 7pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 1px 0;
+}
+.bar-green { background-color: var(--primary-green); }
+.bar-blue { background-color: #2196F3; }
+.action-cells { text-align: center; letter-spacing: 5px; cursor: pointer; }
+.profit-txt { color: var(--primary-green); font-weight: bold; }
+.loss-txt { color: var(--danger-red); font-weight: bold; }
+.txt-gray { color: var(--text-gray); }
+
+/* SEÇÃO DE MÉTRICAS GRÁFICAS */
+.metrics-visual-wrapper { display: flex; gap: 15px; flex: 1; min-height: 0; }
+.metric-card {
+    flex: 1;
+    background: var(--white);
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+.metric-card h5 { font-size: 8pt; color: var(--text-gray); margin-bottom: 6px; font-weight: 600; }
+
+.simulated-chart {
+    flex: 1;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+    background: linear-gradient(to top, #F5F7FA, transparent);
+    min-height: 60px;
+}
+.vector-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--logo-cyan);
+    bottom: 40%;
+    transform: rotate(-4deg);
+}
+.chart-tag { position: absolute; right: 8px; top: 6px; font-size: 7pt; font-weight: bold; color: var(--primary-green); }
+
+.bar-chart-group { display: flex; flex-direction: column; gap: 8px; justify-content: center; height: 100%; }
+.chart-bar-row { display: flex; align-items: center; gap: 8px; }
+.bar-name { font-size: 7.5pt; width: 45px; color: var(--text-dark); }
+.chart-bar-fill { height: 10px; border-radius: 3px; }
+.bar-percentage { font-size: 7.5pt; font-weight: bold; color: var(--text-gray); width: 25px; text-align: right; }
+
+.fill-red { background: var(--danger-red); }
+.fill-amber { background: #FFA000; }
+.fill-green { background: var(--primary-green); }
+
+/* SEÇÃO DE CONFIGURAÇÃO DE TRILHAS */
+.custom-actions-wrapper { display: flex; flex-direction: column; gap: 12px; flex: 1; justify-content: center; }
+.action-card-btn {
+    padding: 12px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.action-card-header { display: flex; justify-content: space-between; align-items: center; }
+.action-card-btn strong { font-size: 9.5pt; font-weight: 700; }
+.action-card-btn p { font-size: 8.5pt; margin: 0; line-height: 1.3; }
+
+.status-indicator { font-size: 7pt; font-weight: bold; padding: 1px 6px; border-radius: 4px; text-transform: uppercase; }
+.status-indicator.active { background: #C8E6C9; color: #1B5E20; }
+.status-indicator.ready { background: #E1BEE7; color: #4A148C; }
+
+.blue-layout { background: #E3F2FD; color: #0D47A1; border-color: #BBDEFB; }
+.dark-layout { background: #ECEFF1; color: #263238; border-color: #CFD8DC; }
+
+/* FOOTER DA PÁGINA */
+.bottom-action-bar {
+    flex: 0 0 auto;
+    padding: 12px 30px 15px 30px;
+    text-align: right;
+    background: var(--white);
+    border-top: 1px solid var(--border-color);
+}
+.main-btn {
+    background: var(--header-bg-blue);
+    color: white;
+    border: 2px solid var(--logo-green);
+    padding: 11px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 9pt;
+    cursor: pointer;
+}
