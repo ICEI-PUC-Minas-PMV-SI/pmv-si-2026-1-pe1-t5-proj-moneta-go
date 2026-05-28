@@ -27,19 +27,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-01| O sistema deve permitir cadastro e login com perfis distintos: criança, adolescente, jovem adulto, independente e educador. | Lucas | login.html |
-|RF-02| O sistema deve permitir que educadores criem turmas, adicionem alunos e vinculem perfis de aprendizagem ao contato docente. | Leticia | turmas.html |
+|RF-01| O sistema deve permitir cadastro e login com perfis distintos: criança, adolescente, jovem adulto, independente e educador. | Lucas | rf01-login.html OK |
+|RF-02| O sistema deve permitir que educadores criem turmas, adicionem alunos e vinculem perfis de aprendizagem ao contato docente. | Leticia | rf-painel.hetml OK |
 |RF-03| O sistema deve ajustar automaticamente a linguagem, visual e complexidade do conteúdo conforme a faixa etária do perfil cadastrado. | Patrícia | dashboard.html |
 |RF-04| O sistema deve disponibilizar trilhas de aprendizado sobre orçamento, poupança, crédito, consumo consciente e investimentos básicos. | Wilson | trilhas.html |
 |RF-05| O sistema deve implementar mecânicas de gamificação: pontuação, níveis, conquistas, rankings e desafios progressivos. | Wilson | ranking.html |
-|RF-06| O sistema deve incluir simuladores de probabilidade e risco para ilustrar a diferença entre investimento e apostas. | Gustavo | simulador-risco.html |
-|RF-07| O sistema deve oferecer um "Cofre Mágico" virtual onde o usuário deposita moedas e visualiza o progresso da meta de poupança. | Henrique | cofre.html |
-|RF-08| O sistema deve oferecer feedback imediato a cada interação, reforçando conceitos financeiros de forma contextualizada. | Lucas | feedback.html |
-|RF-09| O sistema deve rastrear e categorizar automaticamente “gastos formigas” (pequenas despesas recorrentes como cafés e transporte). | Henrique | extrato-detalhado.html |
-|RF-10| O sistema deve permitir o registro manual de ganhos e despesas, com suporte a categorias personalizadas e metas de reserva de emergência. | Leticia | lancamentos.html |
+|RF-06| O sistema deve incluir simuladores de probabilidade e risco para ilustrar a diferença entre investimento e apostas. | Gustavo | rf06-simulador.html OK|
+|RF-07| O sistema deve oferecer um "Cofre Mágico" virtual onde o usuário deposita moedas e visualiza o progresso da meta de poupança. | Henrique | rf07-cofre-magico.html OK |
+|RF-08| O sistema deve oferecer feedback imediato a cada interação, reforçando conceitos financeiros de forma contextualizada. | Lucas | rf08-feedback.js OK |
+|RF-09| O sistema deve rastrear e categorizar automaticamente “gastos formigas” (pequenas despesas recorrentes como cafés e transporte). | Henrique | rf09-gastos-formiga.html OK |
+|RF-10| O sistema deve permitir o registro manual de ganhos e despesas, com suporte a categorias personalizadas e metas de reserva de emergência. | Leticia | rf-financeiros.html OK |
 |RF-11| O sistema deve exibir relatórios de fluxo financeiro pessoal com gráficos de entradas, saídas e progresso de metas. | Wilson | relatórios.html |
-|RF-12| O sistema deve disponibilizar um painel docente com estatísticas de engajamento, desempenho por aluno e progresso por trilha. | Gustavo | painel-docente.html |
-|RF-13| O sistema deve permitir que os educadores personalizem trilhas, atribuam desafios específicos e adicionem contextos pedagógicos às turmas. | Gustavo | gestao-trilhas.html |
+|RF-12| O sistema deve disponibilizar um painel docente com estatísticas de engajamento, desempenho por aluno e progresso por trilha. | Gustavo | rf12-painel-docente.html OK |
+|RF-13| O sistema deve permitir que os educadores personalizem trilhas, atribuam desafios específicos e adicionem contextos pedagógicos às turmas. | Gustavo | rf13-gestao-trilhas.html OK|
 |RF-14| O sistema deve oferecer trilhas e simulações de planejamento de compras e consumo conscientes ao contexto doméstico. | Patrícia | planejamento-compras.html |
 
 ## Descrição das estruturas:

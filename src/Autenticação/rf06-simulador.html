@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moneta Go - Arena do Simulador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-rf06-simulador.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="main-header">
+            <a href="../rf-painel.html" class="logo-link" aria-label="Moneta Go – página inicial">
+                <img src="https://moneta-go.vercel.app/Logo.jpeg" alt="Logotipo Moneta Go">
+                <span class="brand-text">
+                    <span class="moneta">MONETA</span><span class="go">GO</span>
+                </span>
+            </a>
+            
+            <div class="player-stats">
+                <div class="stats-info">
+                    <span class="rank-label">NÍVEL 5</span>
+                    <span class="rank-name">Estrategista Mirim</span>
+                </div>
+                <div class="xp-bar-container">
+                    <div class="xp-bar-fill"></div>
+                </div>
+            </div>
+
+            <button class="help-button">AJUDA</button>
+        </header>
+
+        <main class="main-content">
+            <div class="page-title-box">
+                <h1>🏟️ Arena do Simulador <small>Descubra o impacto dos seus investimentos na prática</small></h1>
+            </div>
+
+            <div class="workspace-grid">
+                <section class="workspace-col col-esquerda-65">
+                    <h2 class="section-label">MATRIZ DE ATIVOS</h2>
+
+                    <div class="cards-scroll-area">
+                        <div class="asset-card safe-border">
+                            <div class="card-header">
+                                <h3>🛡️ Classe A: Renda Fixa (Segurança)</h3>
+                                <span class="risk-badge low-risk">BAIXO RISCO</span>
+                            </div>
+                            <p class="description">Ideal para quem não quer perder nem um centavo. Protegido pelo FGC ou Governo Federal.</p>
+                            
+                            <table class="market-table">
+                                <thead>
+                                    <tr><th>Ativo</th><th>Garantia</th><th>Ganho/Mês</th><th>Perda/Mês</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tesouro Selic</td>
+                                        <td>Governo</td>
+                                        <td class="profit-txt">+0,95%</td>
+                                        <td class="profit-txt">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CDB Digital</td>
+                                        <td>FGC</td>
+                                        <td class="profit-txt">+0,92%</td>
+                                        <td class="profit-txt">0,00%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="mini-visual-chart">
+                                <div class="line safe-line"></div>
+                                <span class="graph-tag tag-green">Crescimento Constante 📈</span>
+                            </div>
+                        </div>
+
+                        <div class="asset-card risk-border">
+                            <div class="card-header">
+                                <h3>⚡ Classe B: Renda Variável (Risco)</h3>
+                                <span class="risk-badge high-risk">ALTO RISCO</span>
+                            </div>
+                            <p class="description">Onde o dinheiro oscila. Ganhos expressivos, mas o tombo pode ser grande.</p>
+                            
+                            <table class="market-table">
+                                <thead>
+                                    <tr><th>Ação / Cripto</th><th>Risco</th><th>Ganho Máx.</th><th>Perda Máx.</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ações de Tech</td>
+                                        <td>Mercado</td>
+                                        <td class="profit-txt">+15,0%</td>
+                                        <td class="loss-txt">-25,0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CryptoMoneta</td>
+                                        <td>Extremo</td>
+                                        <td class="profit-txt">+40,0%</td>
+                                        <td class="loss-txt">-60,0%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="mini-visual-chart">
+                                <div class="line risk-line"></div>
+                                <span class="graph-tag tag-red">Alta Volatilidade 📉</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="workspace-col col-direita-35">
+                    <h2 class="section-label">SIMULADOR DE IMPACTO</h2>
+                    
+                    <div class="simulation-content">
+                        <div class="projections-area">
+                            <h3>Projeção Mensal</h3>
+                            <p class="base-aporte">Base: Aporte de <strong>R$ 1.000,00</strong></p>
+
+                            <div class="scenario-box safe-bg">
+                                <h4>Cenário Conservador</h4>
+                                <div class="scenario-row"><span>Rendimento:</span><span class="profit-txt">+ R$ 9,50</span></div>
+                                <div class="scenario-row"><span>Risco Real:</span><span class="profit-txt">R$ 0,00</span></div>
+                            </div>
+
+                            <div class="scenario-box risk-bg">
+                                <h4>Cenário Agressivo</h4>
+                                <div class="scenario-row"><span>Mês de Alta:</span><span class="profit-txt">+ R$ 150,00</span></div>
+                                <div class="scenario-row"><span>Mês de Baixa:</span><span class="loss-txt">- R$ 250,00</span></div>
+                            </div>
+                        </div>
+
+                        <div class="educational-tip-box">
+                            <strong>💡 DICA MONETA:</strong> No mercado financeiro, rentabilidade anda de mãos dadas com o risco. Diversificar é o segredo!
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="bottom-action-bar">
+            <button class="main-btn">AVANÇAR PARA RELATÓRIO DE RISCOS</button>
+        </footer>
+    </div>
+
+</body>
+</html>

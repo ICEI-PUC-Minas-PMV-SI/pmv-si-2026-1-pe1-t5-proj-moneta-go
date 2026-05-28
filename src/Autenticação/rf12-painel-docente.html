@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moneta Go - Painel do Educador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rf12-painel-docente.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="main-header">
+            <a href="../rf-painel.html" class="logo-link" aria-label="Moneta Go – página inicial">
+                <img src="https://moneta-go.vercel.app/Logo.jpeg" alt="Logotipo Moneta Go">
+                <span class="brand-text">
+                    <span class="moneta">MONETA</span><span class="go">GO</span>
+                </span>
+            </a>
+            
+            <div class="player-stats">
+                <div class="stats-info">
+                    <span class="rank-label">CONTA: PEDAGÓGICO</span>
+                    <span class="rank-name">Prof. Administrador</span>
+                </div>
+                <div class="xp-bar-container">
+                    <div class="xp-bar-fill"></div>
+                </div>
+            </div>
+
+            <button class="help-button">AJUDA</button>
+        </header>
+
+        <main class="main-content">
+            <div class="page-title-box">
+                <h1>👨‍🏫 Painel do Educador <small>Gestão Avançada de Turmas, Alunos e Customização de Trilhas</small></h1>
+            </div>
+
+            <div class="summary-cards-container">
+                <div class="summary-card">
+                    <span class="card-icon">👥</span>
+                    <div class="card-data">
+                        <h3>56</h3>
+                        <p>Total de Alunos Ativos</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <span class="card-icon">🔥</span>
+                    <div class="card-data">
+                        <h3>79.8%</h3>
+                        <p>Engajamento Médio</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <span class="card-icon">🏆</span>
+                    <div class="card-data">
+                        <h3>32</h3>
+                        <p>Desafios Concluídos</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <span class="card-icon">🚨</span>
+                    <div class="card-data">
+                        <h3>5 Alunos</h3>
+                        <p>Precisam de Atenção</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workspace-grid grid-superior">
+                <section class="workspace-col col-esquerda-60">
+                    <h2 class="section-label">Minhas Turmas e Alunos (Visão Turma)</h2>
+                    <div class="table-container">
+                        <table class="panel-table">
+                            <thead>
+                                <tr>
+                                    <th>Turma</th>
+                                    <th>Nº Alunos</th>
+                                    <th>Engajamento Global %</th>
+                                    <th>Progresso na Trilha</th>
+                                    <th>Média Geral</th>
+                                    <th style="text-align: center;">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Turma A (Adolescentes)</strong></td>
+                                    <td>12 alunos</td>
+                                    <td><div class="mini-progress-bar bar-green" style="width: 80%;">80%</div></td>
+                                    <td><div class="mini-progress-bar bar-blue" style="width: 92%;">92%</div></td>
+                                    <td><span class="score-txt">8.5 / 10</span></td>
+                                    <td class="action-cells">👁️ ✏️ 🔍</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Turma B (Crianças)</strong></td>
+                                    <td>15 alunos</td>
+                                    <td><div class="mini-progress-bar bar-green" style="width: 85%;">85%</div></td>
+                                    <td><div class="mini-progress-bar bar-blue" style="width: 74%;">74%</div></td>
+                                    <td><span class="score-txt">9.0 / 10</span></td>
+                                    <td class="action-cells">👁️ ✏️ 🔍</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Turma C (Jovens Adultos)</strong></td>
+                                    <td>18 alunos</td>
+                                    <td><div class="mini-progress-bar bar-green" style="width: 72%;">72%</div></td>
+                                    <td><div class="mini-progress-bar bar-blue" style="width: 65%;">65%</div></td>
+                                    <td><span class="score-txt">7.8 / 10</span></td>
+                                    <td class="action-cells">👁️ ✏️ 🔍</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Turma D (Treinamento)</strong></td>
+                                    <td>11 alunos</td>
+                                    <td><div class="mini-progress-bar bar-green" style="width: 64%;">64%</div></td>
+                                    <td><div class="mini-progress-bar bar-blue" style="width: 40%;">40%</div></td>
+                                    <td><span class="score-txt">6.5 / 10</span></td>
+                                    <td class="action-cells">👁️ ✏️ 🔍</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="workspace-col col-direita-40">
+                    <h2 class="section-label">Gestão de Alunos (Visão Turma A)</h2>
+                    <div class="table-container">
+                        <table class="panel-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome do Aluno</th>
+                                    <th>Nível / XP</th>
+                                    <th>Progresso</th>
+                                    <th>Último Logon</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ana Paula</td>
+                                    <td><span class="badge-xp">Nv. 5</span></td>
+                                    <td><span class="profit-txt">95%</span></td>
+                                    <td class="txt-gray">Hoje às 10:24</td>
+                                </tr>
+                                <tr>
+                                    <td>Andre Luiz</td>
+                                    <td><span class="badge-xp">Nv. 4</span></td>
+                                    <td><span class="profit-txt">92%</span></td>
+                                    <td class="txt-gray">Hoje às 08:15</td>
+                                </tr>
+                                <tr>
+                                    <td>Matheus Silva</td>
+                                    <td><span class="badge-xp">Nv. 4</span></td>
+                                    <td><span class="profit-txt">88%</span></td>
+                                    <td class="txt-gray">Ontem</td>
+                                </tr>
+                                <tr>
+                                    <td>Beatriz Ramos</td>
+                                    <td><span class="badge-xp">Nv. 3</span></td>
+                                    <td><span class="profit-txt">76%</span></td>
+                                    <td class="txt-gray">Ontem</td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Eduardo</td>
+                                    <td><span class="badge-xp">Nv. 3</span></td>
+                                    <td><span class="profit-txt">69%</span></td>
+                                    <td class="txt-gray">Há 2 dias</td>
+                                </tr>
+                                <tr>
+                                    <td>Fernanda Souza</td>
+                                    <td><span class="badge-xp">Nv. 2</span></td>
+                                    <td><span class="loss-txt">45%</span></td>
+                                    <td class="txt-gray">Há 5 dias</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div class="workspace-grid grid-inferior">
+                <section class="workspace-col col-esquerda-60">
+                    <h2 class="section-label">Métricas de Desempenho (Visão Global)</h2>
+                    <div class="metrics-visual-wrapper">
+                        <div class="metric-card">
+                            <h5>Engajamento Médio vs Tempo (Últimos 30 dias)</h5>
+                            <div class="simulated-chart chart-line-bg">
+                                <div class="vector-line"></div>
+                                <span class="chart-tag dynamic-up">Tendência de Alta ↑</span>
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <h5>Tópicos com Mais Dificuldade (Geral)</h5>
+                            <div class="bar-chart-group">
+                                <div class="chart-bar-row">
+                                    <span class="bar-name">Tesouro</span>
+                                    <div class="chart-bar-fill fill-red" style="width: 75%;"></div>
+                                    <span class="bar-percentage">75%</span>
+                                </div>
+                                <div class="chart-bar-row">
+                                    <span class="bar-name">Inflação</span>
+                                    <div class="chart-bar-fill fill-amber" style="width: 45%;"></div>
+                                    <span class="bar-percentage">45%</span>
+                                </div>
+                                <div class="chart-bar-row">
+                                    <span class="bar-name">Ações</span>
+                                    <div class="chart-bar-fill fill-green" style="width: 20%;"></div>
+                                    <span class="bar-percentage">20%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="workspace-col col-direita-40">
+                    <h2 class="section-label">Configuração e Customização de Desafios</h2>
+                    <div class="custom-actions-wrapper">
+                        <div class="action-card-btn blue-layout">
+                            <div class="action-card-header">
+                                <strong>⚙️ Customização de Trilhas</strong>
+                                <span class="status-indicator active">Ativo</span>
+                            </div>
+                            <p>Liberar ou pausar módulos de Orçamento, Poupança, Crédito e a Arena de Simulação Real.</p>
+                        </div>
+                        <div class="action-card-btn dark-layout">
+                            <div class="action-card-header">
+                                <strong>🚀 Disparar Missão Gamificada</strong>
+                                <span class="status-indicator ready">Disponível</span>
+                            </div>
+                            <p>Criar desafios personalizados com aporte fictício controlado e prazos de encerramento automáticos.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="bottom-action-bar">
+            <button class="main-btn">IR PARA GESTÃO DE ALUNOS (VISÃO COMPLETA)</button>
+        </footer>
+    </div>
+
+</body>
+</html>
