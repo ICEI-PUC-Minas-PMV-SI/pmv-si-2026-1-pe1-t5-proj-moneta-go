@@ -1,9 +1,9 @@
 const PERFIS = {
-  crianca:     { fa: 'fa-child-reaching', label: 'Criança',      redirect: '../rf-painel.html'              },
-  adolescente: { fa: 'fa-person',         label: 'Adolescente',  redirect: '../rf-painel.html'              },
-  jovemAdulto: { fa: 'fa-graduation-cap', label: 'Jovem Adulto', redirect: '../rf-painel.html'              },
-  autonomo:    { fa: 'fa-briefcase',      label: 'Autônomo',     redirect: '../rf-painel.html'              },
-  educador:    { fa: 'fa-chalkboard-user',label: 'Educador',     redirect: '../rf-painel.html'              },
+  crianca:     { fa: 'fa-child-reaching', label: 'Criança',      redirect: '../dashboard.html' },
+  adolescente: { fa: 'fa-person',         label: 'Adolescente',  redirect: '../dashboard.html' },
+  jovemAdulto: { fa: 'fa-graduation-cap', label: 'Jovem Adulto', redirect: '../dashboard.html' },
+  autonomo:    { fa: 'fa-briefcase',      label: 'Autônomo',     redirect: '../dashboard.html' },
+  educador:    { fa: 'fa-chalkboard-user',label: 'Educador',     redirect: '../dashboard.html' },
 };
 
 const MSGS = {
@@ -75,8 +75,7 @@ function exibirPosLogin(usuario) {
   document.getElementById('pl-msg').textContent  = MSGS[usuario.perfil];
   document.getElementById('pos-login').style.display = 'block';
 
-  // Descomentar quando dashboards existirem:
-  // window.location.href = p.redirect;
+  setTimeout(() => { window.location.href = p.redirect; }, 1800);
 }
 
 function sair() {
