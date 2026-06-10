@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro — Moneta Go</title>
+  <link rel="stylesheet" href="src/Estilos/estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="src/Estilos/rf01-cadastro.css">
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="page-header">
+  <a href="src/rf-painel.html" class="logo-link" aria-label="Moneta Go – página inicial">
+    <img src="src/Logo.jpeg" alt="Logotipo Moneta Go">
+    <span class="brand-text">
+      <span class="moneta">MONETA</span><span class="go">GO</span>
+    </span>
+  </a>
+  <nav class="header-nav">
+    <button class="btn-ajuda" aria-label="Ajuda e acessibilidade">
+      <i class="fa-solid fa-circle-question"></i> Ajuda
+    </button>
+    <a href="src/Autenticação/rf01-login.html" class="btn-entrar">Entrar</a>
+  </nav>
+</header>
+
+<!-- ── Main ── -->
+<main class="page-main">
+
+  <nav class="breadcrumb" aria-label="Navegação estrutural">
+    <a href="src/rf-painel.html"><i class="fa-solid fa-house"></i> Início</a>
+    <i class="fa-solid fa-chevron-right" style="font-size:11px"></i>
+    <span>Cadastro</span>
+  </nav>
+
+  <div class="form-card" role="main">
+
+    <!-- Progresso -->
+    <div class="progress-steps" role="progressbar" aria-label="Etapas do cadastro" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3">
+      <div class="prog active" id="prog-1"></div>
+      <div class="prog"        id="prog-2"></div>
+      <div class="prog"        id="prog-3"></div>
+    </div>
+
+    <!-- ── Etapa 1: Dados básicos ── -->
+    <section class="step active" id="step-1" aria-label="Etapa 1 de 3: seus dados">
+      <p class="step-label"><i class="fa-solid fa-user"></i> Etapa 1 de 3</p>
+      <h1 class="step-title">Criar sua conta</h1>
+      <p class="step-sub">Preencha seus dados para começar a jornada</p>
+
+      <form id="form1" novalidate>
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <input type="text" id="nome" placeholder="Seu nome completo"
+                   autocomplete="name" aria-required="true" aria-describedby="err-nome">
+          </div>
+          <span class="err-msg" id="err-nome" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> Informe seu nome completo (mínimo 3 letras)
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <input type="email" id="email" placeholder="seu@email.com"
+                   autocomplete="email" aria-required="true" aria-describedby="err-email">
+          </div>
+          <span class="err-msg" id="err-email" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> Informe um e-mail válido
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <input type="password" id="senha" placeholder="Mínimo 6 caracteres"
+                   autocomplete="new-password" aria-required="true" aria-describedby="err-senha">
+          </div>
+          <span class="err-msg" id="err-senha" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> A senha deve ter no mínimo 6 caracteres
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="senha2">Confirmar senha</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <input type="password" id="senha2" placeholder="Repita a senha"
+                   autocomplete="new-password" aria-required="true" aria-describedby="err-senha2">
+          </div>
+          <span class="err-msg" id="err-senha2" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> As senhas não coincidem
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="nascimento">Data de nascimento</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+            <input type="date" id="nascimento"
+                   autocomplete="bday" aria-required="true" aria-describedby="err-nascimento">
+          </div>
+          <span class="err-msg" id="err-nascimento" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> Informe sua data de nascimento
+          </span>
+        </div>
+
+        <button type="submit" class="btn-confirmar">
+          Avançar <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <hr class="sep">
+      <div class="bottom-link">Já tem conta? <a href="src/Autenticação/rf01-login.html">Entrar agora</a></div>
+    </section>
+
+    <!-- ── Etapa 2: Perfil ── -->
+    <section class="step" id="step-2" aria-label="Etapa 2 de 3: escolha do perfil">
+      <p class="step-label"><i class="fa-solid fa-user-tag"></i> Etapa 2 de 3</p>
+      <h2 class="step-title">Como você vai usar o Moneta Go?</h2>
+      <p class="step-sub">Escolha seu perfil para personalizarmos a experiência</p>
+
+      <span class="badge-auto" id="badge-auto" aria-live="polite">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Perfil detectado pela sua idade
+      </span>
+
+      <div class="profile-grid" id="profile-grid" role="radiogroup" aria-label="Selecione seu perfil"></div>
+
+      <div id="educador-fields">
+        <hr class="sep" style="margin-top:0">
+        <div class="form-group">
+          <label for="escola">Escola / Instituição</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+            <input type="text" id="escola" placeholder="Nome da escola ou instituição"
+                   aria-describedby="err-escola">
+          </div>
+          <span class="err-msg" id="err-escola" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> Informe a escola ou instituição
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="area">Área de ensino</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <select id="area" aria-describedby="err-area">
+              <option value="">Selecione...</option>
+              <option value="fundamental">Ensino Fundamental</option>
+              <option value="medio">Ensino Médio</option>
+              <option value="superior">Ensino Superior</option>
+              <option value="tecnico">Ensino Técnico / Profissional</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <span class="err-msg" id="err-area" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> Selecione a área de ensino
+          </span>
+        </div>
+      </div>
+
+      <span class="err-msg" id="err-perfil" style="display:none; margin-bottom:12px" role="alert">
+        <i class="fa-solid fa-triangle-exclamation"></i> Selecione um perfil para continuar
+      </span>
+
+      <button class="btn-confirmar" id="btn2">
+        Avançar <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="btn-voltar" onclick="irEtapa(1)">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </section>
+
+    <!-- ── Etapa 3: Termos ── -->
+    <section class="step" id="step-3" aria-label="Etapa 3 de 3: termos e privacidade">
+      <p class="step-label"><i class="fa-solid fa-shield-halved"></i> Etapa 3 de 3</p>
+      <h2 class="step-title">Quase lá!</h2>
+      <p class="step-sub">Leia e aceite os termos para finalizar seu cadastro</p>
+
+      <div class="alert-info">
+        <i class="fa-solid fa-circle-info" style="color:var(--belize-blue); flex-shrink:0; margin-top:1px"></i>
+        <span>Seus dados ficam armazenados localmente no seu dispositivo e nunca são compartilhados com terceiros.</span>
+      </div>
+
+      <div class="alert-warn" id="aviso-lgpd" aria-live="polite">
+        <span class="icon-alert"><i class="fa-solid fa-triangle-exclamation"></i></span>
+        <span>Perfil de menor de idade detectado. Recomendamos o consentimento de um responsável, conforme a <strong>LGPD</strong> e o Marco Civil da Internet.</span>
+      </div>
+
+      <div class="check-group">
+        <input type="checkbox" id="ck-termos" aria-required="true">
+        <label for="ck-termos">
+          Li e aceito os <a href="#">Termos de Uso</a> da plataforma Moneta Go
+        </label>
+      </div>
+      <div class="check-group">
+        <input type="checkbox" id="ck-privacidade" aria-required="true">
+        <label for="ck-privacidade">
+          Concordo com a <a href="#">Política de Privacidade</a> e o tratamento dos meus dados conforme a <strong>LGPD</strong>
+        </label>
+      </div>
+      <div class="check-group" id="ck-responsavel-wrap" style="display:none">
+        <input type="checkbox" id="ck-responsavel" aria-required="true">
+        <label for="ck-responsavel">
+          Sou responsável por este menor e autorizo o uso da plataforma
+        </label>
+      </div>
+
+      <span class="err-msg" id="err-termos" style="margin-bottom:12px" role="alert">
+        <i class="fa-solid fa-triangle-exclamation"></i> Você precisa aceitar todos os termos para continuar
+      </span>
+
+      <button class="btn-confirmar" id="btn-finalizar">
+        <i class="fa-solid fa-check"></i> Criar conta
+      </button>
+      <button class="btn-voltar" onclick="irEtapa(2)">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </section>
+
+    <!-- ── Sucesso ── -->
+    <section class="step" id="step-sucesso" aria-label="Cadastro concluído" aria-live="assertive">
+      <div class="success-wrap">
+        <div class="success-coin" id="sucesso-icon" aria-hidden="true">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h2 class="success-title">Conta criada!</h2>
+        <p class="success-text" id="sucesso-msg">Bem-vindo(a) ao Moneta Go!</p>
+        <button class="btn-confirmar" onclick="window.location.href='src/Autenticação/rf01-login.html'" style="max-width:300px; margin:0 auto;">
+          <i class="fa-solid fa-right-to-bracket"></i> Ir para o Login
+        </button>
+      </div>
+    </section>
+
+  </div><!-- /.form-card -->
+</main>
+
+<script src="src/Autenticação/rf01-cadastro.js"></script>
+<script src="src/componentes/rf08-feedback.js"></script>
+</body>
+</html>
