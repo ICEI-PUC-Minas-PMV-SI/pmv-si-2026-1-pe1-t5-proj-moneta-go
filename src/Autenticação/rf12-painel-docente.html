@@ -14,7 +14,7 @@
     <div class="app-container">
         <header class="main-header">
             <a href="../rf-painel.html" class="logo-link" aria-label="Moneta Go – página inicial">
-                <img src="https://moneta-go.vercel.app/Logo.jpeg" alt="Logotipo Moneta Go">
+                <img src="assets/logo_moneta.png" alt="Logotipo Moneta Go">
                 <span class="brand-text">
                     <span class="moneta">MONETA</span><span class="go">GO</span>
                 </span>
@@ -39,28 +39,28 @@
             </div>
 
             <div class="summary-cards-container">
-                <div class="summary-card">
+                <div class="summary-card" id="card-total-alunos">
                     <span class="card-icon">👥</span>
                     <div class="card-data">
                         <h3>56</h3>
                         <p>Total de Alunos Ativos</p>
                     </div>
                 </div>
-                <div class="summary-card">
+                <div class="summary-card" id="card-engajamento">
                     <span class="card-icon">🔥</span>
                     <div class="card-data">
                         <h3>79.8%</h3>
                         <p>Engajamento Médio</p>
                     </div>
                 </div>
-                <div class="summary-card">
+                <div class="summary-card" id="card-desafios">
                     <span class="card-icon">🏆</span>
                     <div class="card-data">
                         <h3>32</h3>
                         <p>Desafios Concluídos</p>
                     </div>
                 </div>
-                <div class="summary-card">
+                <div class="summary-card" id="card-ajuda">
                     <span class="card-icon">🚨</span>
                     <div class="card-data">
                         <h3>5 Alunos</h3>
@@ -91,7 +91,11 @@
                                     <td><div class="mini-progress-bar bar-green" style="width: 80%;">80%</div></td>
                                     <td><div class="mini-progress-bar bar-blue" style="width: 92%;">92%</div></td>
                                     <td><span class="score-txt">8.5 / 10</span></td>
-                                    <td class="action-cells">👁️ ✏️ 🔍</td>
+                                    <td class="action-cells">
+                                        <span class="btn-ver" title="Ver status da trilha">👁️</span>
+                                        <span class="btn-editar" title="Aplicar bônus de XP">✏️</span>
+                                        <span class="btn-buscar" title="Auditar erros de risco">🔍</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><strong>Turma B (Crianças)</strong></td>
@@ -99,7 +103,11 @@
                                     <td><div class="mini-progress-bar bar-green" style="width: 85%;">85%</div></td>
                                     <td><div class="mini-progress-bar bar-blue" style="width: 74%;">74%</div></td>
                                     <td><span class="score-txt">9.0 / 10</span></td>
-                                    <td class="action-cells">👁️ ✏️ 🔍</td>
+                                    <td class="action-cells">
+                                        <span class="btn-ver" title="Ver status da trilha">👁️</span>
+                                        <span class="btn-editar" title="Aplicar bônus de XP">✏️</span>
+                                        <span class="btn-buscar" title="Auditar erros de risco">🔍</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><strong>Turma C (Jovens Adultos)</strong></td>
@@ -107,7 +115,11 @@
                                     <td><div class="mini-progress-bar bar-green" style="width: 72%;">72%</div></td>
                                     <td><div class="mini-progress-bar bar-blue" style="width: 65%;">65%</div></td>
                                     <td><span class="score-txt">7.8 / 10</span></td>
-                                    <td class="action-cells">👁️ ✏️ 🔍</td>
+                                    <td class="action-cells">
+                                        <span class="btn-ver" title="Ver status da trilha">👁️</span>
+                                        <span class="btn-editar" title="Aplicar bônus de XP">✏️</span>
+                                        <span class="btn-buscar" title="Auditar erros de risco">🔍</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><strong>Turma D (Treinamento)</strong></td>
@@ -115,7 +127,11 @@
                                     <td><div class="mini-progress-bar bar-green" style="width: 64%;">64%</div></td>
                                     <td><div class="mini-progress-bar bar-blue" style="width: 40%;">40%</div></td>
                                     <td><span class="score-txt">6.5 / 10</span></td>
-                                    <td class="action-cells">👁️ ✏️ 🔍</td>
+                                    <td class="action-cells">
+                                        <span class="btn-ver" title="Ver status da trilha">👁️</span>
+                                        <span class="btn-editar" title="Aplicar bônus de XP">✏️</span>
+                                        <span class="btn-buscar" title="Auditar erros de risco">🔍</span>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -239,5 +255,19 @@
         </footer>
     </div>
 
+    <div id="moneta-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header-box">
+                <h3 id="moneta-modal-title">Notificação do Ecossistema</h3>
+                <button id="moneta-modal-close">&times;</button>
+            </div>
+            <div class="modal-body-box" id="moneta-modal-body"></div>
+            <div class="modal-footer-box">
+                <button class="modal-btn-confirm" id="moneta-modal-btn">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="rf12-painel-docente.js"></script>
 </body>
 </html>
