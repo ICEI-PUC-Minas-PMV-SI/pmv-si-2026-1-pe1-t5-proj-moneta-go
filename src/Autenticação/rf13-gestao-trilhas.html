@@ -13,8 +13,8 @@
 
     <div class="app-container">
         <header class="main-header">
-            <a href="../rf-painel.html" class="logo-link">
-                <img src="https://moneta-go.vercel.app/Logo.jpeg" alt="Logotipo Moneta Go">
+            <a href="../rf-painel.html" class="logo-link" aria-label="Moneta Go – página inicial">
+                <img src="assets/logo_moneta.png" alt="Logotipo Moneta Go">
                 <span class="brand-text">
                     <span class="moneta">MONETA</span><span class="go">GO</span>
                 </span>
@@ -32,43 +32,43 @@
         </header>
 
         <div class="panel-title-strip">
-            <h2>🏟️ CENTRAL DA ARENA DE SIMULAÇÃO & MONITOR PEDAGÓGICO <small>Controle de Ativos, Cenários de Impacto e Métricas de Alunos</small></h2>
+            <h2 id="titulo-central-dinamico">🏟️ CENTRAL DA ARENA DE SIMULAÇÃO & MONITOR PEDAGÓGICO <small>Controle de Ativos, Cenários de Impacto e Métricas de Alunos</small></h2>
         </div>
 
         <main class="main-content">
             
             <div class="top-stats-row">
-                <div class="stat-card">
+                <div class="stat-card" id="card-turmas-ativas" style="cursor: pointer;">
                     <div class="card-inner">
                         <span class="stat-icon icon-blue">👥</span>
-                        <div class="stat-data"><span class="stat-label">Nº Turmas Ativas</span><span class="stat-number">6 Turmas</span></div>
+                        <div class="stat-data"><span class="stat-label">Nº Turmas Ativas</span><span class="stat-number">4 Turmas</span></div>
                     </div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card" id="card-total-alunos" style="cursor: pointer;">
                     <div class="card-inner">
                         <span class="stat-icon icon-teal">👨‍🎓</span>
-                        <div class="stat-data"><span class="stat-label">Total de Alunos</span><span class="stat-number">42 Ativos</span></div>
+                        <div class="stat-data"><span class="stat-label">Total de Alunos</span><span class="stat-number">12 Ativos</span></div>
                     </div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card" id="card-capital-movimentado" style="cursor: pointer;">
                     <div class="card-inner">
                         <span class="stat-icon icon-orange">💰</span>
                         <div class="stat-data"><span class="stat-label">Capital Movimentado</span><span class="stat-number">R$ 245.500,00</span></div>
                     </div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card" id="card-ativo-negociado" style="cursor: pointer;">
                     <div class="card-inner">
                         <span class="stat-icon icon-gold">⚡</span>
                         <div class="stat-data"><span class="stat-label">Ativo Mais Negociado</span><span class="stat-number">CryptoMoneta</span></div>
                     </div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card" id="card-frequencia" style="cursor: pointer;">
                     <div class="card-inner">
                         <span class="stat-icon icon-green">⏱️</span>
-                        <div class="stat-data"><span class="stat-label">Frequência de Logons</span><span class="stat-number">4.8 dias / sem</span></div>
+                        <div class="stat-data"><span class="stat-label">Frequência de Acessos</span><span class="stat-number">4.8 dias / sem</span></div>
                     </div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card" id="card-conclusao" style="cursor: pointer;">
                     <div class="card-inner">
                         <span class="stat-icon icon-cyan">🎯</span>
                         <div class="stat-data"><span class="stat-label">Conclusão de Missões</span><span class="stat-number">85% Global</span></div>
@@ -77,60 +77,161 @@
             </div>
 
             <div class="workspace-grid grid-superior">
-                
                 <section class="workspace-col col-65">
                     <div class="col-header">
-                        <h3 class="section-title">🛡️ MATRIZ DE ATIVOS DISPONÍVEIS NA ARENA (CONTROLE DE PARÂMETROS)</h3>
+                        <h3 class="section-title">🛡️ MATRIZ DE ATIVOS DISPONÍVEIS NA ARENA (CONTROLE PEDAGÓGICO DA RF-06)</h3>
                     </div>
                     <div class="table-container">
                         <table class="panel-table">
                             <thead>
                                 <tr>
-                                    <th>[Classe do Ativo]</th>
-                                    <th>[Garantia/Risco]</th>
-                                    <th>[Liquidez]</th>
-                                    <th>[Ganho Estimado]</th>
-                                    <th>[Perda Limite]</th>
-                                    <th>[Alocação Máx]</th>
-                                    <th style="text-align: center;">[Status]</th>
+                                    <th>Classe do Ativo</th>
+                                    <th>Garantia/Risco</th>
+                                    <th>Liquidez</th>
+                                    <th>Ganho Estimado</th>
+                                    <th>Perda Limite</th>
+                                    <th>Alocação Máx</th>
+                                    <th style="text-align: center; width: 140px;">Gerenciar Acesso</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="row-safe">
-                                    <td><strong>Tesouro Selic (Renda Fixa)</strong></td>
+                            <tbody id="botoes-ativos-corpo">
+                                <!-- Grupo Tesouro Direto Público -->
+                                <tr class="row-safe ativo-selecionavel" id="ativo-selic" style="cursor: pointer;">
+                                    <td><strong>Tesouro Selic (Público)</strong></td>
                                     <td>Governo Federal</td>
                                     <td>Imediata (D+0)</td>
                                     <td class="txt-profit">+0,95% m|m</td>
                                     <td class="txt-profit">0,00%</td>
                                     <td>100% da Carteira</td>
-                                    <td class="center-txt"><span class="badge-status status-safe">LIBERADO</span></td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-selic">
+                                            <option value="LIBERADO" selected>🟢 Liberado</option>
+                                            <option value="RESTRITO">🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
                                 </tr>
-                                <tr class="row-safe">
-                                    <td><strong>CDB Digital Premium</strong></td>
-                                    <td>Fundo Garantidor (FGC)</td>
+                                <tr class="row-safe ativo-selecionavel" id="ativo-ipca" style="cursor: pointer;">
+                                    <td><strong>Tesouro IPCA+ (Inflação)</strong></td>
+                                    <td>Governo Federal</td>
                                     <td>No Vencimento</td>
+                                    <td class="txt-profit">+0,50% + IPCA</td>
+                                    <td class="txt-profit">0,00%</td>
+                                    <td>100% da Carteira</td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-ipca">
+                                            <option value="LIBERADO" selected>🟢 Liberado</option>
+                                            <option value="RESTRITO">🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="row-safe ativo-selecionavel" id="ativo-prefixado" style="cursor: pointer;">
+                                    <td><strong>Tesouro Prefixado (Fixo)</strong></td>
+                                    <td>Governo Federal</td>
+                                    <td>No Vencimento</td>
+                                    <td class="txt-profit">+11,50% a.a.</td>
+                                    <td class="txt-loss">Oscilação MTM</td>
+                                    <td>80% da Carteira</td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-prefixado">
+                                            <option value="LIBERADO" selected>🟢 Liberado</option>
+                                            <option value="RESTRITO">🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <!-- Grupo Crédito Privado -->
+                                <tr class="row-safe ativo-selecionavel" id="ativo-cdb" style="cursor: pointer;">
+                                    <td><strong>CDB Premium (Bancário)</strong></td>
+                                    <td>Fundo Garantidor (FGC)</td>
+                                    <td>Diária (D+1)</td>
                                     <td class="txt-profit">+1,12% m|m</td>
                                     <td class="txt-profit">0,00%</td>
                                     <td>80% da Carteira</td>
-                                    <td class="center-txt"><span class="badge-status status-safe">LIBERADO</span></td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-cdb">
+                                            <option value="LIBERADO" selected>🟢 Liberado</option>
+                                            <option value="RESTRITO">🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
                                 </tr>
-                                <tr class="row-risk">
-                                    <td><strong>Ações de Tecnologia (Variável)</strong></td>
+                                <tr class="row-safe ativo-selecionavel" id="ativo-lci" style="cursor: pointer;">
+                                    <td><strong>LCI / LCA (Isento)</strong></td>
+                                    <td>Fundo Garantidor (FGC)</td>
+                                    <td>90 dias (Mínimo)</td>
+                                    <td class="txt-profit">+0,88% m|m</td>
+                                    <td class="txt-profit">0,00%</td>
+                                    <td>75% da Carteira</td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-lci">
+                                            <option value="LIBERADO" selected>🟢 Liberado</option>
+                                            <option value="RESTRITO">🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="row-safe ativo-selecionavel" id="ativo-debentures" style="cursor: pointer;">
+                                    <td><strong>Debêntures Incentivadas</strong></td>
+                                    <td>Ativos de Infraestrutura</td>
+                                    <td>Longo Prazo</td>
+                                    <td class="txt-profit">+1,35% m|m</td>
+                                    <td class="txt-loss">-5,00%</td>
+                                    <td>50% da Carteira</td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-debentures">
+                                            <option value="LIBERADO" selected>🟢 Liberado</option>
+                                            <option value="RESTRITO">🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <!-- Grupo Renda Variável e Volatilidade -->
+                                <tr class="row-risk ativo-selecionavel" id="ativo-acoes" style="cursor: pointer;">
+                                    <td><strong>Ações Bolsa (Empresas)</strong></td>
                                     <td>Oscilação de Mercado</td>
                                     <td>Padrão (D+2)</td>
                                     <td class="txt-profit">+15,00% máx</td>
                                     <td class="txt-loss">-25,00%</td>
                                     <td>40% da Carteira</td>
-                                    <td class="center-txt"><span class="badge-status status-safe">LIBERADO</span></td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-acoes">
+                                            <option value="LIBERADO" selected>🟢 Liberado</option>
+                                            <option value="RESTRITO">🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
                                 </tr>
-                                <tr class="row-risk">
+                                <tr class="row-risk ativo-selecionavel" id="ativo-fiis" style="cursor: pointer;">
+                                    <td><strong>Fundos Imobiliários (FIIs)</strong></td>
+                                    <td>Volatilidade Comercial</td>
+                                    <td>Imediata (D+1)</td>
+                                    <td class="txt-profit">+1,05% + Dividendos</td>
+                                    <td class="txt-loss">-12,00%</td>
+                                    <td>60% da Carteira</td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-fiis">
+                                            <option value="LIBERADO" selected>🟢 Liberado</option>
+                                            <option value="RESTRITO">🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="row-risk ativo-selecionavel" id="ativo-crypto" style="cursor: pointer;">
                                     <td><strong>CryptoMoneta (Volatilidade)</strong></td>
                                     <td>Risco Extremo</td>
                                     <td>Imediata (24/7)</td>
                                     <td class="txt-profit">+40,00% máx</td>
                                     <td class="txt-loss">-60,00%</td>
                                     <td>15% da Carteira</td>
-                                    <td class="center-txt"><span class="badge-status status-warn">RESTRITO</span></td>
+                                    <td class="center-txt">
+                                        <select class="select-status-ativo" data-ativo="ativo-crypto">
+                                            <option value="LIBERADO">🟢 Liberado</option>
+                                            <option value="RESTRITO" selected>🟡 Restrito</option>
+                                            <option value="BLOQUEADO">🔴 Bloqueado</option>
+                                        </select>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -139,9 +240,9 @@
 
                 <section class="workspace-col col-34">
                     <div class="col-header">
-                        <h3 class="section-title">👤 DESEMPENHO INDIVIDUAL (VISÃO TURMA A)</h3>
+                        <h3 class="section-title" id="titulo-alunos-turma">👤 DESEMPENHO INDIVIDUAL (VISÃO GERAL)</h3>
                     </div>
-                    <div class="table-container">
+                    <div class="table-container" id="container-alunos-scroll">
                         <table class="panel-table">
                             <thead>
                                 <tr>
@@ -151,11 +252,8 @@
                                     <th>XP Real</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr><td><strong>Ana Paula</strong></td><td><span class="txt-profit">95%</span></td><td class="txt-muted">Hoje às 10:24</td><td>1100 XP</td></tr>
-                                <tr><td><strong>Andre Luiz</strong></td><td><span class="txt-profit">92%</span></td><td class="txt-muted">Hoje às 08:15</td><td>800 XP</td></tr>
-                                <tr><td><strong>Matheus Silva</strong></td><td><span class="txt-profit">88%</span></td><td class="txt-muted">Ontem</td><td>1100 XP</td></tr>
-                                <tr><td><strong>Beatriz Ramos</strong></td><td><span class="txt-profit">74%</span></td><td class="txt-muted">Ontem</td><td>650 XP</td></tr>
+                            <tbody id="tabela-alunos-corpo-rf13">
+                                <!-- Preenchido dinamicamente via JavaScript -->
                             </tbody>
                         </table>
                     </div>
@@ -163,38 +261,53 @@
             </div>
 
             <div class="workspace-grid grid-inferior">
-                
                 <section class="workspace-col col-65">
                     <div class="col-header">
-                        <h3 class="section-title">📊 GRÁFICOS DA ARENA E EVOLUÇÃO DE RENDIMENTOS</h3>
+                        <h3 class="section-title">📊 MONITOR DE RISCOS E VOLATILIDADE DA ARENA (DADOS VIVOS)</h3>
                     </div>
                     <div class="charts-inner-layout">
                         <div class="charts-top-row">
-                            <div class="chart-block">
+                            <div class="chart-block text-chart-container">
                                 <h4>Tendência de Engajamento Global vs Tempo</h4>
-                                <div class="draw-chart line-chart-svg"></div>
+                                <div class="live-growth-chart-box">
+                                    <div class="bar-vertical-growth hide-mobile"><div class="fill-growth-blue" style="height: 40%"><span>Sem 1</span></div></div>
+                                    <div class="bar-vertical-growth hide-mobile"><div class="fill-growth-blue" style="height: 65%"><span>Sem 2</span></div></div>
+                                    <div class="bar-vertical-growth"><div class="fill-growth-blue" style="height: 85%"><span>Sem 3</span></div></div>
+                                    <div class="bar-vertical-growth"><div class="fill-growth-cyan" id="live-growth-current" style="height: 92%"><span>Atual</span></div></div>
+                                </div>
                             </div>
                             <div class="chart-block">
-                                <h4>Distribuição de Ativos por Carteira</h4>
-                                <div class="draw-chart pie-chart-svg"></div>
+                                <h4>Distribuição de Perfil das Carteiras</h4>
+                                <div class="live-pie-simulation-box">
+                                    <div class="pie-segment-indicator color-blue-ui"><span>70% Conservador</span></div>
+                                    <div class="pie-segment-indicator color-orange-ui"><span>20% Moderado</span></div>
+                                    <div class="pie-segment-indicator color-red-ui"><span>10% Agressivo</span></div>
+                                </div>
                             </div>
                             <div class="chart-block">
                                 <h4>Nível de Alocação em Risco (Média)</h4>
                                 <div class="simulated-bar-rows">
-                                    <div class="bar-row-item"><span>Crypto</span><div class="bar-bg"><div class="bar-fill-orange" style="width: 78%"></div></div></div>
-                                    <div class="bar-row-item"><span>Ações</span><div class="bar-bg"><div class="bar-fill-orange" style="width: 45%"></div></div></div>
-                                    <div class="bar-row-item"><span>Muted</span><div class="bar-bg"><div class="bar-fill-orange" style="width: 12%"></div></div></div>
+                                    <div class="bar-row-item"><span>Crypto</span><div class="bar-bg"><div class="bar-fill-orange" id="bar-crypto" style="width: 78%"></div></div></div>
+                                    <div class="bar-row-item"><span>Ações</span><div class="bar-bg"><div class="bar-fill-orange" id="bar-acoes" style="width: 45%"></div></div></div>
+                                    <div class="bar-row-item"><span>Fixa</span><div class="bar-bg"><div class="bar-fill-orange" id="bar-fixa" style="width: 12%"></div></div></div>
                                 </div>
                             </div>
                         </div>
                         <div class="charts-bottom-row">
                             <div class="chart-block b-long">
-                                <h4>Curva de Aprendizado e Acúmulo de Patrimônio Fictício</h4>
-                                <div class="draw-chart long-line-svg"></div>
+                                <h4>Histórico de Estabilidade do Ativo Selecionado</h4>
+                                <div class="live-timeline-horizontal">
+                                    <div class="timeline-node active-node" id="node-t1"><span>Janeiro<br><b>Estável</b></span></div>
+                                    <div class="timeline-node active-node" id="node-t2"><span>Março<br><b>Crescimento</b></span></div>
+                                    <div class="timeline-node" id="node-t3"><span>Maio<br><b>Volátil</b></span></div>
+                                </div>
                             </div>
                             <div class="chart-block b-short">
-                                <h4>Média de XP Alocado / Semana</h4>
-                                <div class="draw-chart bars-vertical-svg"></div>
+                                <h4>Média de XP Gerado por Turma</h4>
+                                <div class="badge-display-grid">
+                                    <div class="badge-display-item"><span>Turma A</span><strong>+950 XP</strong></div>
+                                    <div class="badge-display-item"><span>Turma B</span><strong>+420 XP</strong></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -209,24 +322,24 @@
                         <div class="config-section-card">
                             <h4>Visibilidade de Módulos (Visão Aluno)</h4>
                             <div class="toggles-inline-group">
-                                <div class="toggle-item-box"><span>Orçamento</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
-                                <div class="toggle-item-box"><span>Poupança</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
-                                <div class="toggle-item-box bg-highlight-green"><span>Arena Real</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                                <div class="toggle-item-box"><span>Orçamento</span><label class="switch"><input type="checkbox" id="toggle-orcamento" checked><span class="slider"></span></label></div>
+                                <div class="toggle-item-box"><span>Poupança</span><label class="switch"><input type="checkbox" id="toggle-poupanca" checked><span class="slider"></span></label></div>
+                                <div class="toggle-item-box bg-highlight-green"><span>Arena Real</span><label class="switch"><input type="checkbox" id="toggle-arena" checked><span class="slider"></span></label></div>
                             </div>
                         </div>
 
                         <div class="config-section-card layout-scenarios-box">
-                            <h4>Simulador de Projeções (Aporte Base de Aluno: R$ 1.000,00)</h4>
+                            <h4 id="titulo-simulador-projeções">Simulador de Projeções (Aporte Base de Aluno: R$ 1.000,00)</h4>
                             <div class="scenarios-wrapper">
-                                <div class="scen-item safe-bg">
+                                <div class="scen-item safe-bg" style="cursor: pointer; border: 2px solid transparent;" id="btn-cenario-conservador">
                                     <strong>Cenário Conservador:</strong>
-                                    <p>Rendimento: <span class="txt-profit">+ R$ 9,50</span></p>
+                                    <p>Rendimento: <span class="txt-profit" id="sim-ganho-conservador">+ R$ 9,50</span></p>
                                     <p>Impostos/Taxas: <span class="txt-profit">R$ 0,00</span></p>
                                 </div>
-                                <div class="scen-item risk-bg">
+                                <div class="scen-item risk-bg" style="cursor: pointer; border: 2px solid transparent;" id="btn-cenario-agressivo">
                                     <strong>Cenário Agressivo:</strong>
-                                    <p>Mês de Alta: <span class="txt-profit">+ R$ 150,00</span></p>
-                                    <p>Mês de Baixa: <span class="txt-loss">- R$ 250,00</span></p>
+                                    <p>Mês de Alta: <span class="txt-profit" id="sim-ganho-agressivo">+ R$ 150,00</span></p>
+                                    <p>Mês de Baixa: <span class="txt-loss" id="sim-perda-agressivo">- R$ 250,00</span></p>
                                 </div>
                             </div>
                         </div>
@@ -234,10 +347,10 @@
                         <div class="config-section-card">
                             <h4>Disparar Desafios Customizados</h4>
                             <div class="challenge-buttons-grid">
-                                <button class="btn-ch btn-ch-blue">Desafio Troco</button>
-                                <button class="btn-ch btn-ch-orange">Desafio Energia</button>
-                                <button class="btn-ch btn-ch-green">Investimento Inicial</button>
-                                <button class="btn-ch btn-ch-more">...</button>
+                                <button class="btn-ch btn-ch-blue" id="ch-troco">Desafio Troco</button>
+                                <button class="btn-ch btn-ch-orange" id="ch-energia">Desafio Energia</button>
+                                <button class="btn-ch btn-ch-green" id="ch-inicial">Investimento Inicial</button>
+                                <button class="btn-ch btn-ch-more" id="ch-custom">...</button>
                             </div>
                         </div>
                     </div>
@@ -246,9 +359,24 @@
         </main>
 
         <footer class="bottom-action-bar">
-            <button class="main-btn">AVANÇAR PARA RELATÓRIO DE RISCOS DA ARENA</button>
+            <button class="main-btn" id="btn-avancar-relatorio">AVANÇAR PARA RELATÓRIO DE RISCOS DA ARENA</button>
         </footer>
     </div>
 
+    <!-- Modal Customizado -->
+    <div id="moneta-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header-box">
+                <h3 id="moneta-modal-title">Configuração do Ecossistema</h3>
+                <button id="moneta-modal-close">&times;</button>
+            </div>
+            <div class="modal-body-box" id="moneta-modal-body"></div>
+            <div class="modal-footer-box">
+                <button class="modal-btn-confirm" id="moneta-modal-btn">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="rf13-gestao-trilhas.js"></script>
 </body>
 </html>
