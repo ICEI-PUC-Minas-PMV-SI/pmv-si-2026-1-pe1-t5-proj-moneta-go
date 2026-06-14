@@ -1,24 +1,17 @@
-/* ==========================================================================
-   PALETA DE CORES OFICIAL MONETA GO (ATUALIZADA CONFORME MANUAL DA MARCA)
-   ========================================================================== */
 :root {
-    --header-bg-blue: #0d1b2a;     /* Azul Escuro Cabeçalho */
-    --logo-cyan: #1ABC9C;          /* Ciano Oficial do Manual da Marca */
-    --logo-green: #2ECC71;         /* Verde Vibrante Oficial do Manual da Marca */
-    
-    --primary-blue: #1A237E;       /* Azul padrão de seções */
-    --primary-green: #00C853;      /* Verde de progresso positivo */
-    --danger-red: #FF3D00;         /* Vermelho para atenção/risco */
+    --header-bg-blue: #0d1b2a;
+    --logo-cyan: #1ABC9C;
+    --logo-green: #2ECC71;
+    --primary-blue: #1A237E;
+    --primary-green: #00C853;
+    --danger-red: #FF3D00;
     --white: #FFFFFF;
     --border-color: #CFD8DC;
-    --bg-page: #F4F7F9;            /* Fundo fluido leve */
+    --bg-page: #F4F7F9;
     --text-dark: #263238;
     --text-gray: #78909C;
 }
 
-/* ==========================================================================
-   RESET RADICAL - BORDA A BORDA REAL
-   ========================================================================== */
 html, body {
     margin: 0 !important;
     padding: 0 !important;
@@ -43,9 +36,6 @@ html, body {
     overflow: hidden;
 }
 
-/* ==========================================================================
-   HEADER 100% INFINITO (FULL WIDTH)
-   ========================================================================== */
 .main-header {
     flex: 0 0 auto; 
     display: flex;
@@ -76,7 +66,7 @@ html, body {
     display: flex;
     align-items: center;
 }
-.brand-text .moneta { color: var(--logo-cyan); }
+.brand-text .moneta { color: #26c6da; }
 .brand-text .go { color: var(--logo-green); }
 
 .player-stats { flex: 1; max-width: 300px; margin: 0 30px; color: white; }
@@ -98,9 +88,6 @@ html, body {
     background: rgba(26, 188, 156, 0.15);
 }
 
-/* ==========================================================================
-   CONTEÚDO DA INTERFACE E GRIDS COM SUPORTE A ROLAGEM (SCROLL)
-   ========================================================================== */
 .main-content {
     flex: 1 1 auto;
     display: flex;
@@ -121,7 +108,6 @@ html, body {
 .page-title-box h1 { font-size: 14pt; color: var(--primary-blue); margin: 0; }
 .page-title-box h1 small { font-size: 10pt; color: var(--text-gray); font-weight: normal; margin-left: 8px; }
 
-/* CARTÕES PEDAGÓGICOS SUPERIORES */
 .summary-cards-container {
     flex: 0 0 auto;
     display: flex;
@@ -153,7 +139,6 @@ html, body {
 .card-data h3 { font-size: 13pt; color: var(--primary-blue); margin: 0; font-weight: 700; }
 .card-data p { font-size: 8.5pt; color: var(--text-gray); margin: 0; }
 
-/* ESTRUTURA DE GRIDS DO WORKSPACE */
 .workspace-grid { display: flex; gap: 15px; min-height: 0; }
 .grid-superior { flex: 1.3; }
 .grid-inferior { flex: 1; }
@@ -183,7 +168,6 @@ html, body {
     letter-spacing: 0.5px;
 }
 
-/* ATIVAÇÃO DE SCROLL BAR INTERNA PARA NÃO QUEBRAR O DESIGN */
 .table-container {
     flex: 1;
     overflow-y: auto;
@@ -192,7 +176,6 @@ html, body {
 .table-container::-webkit-scrollbar { width: 5px; }
 .table-container::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
 
-/* FORMATAÇÃO DE TABELAS */
 .panel-table { width: 100%; border-collapse: collapse; }
 .panel-table th {
     text-align: left;
@@ -220,12 +203,25 @@ html, body {
 }
 .bar-green { background-color: var(--primary-green); }
 .bar-blue { background-color: #2196F3; }
-.action-cells { text-align: center; letter-spacing: 5px; cursor: pointer; }
+
+.action-cells { 
+    text-align: center !important; 
+}
+.action-cells span {
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.1s ease;
+    margin: 0 4px;
+    letter-spacing: normal;
+}
+.action-cells span:hover {
+    transform: scale(1.35);
+}
+
 .profit-txt { color: var(--primary-green); font-weight: bold; }
 .loss-txt { color: var(--danger-red); font-weight: bold; }
 .txt-gray { color: var(--text-gray); }
 
-/* SEÇÃO DE MÉTRICAS GRÁFICAS */
 .metrics-visual-wrapper { display: flex; gap: 15px; flex: 1; min-height: 0; }
 .metric-card {
     flex: 1;
@@ -260,14 +256,13 @@ html, body {
 .bar-chart-group { display: flex; flex-direction: column; gap: 8px; justify-content: center; height: 100%; }
 .chart-bar-row { display: flex; align-items: center; gap: 8px; }
 .bar-name { font-size: 7.5pt; width: 45px; color: var(--text-dark); }
-.chart-bar-fill { height: 10px; border-radius: 3px; }
+.chart-bar-fill { height: 10px; border-radius: 3px; transition: width 0.4s ease-in-out; }
 .bar-percentage { font-size: 7.5pt; font-weight: bold; color: var(--text-gray); width: 25px; text-align: right; }
 
 .fill-red { background: var(--danger-red); }
 .fill-amber { background: #FFA000; }
 .fill-green { background: var(--primary-green); }
 
-/* SEÇÃO DE CONFIGURAÇÃO DE TRILHAS */
 .custom-actions-wrapper { display: flex; flex-direction: column; gap: 12px; flex: 1; justify-content: center; }
 .action-card-btn {
     padding: 12px 14px;
@@ -289,7 +284,6 @@ html, body {
 .blue-layout { background: #E3F2FD; color: #0D47A1; border-color: #BBDEFB; }
 .dark-layout { background: #ECEFF1; color: #263238; border-color: #CFD8DC; }
 
-/* FOOTER DA PÁGINA */
 .bottom-action-bar {
     flex: 0 0 auto;
     padding: 12px 30px 15px 30px;
@@ -306,4 +300,83 @@ html, body {
     font-weight: bold;
     font-size: 9pt;
     cursor: pointer;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(13, 27, 42, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-box {
+    background: var(--white);
+    width: 480px;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transform: translateY(-20px);
+    transition: transform 0.2s ease;
+}
+.modal-overlay.active .modal-box {
+    transform: translateY(0);
+}
+.modal-header-box {
+    background: var(--header-bg-blue);
+    color: var(--white);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header-box h3 {
+    font-size: 11pt;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+#moneta-modal-close {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 18pt;
+    cursor: pointer;
+    line-height: 1;
+}
+.modal-body-box {
+    padding: 20px;
+    font-size: 9.5pt;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+.modal-footer-box {
+    padding: 10px 20px 15px 20px;
+    text-align: right;
+}
+.modal-btn-confirm {
+    background: var(--primary-blue);
+    color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 8.5pt;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+.modal-btn-confirm:hover {
+    background: #0d1b2a;
 }
