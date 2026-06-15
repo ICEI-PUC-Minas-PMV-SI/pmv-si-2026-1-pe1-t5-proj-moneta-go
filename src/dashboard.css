@@ -1,0 +1,242 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --theme-bg: #f8fafc;
+      --theme-surface: #ffffff;
+      --theme-primary: #2980b9;
+      --theme-accent: #2ecc71;
+      --theme-text: #2c3e50;
+      --theme-muted: #7f8c8d;
+      --theme-border: #e0e0e0;
+      --theme-h1: 28px;
+      --theme-body: 16px;
+      --theme-radius: 12px;
+      --theme-font: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+
+body {
+  background: var(--theme-bg);
+  color: var(--theme-text);
+      font-family: var(--theme-font);
+      font-size: var(--theme-body);
+      min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+.is-hidden { display: none !important; }
+
+/* ── Header ── */
+.app-header {
+      background: var(--theme-primary);
+      color: white;
+      height: 60px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .logo-link img { height: 34px; border-radius: 4px; }
+
+    .brand-name { font-weight: 900; font-size: 20px; letter-spacing: -0.5px; }
+    .brand-name .go { color: var(--theme-accent); }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .user-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .btn-sair {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+      padding: 7px 16px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+    .btn-sair:hover { background: rgba(255,255,255,0.2); }
+
+    /* ── Main ── */
+    .main { max-width: 1080px; margin: 0 auto; padding: 36px 24px 60px; }
+
+    /* ── Welcome ── */
+    .welcome { margin-bottom: 28px; }
+
+    .welcome-greeting {
+      font-size: var(--theme-h1);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .welcome-sub {
+      font-size: calc(var(--theme-body) * 0.95);
+      color: var(--theme-muted);
+      margin-bottom: 14px;
+    }
+
+    .perfil-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--theme-primary);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ── Tip Banner ── */
+    .tip-banner {
+      background: linear-gradient(135deg, var(--theme-primary), var(--theme-accent));
+      color: white;
+      padding: 20px 24px;
+      border-radius: var(--theme-radius);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .tip-emoji { font-size: 36px; flex-shrink: 0; line-height: 1; }
+    .tip-content h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+    .tip-content p { font-size: 14px; opacity: 0.92; line-height: 1.5; }
+
+    /* ── Stats ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background: var(--theme-surface);
+      border: 1px solid var(--theme-border);
+      border-radius: var(--theme-radius);
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .stat-emoji { font-size: 26px; margin-bottom: 8px; }
+    .stat-value { font-size: 22px; font-weight: 800; color: var(--theme-primary); }
+    .stat-label { font-size: 12px; color: var(--theme-muted); margin-top: 4px; }
+
+    /* ── Feature Cards ── */
+    .section-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--theme-text);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .feature-card {
+      background: var(--theme-surface);
+      border: 1px solid var(--theme-border);
+      border-radius: var(--theme-radius);
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.09);
+    }
+    .feature-card:focus-visible {
+      outline: 3px solid var(--theme-primary);
+      outline-offset: 2px;
+    }
+
+    .card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 19px;
+    }
+
+    .card-title { font-size: var(--theme-body); font-weight: 700; }
+    .card-desc { font-size: 13.5px; color: var(--theme-muted); line-height: 1.5; flex: 1; }
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--theme-primary);
+    }
+
+    /* ── No session ── */
+.no-session {
+  text-align: center;
+  padding: 80px 24px;
+}
+.no-session-icon { font-size: 52px; color: #ccc; }
+.no-session h2 { font-size: 24px; margin: 16px 0 10px; }
+    .no-session p { color: var(--theme-muted); margin-bottom: 24px; }
+    .btn-login {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--theme-primary);
+      color: white;
+      padding: 12px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .main { padding: 20px 14px 40px; }
+      .app-header { padding: 0 16px; }
+      .welcome-greeting { font-size: calc(var(--theme-h1) * 0.8); }
+      .tip-banner { flex-direction: column; gap: 10px; }
+      .user-pill span { display: none; }
+    }
