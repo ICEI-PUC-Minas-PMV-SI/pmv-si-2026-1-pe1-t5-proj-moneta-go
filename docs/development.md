@@ -52,3 +52,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
 | Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
 
+### RF-01 — Cadastro e Login
+
+#### Chave: `monetago_usuarios`
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| id | Número inteiro | Identificador único do usuário | 1718640000000 |
+| nome | Texto | Nome completo informado no cadastro. | Patricia Silva |
+| email | Texto | E-mail usado para login. | patricia@email.com |
+| senha | Texto | Senha codificada | MTIzNDU2 |
+| dataNascimento | Data em texto | Data de nascimento no formato `AAAA-MM-DD`. | 2000-01-01 |
+| perfil | Texto | Perfil do usuário: `crianca`, `adolescente`, `jovemAdulto`, `autonomo` ou `educador`. | jovemAdulto |
+| escola | Texto ou nulo | Escola/instituição, preenchida apenas para perfil educador. | Escola Estadual Central |
+| area | Texto ou nulo | Área de ensino, preenchida apenas para perfil educador. | medio |
+| criadoEm | Data/hora em texto | Data e hora do cadastro em formato ISO. | 2026-06-17T14:20:00.000Z |
