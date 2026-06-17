@@ -5,6 +5,11 @@ const formatarMoeda = valor => new Intl.NumberFormat('pt-BR', {
   currency: 'BRL',
 }).format(valor);
 
+const STORAGE_KEYS = {
+  estado: 'monetago_rf14_planejamento',
+  historico: 'monetago_rf14_historico',
+};
+
 const PRODUTOS = {
   basics: [
     { id: 'arroz', emoji: '🌾', nome: 'Arroz 5kg', preco: 22, tipo: 'necessidade', smart: true, dica: 'Base da dieta brasileira e rende várias refeições.' },
@@ -47,6 +52,53 @@ let trilhaAtual = 1;
 
 function todosOsProdutos() {
   return [...PRODUTOS.basics, ...PRODUTOS.proteins, ...PRODUTOS.veggies, ...PRODUTOS.extras];
+}
+
+function salvarEstado() {
+  try {
+    localStorage.setItem(STORAGE_KEYS.estado, JSON.stringify({
+      carrinhoIds: Object.keys(carrinho),
+      trilhaAtual,
+      atualizadoEm: new Date().toISOString(),
+    }));
+  } catch (error) {
+    console.warn('Não foi possível salvar o planejamento de compras.', error);
+  }
+}
+
+function carregarEstado() {
+  try {
+    const estadoSalvo = JSON.parse(localStorage.getItem(STORAGE_KEYS.estado) || 'null');
+    if (!estadoSalvo) return;
+
+    const produtosPorId = new Map(todosOsProdutos().map(produto => [produto.id, produto]));
+    carrinho = {};
+    (estadoSalvo.carrinhoIds || []).forEach(id => {
+      if (produtosPorId.has(id)) carrinho[id] = produtosPorId.get(id);
+    });
+
+    const etapaSalva = Number(estadoSalvo.trilhaAtual);
+    if (Number.isInteger(etapaSalva)) {
+      trilhaAtual = Math.min(Math.max(etapaSalva, 1), TRILHA.length + 1);
+    }
+  } catch (error) {
+    localStorage.removeItem(STORAGE_KEYS.estado);
+    console.warn('Estado salvo do planejamento estava inválido e foi limpo.', error);
+  }
+}
+
+function limparEstadoSalvo() {
+  localStorage.removeItem(STORAGE_KEYS.estado);
+}
+
+function salvarHistorico(resultado) {
+  try {
+    const historico = JSON.parse(localStorage.getItem(STORAGE_KEYS.historico) || '[]');
+    historico.unshift(resultado);
+    localStorage.setItem(STORAGE_KEYS.historico, JSON.stringify(historico.slice(0, 10)));
+  } catch (error) {
+    console.warn('Não foi possível salvar o histórico de compras.', error);
+  }
 }
 
 function criarProduto(produto) {
@@ -122,6 +174,7 @@ function toggleItem(id) {
 
   atualizarUI();
   avancarTrilha();
+  salvarEstado();
 }
 
 function avancarTrilha() {
@@ -264,10 +317,28 @@ function finalizarCompra() {
   renderTrilha();
 
   const total = calcTotal();
+  const itens = Object.values(carrinho);
   const necessidades = Object.values(carrinho).filter(produto => produto.tipo === 'necessidade').length;
   const extras = Object.values(carrinho).filter(produto => produto.tipo === 'desejo').length;
   const sobra = ORCAMENTO - total;
   const score = calcScore(necessidades, extras, total);
+
+  salvarEstado();
+  salvarHistorico({
+    id: Date.now(),
+    finalizadoEm: new Date().toISOString(),
+    orcamento: ORCAMENTO,
+    total,
+    sobra,
+    score,
+    itens: itens.map(produto => ({
+      id: produto.id,
+      nome: produto.nome,
+      preco: produto.preco,
+      tipo: produto.tipo,
+      smart: produto.smart,
+    })),
+  });
 
   const scoreEl = document.getElementById('modal-score');
   scoreEl.textContent = `${score}%`;
@@ -332,6 +403,7 @@ function recomecarModal() {
 function resetarCompra() {
   carrinho = {};
   trilhaAtual = 1;
+  limparEstadoSalvo();
   atualizarUI();
   renderTrilha();
 }
@@ -363,5 +435,6 @@ function configurarEventos() {
 
 configurarEventos();
 renderPrateleiras();
+carregarEstado();
 renderTrilha();
 atualizarUI();
