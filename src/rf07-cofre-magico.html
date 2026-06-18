@@ -25,45 +25,82 @@
     <main class="page">
 
         <section class="card">
-
             <h1>🏦 Cofre Mágico</h1>
 
             <p class="subtitle">
                 Guarde moedas e acompanhe sua meta financeira
             </p>
 
-            <div class="coin">
-                🏦
-            </div>
+            <div class="coin">🏦</div>
 
             <p class="goal">
                 Meta atual: Notebook Gamer
             </p>
 
-            <p class="value">
-                R$ 1.350 / R$ 3.000
+            <p class="value" id="valor-cofre">
+                R$ 1.350,00 / R$ 3.000,00
             </p>
 
             <div class="progress-bar">
-                <div class="progress"></div>
+                <div class="progress" id="barra-progresso"></div>
             </div>
 
-            <p class="coins">
+            <p class="coins" id="moedas-cofre">
                 🟡 1350 moedas acumuladas
             </p>
 
-            <p class="hint">
+            <p class="hint" id="mensagem-progresso">
                 Continue economizando para desbloquear recompensas!
             </p>
 
-            <button class="deposit-btn">
+            <button class="deposit-btn" id="btn-depositar" type="button">
                 Depositar moedas
             </button>
-
         </section>
 
     </main>
 
+    <section class="modal" id="modal-deposito" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="btn-fechar-modal" type="button" aria-label="Fechar">
+                ×
+            </button>
+
+            <h2>Adicionar moedas</h2>
+
+            <p>
+                Informe quanto deseja guardar no seu Cofre Mágico.
+            </p>
+
+            <form id="form-deposito">
+                <label for="valor-deposito">Valor do depósito</label>
+
+                <input
+                    type="number"
+                    id="valor-deposito"
+                    min="1"
+                    step="1"
+                    placeholder="Ex.: 50"
+                    required
+                >
+
+                <span class="erro-deposito" id="erro-deposito">
+                    Informe um valor válido para depositar.
+                </span>
+
+                <div class="modal-actions">
+                    <button class="cancel-btn" id="btn-cancelar" type="button">
+                        Cancelar
+                    </button>
+
+                    <button class="confirm-btn" type="submit">
+                        Confirmar depósito
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="componentes/rf07-cofre-magico.js"></script>
 </body>
 </html>
-<a href=""></a>
