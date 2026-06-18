@@ -8,17 +8,17 @@ message: >-
   Web da PUC Minas.
 type: software
 authors:
-  - given-names: Aluno 1
-    family-names: Nome Completo
-    email: aluno@pucminas.br
+  - given-names: Leticia
+    family-names: do Carmo Barbosa
+    email: leticia.barbosa.1667732@sga.pucminas.br
     affiliation: PUC Minas
-- given-names: Roberto Felipe
-    family-names: Dias Ferreira da Rocha
+- given-names: Gustavo
+    family-names: 
     name-suffix: Prof.
     email: rocha@pucminas.br
     affiliation: PUC Minas
 repository-code: >-
-  https://github.com/ICEI-PUC-Minas-PMV-SI/WebApplicationProject-Template
+  https://icei-puc-minas-pmv-si.github.io/pmv-si-2026-1-pe1-t5-proj-moneta-go
 abstract: >-
   Descrever resumidamente, em um ou dois parágrafos, o
   projeto que foi desenvolvido.
@@ -28,4 +28,4 @@ keywords:
   - CSS
   - JavaScript
   - Template
-date-released: '2024-06-23'
+date-released: '2026-06-21'

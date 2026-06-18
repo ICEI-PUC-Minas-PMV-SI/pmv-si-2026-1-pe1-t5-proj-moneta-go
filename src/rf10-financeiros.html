@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Financeiro</title>
     <link rel="stylesheet" href="Estilos/estilo.css">
 </head>
+
 <body>
 
     <div class="dashboard-container">
@@ -15,12 +17,12 @@
             </h2>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Visão Geral</a></li>
-                    <li><a href="#nova-transacao">Lançamentos</a></li>
+                    <li><a href="rf02-painel.html">Visão Geral</a></li>
+                    <li><a href="#nova-transacao" class="active">Lançamentos</a></li>
                     <li><a href="#categorias">Categorias</a></li>
                     <li><a href="#metas">Reserva de Emergência</a></li>
                 </ul>
-                <button onclick="window.history.back()" class="btn-confirmar">Voltar</button>
+                <button onclick="window.history.back()" class="btn-confirmar" style="margin-top:16px;">Voltar</button>
             </nav>
         </aside>
 
@@ -31,10 +33,28 @@
             </header>
 
             <div class="cards-grid">
-                
+
+                <!-- REGISTRAR TRANSAÇÃO -->
                 <section id="nova-transacao" class="card card-wide">
                     <h3>Registrar Transação</h3>
-                    <form action="#" method="POST">
+
+                    <!-- Resumo rápido -->
+                    <div class="resumo-row">
+                        <div class="resumo-box ganhos">
+                            <div class="lbl">Ganhos</div>
+                            <div class="val" id="resumo-ganhos">R$ 0,00</div>
+                        </div>
+                        <div class="resumo-box despesas">
+                            <div class="lbl">Despesas</div>
+                            <div class="val" id="resumo-despesas">R$ 0,00</div>
+                        </div>
+                        <div class="resumo-box saldo">
+                            <div class="lbl">Saldo</div>
+                            <div class="val" id="resumo-saldo">R$ 0,00</div>
+                        </div>
+                    </div>
+
+                    <form id="form-transacao">
                         <div class="radio-group">
                             <label class="radio-label income">
                                 <input type="radio" name="tipo-transacao" value="ganho" checked> Ganho
@@ -43,42 +63,40 @@
                                 <input type="radio" name="tipo-transacao" value="despesa"> Despesa
                             </label>
                         </div>
-
                         <div class="form-row">
                             <div class="form-group half-width">
                                 <label for="valor">Valor (R$)</label>
-                                <input type="number" id="valor" step="0.01" placeholder="0,00" required>
+                                <input type="number" id="valor" step="0.01" min="0.01" placeholder="0,00" required>
                             </div>
                             <div class="form-group half-width">
                                 <label for="data">Data</label>
                                 <input type="date" id="data" required>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label for="categoria-transacao">Categoria</label>
                             <select id="categoria-transacao" required>
                                 <option value="" disabled selected>Selecione uma categoria...</option>
-                                <option value="salario">Salário</option>
-                                <option value="freelance">Freelance</option>
-                                <option value="alimentacao">Alimentação</option>
-                                <option value="transporte">Transporte</option>
                             </select>
                         </div>
-
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
                             <input type="text" id="descricao" placeholder="Ex: Conta de luz, Pagamento de projeto..." required>
                         </div>
-
                         <button type="submit" class="btn-primary">Salvar Lançamento</button>
                     </form>
+
+                    <!-- Lista de lançamentos -->
+                    <ul class="transacao-lista" id="lista-transacoes">
+                        <li class="empty-state">Nenhum lançamento ainda.</li>
+                    </ul>
                 </section>
 
+                <!-- CATEGORIAS -->
                 <section id="categorias" class="card">
                     <h3>Nova Categoria</h3>
                     <p class="subtitle">Crie categorias personalizadas para organizar suas finanças.</p>
-                    <form action="#" method="POST">
+                    <form id="form-categoria">
                         <div class="form-group">
                             <label for="nome-categoria">Nome da Categoria</label>
                             <input type="text" id="nome-categoria" placeholder="Ex: Assinaturas de Streaming" required>
@@ -92,25 +110,34 @@
                         </div>
                         <button type="submit" class="btn-outline">Adicionar Categoria</button>
                     </form>
+
+                    <ul class="cat-lista" id="lista-categorias">
+                        <li class="empty-state">Nenhuma categoria personalizada.</li>
+                    </ul>
                 </section>
 
+                <!-- RESERVA DE EMERGÊNCIA -->
                 <section id="metas" class="card goal-card">
                     <h3>Reserva de Emergência</h3>
                     <div class="goal-progress-container">
                         <div class="goal-labels">
-                            <span>Atual: <strong>R$ 3.500,00</strong></span>
-                            <span>Meta: <strong>R$ 10.000,00</strong></span>
+                            <span>Atual: <strong id="meta-atual">R$ 0,00</strong></span>
+                            <span>Meta: <strong id="meta-objetivo">R$ 10.000,00</strong></span>
                         </div>
                         <div class="progress-bar">
-                            <div class="progress-fill" style="width: 35%;"></div>
+                            <div class="progress-fill" id="meta-barra" style="width: 0%;"></div>
                         </div>
-                        <p class="goal-percentage">35% concluído</p>
+                        <p class="goal-percentage" id="meta-pct">0% concluído</p>
                     </div>
 
-                    <form action="#" method="POST">
+                    <form id="form-meta">
                         <div class="form-group">
-                            <label for="atualizar-reserva">Adicionar valor à reserva (R$)</label>
-                            <input type="number" id="atualizar-reserva" step="0.01" placeholder="Ex: 200,00" required>
+                            <label for="novo-objetivo">Alterar meta (R$)</label>
+                            <input type="number" id="novo-objetivo" step="0.01" min="1" placeholder="Ex: 15.000,00">
+                        </div>
+                        <div class="form-group">
+                            <label for="atualizar-reserva">Adicionar à reserva (R$)</label>
+                            <input type="number" id="atualizar-reserva" step="0.01" min="0.01" placeholder="Ex: 200,00" required>
                         </div>
                         <button type="submit" class="btn-success">Atualizar Reserva</button>
                     </form>
@@ -120,5 +147,9 @@
         </main>
     </div>
 
+    <div class="toast" id="toast"></div>
+
+    <script src="Autenticação/financeiros.js"></script>
 </body>
+
 </html>

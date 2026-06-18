@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO MONETA - Painel</title>
+    <link rel="stylesheet" href="Estilos/estilo.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2 class="brand">
+                <span class="moneta">MONETA</span><span class="go">GO</span>
+            </h2>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Visão Geral</a></li>
+                    <li><a href="#criar-turma">Minhas Turmas</a></li>
+                    <li><a href="#adicionar-aluno">Alunos</a></li>
+                    <li><a href="#vincular-perfil">Perfis de Aprendizado</a></li>
+                    <li><a href="rf10-financeiros.html">Financeiros</a></li>
+                </ul>
+            </nav>
+            <div class="achievement-highlight">
+                <span class="star">★</span>
+                <p>Nível Pro</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Painel do Educador</h1>
+                <div class="status-bar">
+                    <span>Progresso do Período:</span>
+                    <div class="progress-container">
+                        <div class="progress-fill" id="progresso-periodo" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cards-grid">
+
+                <!-- CRIAR TURMA -->
+                <section id="criar-turma" class="card">
+                    <h3>Criar Nova Turma</h3>
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <div class="stat-val" id="stat-turmas">0</div>
+                            <div class="stat-lbl">Turmas</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-val" id="stat-alunos">0</div>
+                            <div class="stat-lbl">Alunos</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-val" id="stat-perfis">0</div>
+                            <div class="stat-lbl">Vínculos</div>
+                        </div>
+                    </div>
+                    <form id="form-turma">
+                        <div class="form-group">
+                            <label>Nome da Turma</label>
+                            <input type="text" id="input-turma" placeholder="Ex: Economia 101" required>
+                        </div>
+                        <button type="submit" class="btn-confirmar">Confirmar Criação</button>
+                    </form>
+                </section>
+
+                <!-- ADICIONAR ALUNO -->
+                <section id="adicionar-aluno" class="card">
+                    <h3>Adicionar Aluno</h3>
+                    <form id="form-aluno">
+                        <div class="form-group">
+                            <label>Nome Completo</label>
+                            <input type="text" id="input-aluno-nome" placeholder="Nome do aluno" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Turma</label>
+                            <select id="select-turma-aluno" required>
+                                <option value="" disabled selected>Selecione uma turma...</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-confirmar">Confirmar Aluno</button>
+                    </form>
+                </section>
+
+                <!-- VINCULAR PERFIL -->
+                <section id="vincular-perfil" class="card">
+                    <h3>Vincular Perfil</h3>
+                    <p class="desc" style="margin-bottom:16px; font-size:13px; color:#666;">Defina o perfil de aprendizado do estudante.</p>
+                    <form id="form-perfil">
+                        <div class="form-group">
+                            <label>Aluno</label>
+                            <select id="select-aluno-perfil" required>
+                                <option value="" disabled selected>Selecione um aluno...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Perfil de Aprendizado</label>
+                            <select id="select-perfil" required>
+                                <option value="" disabled selected>Selecione um perfil...</option>
+                                <option value="Visual">🎨 Visual</option>
+                                <option value="Auditivo">🎧 Auditivo</option>
+                                <option value="Leitura/Escrita">📚 Leitura / Escrita</option>
+                                <option value="Cinestésico">🤸 Cinestésico</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-secundario" style="width:100%">Vincular Perfil</button>
+                        <div class="alert-box" style="margin-top:16px;">
+                            <span class="icon-alert">!</span> Cada aluno pode ter apenas um perfil ativo.
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <!-- LISTAS -->
+            <div class="lista-section">
+                <h3>📋 Turmas e Alunos</h3>
+                <div id="lista-turmas-alunos">
+                    <p class="empty-state">Nenhuma turma criada ainda.</p>
+                </div>
+            </div>
+
+            <div class="lista-section">
+                <h3>🧠 Vínculos de Perfil</h3>
+                <ul class="item-list" id="lista-perfis">
+                    <li class="empty-state">Nenhum vínculo registrado.</li>
+                </ul>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="Autenticação/painel.js"></script>
+</body>
+
+</html>

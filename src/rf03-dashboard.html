@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início — Moneta Go</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="rf03-dashboard.css">
+</head>
+<body>
+
+<header class="app-header" role="banner">
+  <a href="dashboard.html" class="logo-link" aria-label="Moneta Go — página inicial">
+    <img src="Logo.jpeg" alt="Logotipo Moneta Go">
+    <span class="brand-name">MONETA<span class="go">GO</span></span>
+  </a>
+  <div class="header-right">
+    <div class="user-pill is-hidden" id="user-pill" aria-live="polite">
+      <i class="fa-solid fa-circle-user" id="user-icon" aria-hidden="true"></i>
+      <span id="user-name"></span>
+    </div>
+    <button class="btn-sair is-hidden" id="btn-sair" aria-label="Sair da conta">
+      <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Sair
+    </button>
+  </div>
+</header>
+
+<main class="main" id="main" role="main">
+  <div class="no-session is-hidden" id="no-session">
+    <i class="fa-solid fa-lock no-session-icon" aria-hidden="true"></i>
+    <h2>Acesso necessário</h2>
+    <p>Faça login para acessar seu painel personalizado.</p>
+    <a href="Autenticação/rf01-login.html" class="btn-login">
+      <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Fazer Login
+    </a>
+  </div>
+</main>
+
+<script src="rf03-dashboard.js"></script>
+</body>
+</html>

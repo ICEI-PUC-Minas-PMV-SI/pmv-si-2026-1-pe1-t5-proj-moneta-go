@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planejamento de Compras — Moneta Go</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="rf14-planejamento-compras.css">
+</head>
+<body>
+
+<div class="app-container" role="application" aria-label="Simulador de Planejamento de Compras">
+
+  <!-- ── Header ── -->
+  <header class="main-header" role="banner">
+    <a href="dashboard.html" class="logo-link" aria-label="Moneta Go — página inicial">
+      <img src="Logo.jpeg" alt="Logotipo Moneta Go">
+      <span class="brand-text">
+        <span class="moneta">MONETA</span><span class="go">GO</span>
+      </span>
+    </a>
+    <div class="user-profile-meta" aria-live="polite">
+      <span class="profile-lbl">ORÇAMENTO</span>
+      <span class="user-name" id="header-budget-status">R$150,00 disponíveis</span>
+    </div>
+    <button class="help-button" id="btn-ajuda" aria-label="Ajuda">
+      <i class="fa-solid fa-circle-question" aria-hidden="true"></i> Ajuda
+    </button>
+  </header>
+
+  <!-- ── Título ── -->
+  <div class="panel-title-strip" role="navigation" aria-label="Localização na plataforma">
+    <h2>🛒 Simulador de Compras Conscientes</h2>
+    <span class="header-accessibility-note">
+      <a href="dashboard.html" class="link-inherit">Início</a> &rsaquo; Planejamento de Compras
+    </span>
+  </div>
+
+  <!-- ── Conteúdo ── -->
+  <div class="main-content">
+    <div class="triple-column-grid">
+
+      <!-- ── Coluna Esquerda: Carrinho ── -->
+      <div class="grid-column col-left">
+        <div class="section-meta-header">
+          <span>MEU CARRINHO</span>
+          <span id="cart-count">0 itens</span>
+        </div>
+
+        <div class="shopping-list-container">
+          <div class="box-head-label">
+            <h4>Lista de Compras</h4>
+            <small id="cart-subtitle">Adicione produtos nas prateleiras</small>
+          </div>
+
+          <div class="budget-header">
+            <span class="budget-limit-text">Orçamento: <strong>R$150,00</strong></span>
+            <span id="budget-status-label" class="budget-ok">Dentro do orçamento</span>
+          </div>
+          <div class="budget-bar" role="progressbar" aria-label="Uso do orçamento" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="budget-bar-wrap">
+            <div class="budget-fill" id="budget-fill"></div>
+          </div>
+
+          <ul class="check-list" id="cart-list" aria-label="Itens no carrinho">
+            <li class="empty-cart-message">
+              Nenhum item adicionado ainda
+            </li>
+          </ul>
+
+          <div class="total-display-card" aria-live="polite">
+            <span>Total da Compra</span>
+            <strong id="cart-total">R$0,00</strong>
+          </div>
+        </div>
+
+        <div class="column-footer-tags">
+          <span class="tag-footer-item">Orçamento semanal<br>R$150,00</span>
+          <span class="tag-footer-item">Dica: clique em<br>um item para remover</span>
+        </div>
+      </div>
+
+      <!-- ── Coluna Central: Prateleiras ── -->
+      <div class="grid-column col-center">
+        <div class="section-meta-header">
+          <span>SUPERMERCADO VIRTUAL</span>
+          <span>Clique em "+ Adicionar" para colocar no carrinho</span>
+        </div>
+
+        <div class="challenge-main-box">
+
+          <!-- Prateleira 1: Básicos -->
+          <div class="supermarket-shelf" aria-label="Prateleira de básicos">
+            <div class="shelf-divider">🍚 BÁSICOS DA DESPENSA</div>
+            <div class="shelf-row" id="shelf-basics">
+              <!-- injected by JS -->
+            </div>
+            <div class="shelf-divider">🥩 PROTEÍNAS</div>
+            <div class="shelf-row" id="shelf-proteins">
+              <!-- injected by JS -->
+            </div>
+            <div class="shelf-divider">🥬 HORTIFRÚTI</div>
+            <div class="shelf-row" id="shelf-veggies">
+              <!-- injected by JS -->
+            </div>
+          </div>
+
+          <!-- Prateleira 2: Extras -->
+          <div class="supermarket-shelf" aria-label="Prateleira de extras e guloseimas">
+            <div class="shelf-divider">🍫 GULOSEIMAS & EXTRAS</div>
+            <div class="shelf-row" id="shelf-extras">
+              <!-- injected by JS -->
+            </div>
+          </div>
+
+          <!-- Painel de feedback -->
+          <div class="feedback-result-panel" id="feedback-panel" aria-live="polite">
+            <div class="result-header">
+              <h4 id="feedback-title">📊 Resumo da Compra</h4>
+              <span id="feedback-badge" class="feedback-badge"></span>
+            </div>
+            <div class="metrics-row" id="metrics-row">
+              <div class="m-box">
+                <strong id="metric-necessidades">0</strong>
+                <span>itens essenciais</span>
+              </div>
+              <div class="m-box">
+                <strong id="metric-extras">0</strong>
+                <span>itens extras</span>
+              </div>
+              <div class="m-box">
+                <strong id="metric-economia" class="txt-warn">R$0</strong>
+                <span id="metric-economia-label">sobra / falta</span>
+              </div>
+            </div>
+            <div class="progress-bar-feedback" id="feedback-score-label">Pontuação de consumo consciente: 0%</div>
+            <div class="bar-bg">
+              <div class="bar-fill" id="feedback-bar"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="column-footer-tags">
+          <span class="tag-footer-item">Produtos marcados 🟢<br>= melhor custo-benefício</span>
+          <span class="tag-footer-item">Itens em <em>azul</em><br>já estão no carrinho</span>
+        </div>
+      </div>
+
+      <!-- ── Coluna Direita: Trilha de Aprendizado ── -->
+      <div class="grid-column col-right">
+        <div class="section-meta-header">
+          <span>TRILHA DE APRENDIZADO</span>
+          <span id="trail-progress-label">0/5 etapas</span>
+        </div>
+
+        <div class="shelf-detail-card">
+
+          <div class="instruction-box" id="current-tip" role="note" aria-live="polite">
+            <strong>👋 Passo 1:</strong> Antes de comprar, monte uma lista. Isso evita compras por impulso e garante que você não esqueça nada importante.
+          </div>
+
+          <ul class="trail-steps" id="trail-list" aria-label="Etapas da trilha de aprendizado">
+            <!-- injected by JS -->
+          </ul>
+
+          <div class="mini-shelf-preview concept-preview" aria-label="Conceitos-chave">
+            <div class="shelf-slot concept-card">
+              <strong class="concept-title concept-title-need">✅ Necessidade</strong>
+              Algo essencial para viver com saúde e dignidade.
+            </div>
+            <div class="shelf-slot concept-card">
+              <strong class="concept-title concept-title-want">💛 Desejo</strong>
+              Algo que queremos, mas podemos viver sem.
+            </div>
+          </div>
+
+          <div class="impact-note">
+            <strong>🌱 Impacto do consumo consciente:</strong><br>
+            Planejar compras evita desperdício de alimentos, reduz gastos desnecessários e ajuda o meio ambiente.
+          </div>
+
+        </div>
+
+        <div class="column-footer-tags">
+          <span class="tag-footer-item">RF-14: Planejamento<br>de Compras</span>
+          <span class="tag-footer-item">Moneta Go<br>Educação Financeira</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Barra Inferior ── -->
+  <div class="bottom-action-bar">
+    <button class="main-btn btn-resetar" id="btn-resetar" aria-label="Reiniciar simulação">
+      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Recomeçar
+    </button>
+    <button class="main-btn" id="btn-finalizar" aria-label="Finalizar compra e ver resumo">
+      <i class="fa-solid fa-check-circle" aria-hidden="true"></i> Finalizar Compra
+    </button>
+  </div>
+
+</div>
+
+<!-- ── Modal Resumo ── -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <h3 class="modal-title" id="modal-title">📦 Sua Compra — Resultado Final</h3>
+    <div class="modal-score" id="modal-score">90%</div>
+    <p id="modal-msg" class="modal-msg"></p>
+
+    <div class="modal-section">
+      <h4>Itens Comprados</h4>
+      <div id="modal-items"></div>
+    </div>
+    <div class="modal-section">
+      <h4>O que você aprendeu</h4>
+      <div id="modal-lessons"></div>
+    </div>
+
+    <div class="modal-btns">
+      <button class="btn-recomecar" id="btn-recomecar-modal">
+        <i class="fa-solid fa-rotate-left"></i> Tentar novamente
+      </button>
+      <button class="btn-fechar" id="btn-fechar-modal">
+        <i class="fa-solid fa-xmark"></i> Fechar
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="rf14-planejamento-compras.js"></script>
+</body>
+</html>

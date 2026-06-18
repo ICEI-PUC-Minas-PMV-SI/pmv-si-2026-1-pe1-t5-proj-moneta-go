@@ -559,3 +559,24 @@ body {
 .main-btn:hover {
     background: var(--azul-royal);
 }
+
+.app-container {
+    padding-top: 20px;
+    padding-left: 0;  
+    padding-right: 0;
+}
+
+
+.page-title-box, 
+.capital-input-section, 
+.workspace-grid, 
+.bottom-action-bar {
+    margin-left: 40px;  
+    margin-right: 40px;
+    width: calc(100% - 80px);
+}
+
+.main-header {
+    border-radius: 0;
+    margin-bottom: 20px;
+}
