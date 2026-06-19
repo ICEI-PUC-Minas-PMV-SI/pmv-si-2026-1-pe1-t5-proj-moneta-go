@@ -6,6 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GO MONETA - Painel</title>
     <link rel="stylesheet" href="Estilos/estilo.css">
+    <style>
+        /* ── Ajustes específicos do painel do educador (escopado) ── */
+        .sidebar { display: flex; flex-direction: column; min-height: 100vh; }
+        .brand a { display: inline-block; }
+
+        /* Sistema de views: cada item do menu mostra uma "página" */
+        .view { display: none; animation: viewFade .25s ease; }
+        .view.active { display: block; }
+        @keyframes viewFade {
+            from { opacity: 0; transform: translateY(6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .view-title { font-size: 22px; color: var(--midnight); margin-bottom: 6px; }
+        .view-sub   { color: #667085; font-size: 14px; margin-bottom: 22px; }
+
+        /* Atalhos da visão geral */
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+        .quick-card {
+            background: #fff;
+            border: 1px solid var(--clouds);
+            border-radius: 12px;
+            padding: 22px;
+            text-align: left;
+            cursor: pointer;
+            font: inherit;
+            color: inherit;
+            box-shadow: 0 4px 10px rgba(0,0,0,.03);
+            transition: transform .15s, box-shadow .15s;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+        .quick-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,.08); }
+        .quick-card .q-ico {
+            width: 46px; height: 46px; border-radius: 12px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff;
+        }
+        .quick-card .q-ttl { display: block; font-weight: 700; color: var(--midnight); }
+        .quick-card .q-txt { display: block; font-size: 13px; color: #667085; margin-top: 3px; line-height: 1.45; }
+
+        @media (max-width: 640px) {
+            .sidebar { min-height: auto; }
+        }
+    </style>
 </head>
 
 <body>
@@ -19,10 +69,10 @@
             </h2>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Visão Geral</a></li>
-                    <li><a href="#criar-turma">Minhas Turmas</a></li>
-                    <li><a href="#adicionar-aluno">Alunos</a></li>
-                    <li><a href="#vincular-perfil">Perfis de Aprendizado</a></li>
+                    <li><a href="#" class="active" data-view="overview">Visão Geral</a></li>
+                    <li><a href="#" data-view="turmas">Minhas Turmas</a></li>
+                    <li><a href="#" data-view="alunos">Alunos</a></li>
+                    <li><a href="#" data-view="perfis">Perfis de Aprendizado</a></li>
                     <li><a href="rf10-financeiros.html">Financeiros</a></li>
                 </ul>
             </nav>
@@ -43,95 +93,143 @@
                 </div>
             </header>
 
-            <div class="cards-grid">
+            <!-- ════════ VIEW: VISÃO GERAL ════════ -->
+            <section class="view active" id="view-overview" aria-label="Visão geral">
+                <h2 class="view-title">Visão Geral</h2>
+                <p class="view-sub">Resumo da sua turma e atalhos para as principais ações.</p>
 
-                <!-- CRIAR TURMA -->
-                <section id="criar-turma" class="card">
-                    <h3>Criar Nova Turma</h3>
-                    <div class="stats-row">
-                        <div class="stat-box">
-                            <div class="stat-val" id="stat-turmas">0</div>
-                            <div class="stat-lbl">Turmas</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-val" id="stat-alunos">0</div>
-                            <div class="stat-lbl">Alunos</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-val" id="stat-perfis">0</div>
-                            <div class="stat-lbl">Vínculos</div>
-                        </div>
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-val" id="stat-turmas">0</div>
+                        <div class="stat-lbl">Turmas</div>
                     </div>
-                    <form id="form-turma">
-                        <div class="form-group">
-                            <label>Nome da Turma</label>
-                            <input type="text" id="input-turma" placeholder="Ex: Economia 101" required>
-                        </div>
-                        <button type="submit" class="btn-confirmar">Confirmar Criação</button>
-                    </form>
-                </section>
-
-                <!-- ADICIONAR ALUNO -->
-                <section id="adicionar-aluno" class="card">
-                    <h3>Adicionar Aluno</h3>
-                    <form id="form-aluno">
-                        <div class="form-group">
-                            <label>Nome Completo</label>
-                            <input type="text" id="input-aluno-nome" placeholder="Nome do aluno" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Turma</label>
-                            <select id="select-turma-aluno" required>
-                                <option value="" disabled selected>Selecione uma turma...</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn-confirmar">Confirmar Aluno</button>
-                    </form>
-                </section>
-
-                <!-- VINCULAR PERFIL -->
-                <section id="vincular-perfil" class="card">
-                    <h3>Vincular Perfil</h3>
-                    <p class="desc" style="margin-bottom:16px; font-size:13px; color:#666;">Defina o perfil de aprendizado do estudante.</p>
-                    <form id="form-perfil">
-                        <div class="form-group">
-                            <label>Aluno</label>
-                            <select id="select-aluno-perfil" required>
-                                <option value="" disabled selected>Selecione um aluno...</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Perfil de Aprendizado</label>
-                            <select id="select-perfil" required>
-                                <option value="" disabled selected>Selecione um perfil...</option>
-                                <option value="Visual">🎨 Visual</option>
-                                <option value="Auditivo">🎧 Auditivo</option>
-                                <option value="Leitura/Escrita">📚 Leitura / Escrita</option>
-                                <option value="Cinestésico">🤸 Cinestésico</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn-secundario" style="width:100%">Vincular Perfil</button>
-                        <div class="alert-box" style="margin-top:16px;">
-                            <span class="icon-alert">!</span> Cada aluno pode ter apenas um perfil ativo.
-                        </div>
-                    </form>
-                </section>
-            </div>
-
-            <!-- LISTAS -->
-            <div class="lista-section">
-                <h3>📋 Turmas e Alunos</h3>
-                <div id="lista-turmas-alunos">
-                    <p class="empty-state">Nenhuma turma criada ainda.</p>
+                    <div class="stat-box">
+                        <div class="stat-val" id="stat-alunos">0</div>
+                        <div class="stat-lbl">Alunos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-val" id="stat-perfis">0</div>
+                        <div class="stat-lbl">Vínculos</div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="lista-section">
-                <h3>🧠 Vínculos de Perfil</h3>
-                <ul class="item-list" id="lista-perfis">
-                    <li class="empty-state">Nenhum vínculo registrado.</li>
-                </ul>
-            </div>
+                <div class="quick-grid">
+                    <button type="button" class="quick-card" data-goto="turmas">
+                        <span class="q-ico" style="background:var(--belize-blue)">📂</span>
+                        <span>
+                            <span class="q-ttl">Criar Turma</span>
+                            <span class="q-txt">Crie uma nova turma e organize seus alunos.</span>
+                        </span>
+                    </button>
+                    <button type="button" class="quick-card" data-goto="alunos">
+                        <span class="q-ico" style="background:var(--emerald)">👤</span>
+                        <span>
+                            <span class="q-ttl">Adicionar Aluno</span>
+                            <span class="q-txt">Cadastre alunos e vincule-os às turmas.</span>
+                        </span>
+                    </button>
+                    <button type="button" class="quick-card" data-goto="perfis">
+                        <span class="q-ico" style="background:var(--turquoise)">🧠</span>
+                        <span>
+                            <span class="q-ttl">Vincular Perfil</span>
+                            <span class="q-txt">Defina o perfil de aprendizado de cada aluno.</span>
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ════════ VIEW: MINHAS TURMAS ════════ -->
+            <section class="view" id="view-turmas" aria-label="Minhas turmas">
+                <h2 class="view-title">Minhas Turmas</h2>
+                <p class="view-sub">Crie turmas e acompanhe os alunos vinculados a cada uma.</p>
+
+                <div class="cards-grid">
+                    <section class="card">
+                        <h3>Criar Nova Turma</h3>
+                        <form id="form-turma">
+                            <div class="form-group">
+                                <label for="input-turma">Nome da Turma</label>
+                                <input type="text" id="input-turma" placeholder="Ex: Economia 101" required>
+                            </div>
+                            <button type="submit" class="btn-confirmar">Confirmar Criação</button>
+                        </form>
+                    </section>
+                </div>
+
+                <div class="lista-section">
+                    <h3>📋 Turmas e Alunos</h3>
+                    <div id="lista-turmas-alunos">
+                        <p class="empty-state">Nenhuma turma criada ainda.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ════════ VIEW: ALUNOS ════════ -->
+            <section class="view" id="view-alunos" aria-label="Alunos">
+                <h2 class="view-title">Alunos</h2>
+                <p class="view-sub">Adicione alunos e vincule-os a uma turma existente.</p>
+
+                <div class="cards-grid">
+                    <section class="card">
+                        <h3>Adicionar Aluno</h3>
+                        <form id="form-aluno">
+                            <div class="form-group">
+                                <label for="input-aluno-nome">Nome Completo</label>
+                                <input type="text" id="input-aluno-nome" placeholder="Nome do aluno" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="select-turma-aluno">Turma</label>
+                                <select id="select-turma-aluno" required>
+                                    <option value="" disabled selected>Selecione uma turma...</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-confirmar">Confirmar Aluno</button>
+                        </form>
+                    </section>
+                </div>
+            </section>
+
+            <!-- ════════ VIEW: PERFIS DE APRENDIZADO ════════ -->
+            <section class="view" id="view-perfis" aria-label="Perfis de aprendizado">
+                <h2 class="view-title">Perfis de Aprendizado</h2>
+                <p class="view-sub">Defina o estilo de aprendizado de cada estudante.</p>
+
+                <div class="cards-grid">
+                    <section class="card">
+                        <h3>Vincular Perfil</h3>
+                        <p class="desc" style="margin-bottom:16px; font-size:13px; color:#666;">Defina o perfil de aprendizado do estudante.</p>
+                        <form id="form-perfil">
+                            <div class="form-group">
+                                <label for="select-aluno-perfil">Aluno</label>
+                                <select id="select-aluno-perfil" required>
+                                    <option value="" disabled selected>Selecione um aluno...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="select-perfil">Perfil de Aprendizado</label>
+                                <select id="select-perfil" required>
+                                    <option value="" disabled selected>Selecione um perfil...</option>
+                                    <option value="Visual">🎨 Visual</option>
+                                    <option value="Auditivo">🎧 Auditivo</option>
+                                    <option value="Leitura/Escrita">📚 Leitura / Escrita</option>
+                                    <option value="Cinestésico">🤸 Cinestésico</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-secundario" style="width:100%">Vincular Perfil</button>
+                            <div class="alert-box" style="margin-top:16px;">
+                                <span class="icon-alert">!</span> Cada aluno pode ter apenas um perfil ativo.
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <div class="lista-section">
+                    <h3>🧠 Vínculos de Perfil</h3>
+                    <ul class="item-list" id="lista-perfis">
+                        <li class="empty-state">Nenhum vínculo registrado.</li>
+                    </ul>
+                </div>
+            </section>
 
         </main>
     </div>
@@ -140,27 +238,27 @@
 
     <script src="Autenticação/painel.js"></script>
     <script>
-    /* Navegação da barra lateral: scroll suave + destaque do item ativo */
+    /* Navegação por views da barra lateral + atalhos da Visão Geral */
     (function () {
-        const links = document.querySelectorAll('.sidebar nav ul li a[href^="#"]');
+        const navLinks = document.querySelectorAll('.sidebar nav ul li a[data-view]');
+        const views = document.querySelectorAll('.view');
 
-        function ativar(link) {
-            document.querySelectorAll('.sidebar nav ul li a').forEach(a => a.classList.remove('active'));
-            link.classList.add('active');
+        function mostrarView(nome) {
+            views.forEach(v => v.classList.toggle('active', v.id === 'view-' + nome));
+            navLinks.forEach(a => a.classList.toggle('active', a.dataset.view === nome));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        links.forEach(link => {
+        navLinks.forEach(link => {
             link.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
                 e.preventDefault();
-                ativar(this);
-                if (href === '#') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    return;
-                }
-                const alvo = document.querySelector(href);
-                if (alvo) alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                mostrarView(this.dataset.view);
             });
+        });
+
+        // Atalhos (cards) da Visão Geral
+        document.querySelectorAll('[data-goto]').forEach(btn => {
+            btn.addEventListener('click', () => mostrarView(btn.dataset.goto));
         });
     })();
     </script>
