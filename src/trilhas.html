@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilhas de Aprendizado — Moneta Go</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --emerald:#2ECC71; --turquoise:#1ABC9C; --belize:#2980B9;
+      --midnight:#2C3E50; --gold:#F1C40F; --carrot:#E67E22; --clouds:#ECF0F1;
+      --muted:#64748b; --border:#d8e0e7; --surface:#fff;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+    body{background:#f4f7f9;color:var(--midnight);min-height:100vh;}
+
+    /* Header (padrão da plataforma) */
+    .app-header{display:flex;align-items:center;justify-content:space-between;gap:16px;
+      background:var(--surface);padding:14px 24px;box-shadow:0 2px 10px rgba(44,62,80,.07);
+      position:sticky;top:0;z-index:50;flex-wrap:wrap;}
+    .logo-link{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-link img{height:40px;width:auto;border-radius:8px;}
+    .brand-name{font-size:22px;font-weight:800;letter-spacing:-.5px;color:var(--belize);}
+    .brand-name .go{color:var(--emerald);}
+    .header-right{display:flex;align-items:center;gap:12px;}
+    .user-pill{display:flex;align-items:center;gap:8px;background:#eef8ff;color:var(--belize);
+      padding:8px 14px;border-radius:30px;font-weight:600;font-size:14px;}
+    .btn-sair{background:none;border:1px solid var(--border);color:var(--midnight);
+      padding:8px 14px;border-radius:8px;cursor:pointer;font-size:14px;display:flex;align-items:center;gap:6px;}
+    .btn-sair:hover{background:#fff3e8;border-color:var(--carrot);color:var(--carrot);}
+    .btn-sair:focus-visible,.btn-voltar:focus-visible,a:focus-visible,button:focus-visible{
+      outline:3px solid var(--belize);outline-offset:2px;}
+
+    main{max-width:1100px;margin:0 auto;padding:28px 20px 60px;}
+
+    .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:14px;}
+    .breadcrumb a{color:var(--belize);text-decoration:none;}
+    .breadcrumb a:hover{text-decoration:underline;}
+
+    .page-head{margin-bottom:22px;}
+    .kicker{display:inline-flex;align-items:center;gap:8px;background:#e8f8f5;color:var(--turquoise);
+      font-weight:700;font-size:12px;padding:6px 12px;border-radius:30px;text-transform:uppercase;letter-spacing:.5px;}
+    .page-head h1{font-size:28px;margin:12px 0 6px;}
+    .page-head p{color:var(--muted);max-width:640px;line-height:1.5;}
+
+    /* Resumo de progresso geral */
+    .overview{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0;}
+    .ov-card{flex:1;min-width:150px;background:var(--surface);border:1px solid var(--border);
+      border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:14px;}
+    .ov-emoji{font-size:26px;}
+    .ov-val{font-size:22px;font-weight:800;}
+    .ov-lbl{font-size:13px;color:var(--muted);}
+
+    /* Grid de trilhas */
+    .trilhas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+    .trilha-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;
+      padding:20px;cursor:pointer;text-align:left;transition:transform .15s,box-shadow .15s;
+      display:flex;flex-direction:column;gap:10px;font:inherit;color:inherit;}
+    .trilha-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(44,62,80,.12);}
+    .trilha-top{display:flex;align-items:center;gap:14px;}
+    .trilha-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;
+      justify-content:center;font-size:24px;color:#fff;flex-shrink:0;}
+    .trilha-card h3{font-size:18px;}
+    .trilha-card .desc{font-size:14px;color:var(--muted);line-height:1.5;flex:1;}
+    .prog-wrap{margin-top:4px;}
+    .prog-bar{height:8px;background:var(--clouds);border-radius:6px;overflow:hidden;}
+    .prog-fill{height:100%;background:var(--emerald);border-radius:6px;width:0;transition:width .4s;}
+    .prog-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px;}
+    .badge-done{background:#e8f8ef;color:#1e8e4e;font-weight:700;font-size:11px;
+      padding:3px 10px;border-radius:20px;}
+
+    /* Detalhe da trilha */
+    .hidden{display:none !important;}
+    .detalhe{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;}
+    .btn-voltar{background:none;border:none;color:var(--belize);cursor:pointer;font-size:14px;
+      display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;font-weight:600;}
+    .detalhe-head{display:flex;align-items:center;gap:16px;margin-bottom:18px;}
+    .detalhe-head h2{font-size:24px;}
+    .licao{border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:12px;
+      background:#fbfdff;}
+    .licao h4{display:flex;align-items:center;gap:8px;font-size:16px;margin-bottom:6px;}
+    .licao p{font-size:14px;color:#46566a;line-height:1.55;}
+    .licao .ck{color:var(--emerald);}
+
+    .quiz{margin-top:22px;border-top:2px dashed var(--border);padding-top:20px;}
+    .quiz h3{font-size:18px;margin-bottom:6px;}
+    .quiz .q-sub{font-size:13px;color:var(--muted);margin-bottom:16px;}
+    .pergunta{margin-bottom:20px;}
+    .pergunta .enunciado{font-weight:600;margin-bottom:10px;}
+    .opcoes{display:flex;flex-direction:column;gap:8px;}
+    .opcao{text-align:left;background:#fff;border:2px solid var(--border);border-radius:10px;
+      padding:12px 14px;cursor:pointer;font:inherit;font-size:14px;transition:.12s;}
+    .opcao:hover{border-color:var(--belize);}
+    .opcao.correta{border-color:var(--emerald);background:#eafaf0;}
+    .opcao.errada{border-color:#e74c3c;background:#fdecea;}
+    .opcao:disabled{cursor:default;}
+    .btn-primario{background:var(--emerald);color:#fff;border:none;padding:14px 26px;border-radius:10px;
+      font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 4px 0 #27ae60;transition:.1s;}
+    .btn-primario:hover{filter:brightness(1.05);}
+    .btn-primario:active{transform:translateY(3px);box-shadow:0 1px 0 #27ae60;}
+    .btn-primario:disabled{opacity:.5;cursor:not-allowed;box-shadow:0 4px 0 #27ae60;transform:none;}
+
+    /* Sem sessão */
+    .no-session{text-align:center;padding:70px 20px;color:var(--muted);}
+    .no-session i{font-size:46px;color:var(--belize);margin-bottom:14px;}
+    .no-session h2{color:var(--midnight);margin-bottom:8px;}
+    .btn-login{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--belize);
+      color:#fff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600;}
+
+    @media(max-width:560px){.page-head h1{font-size:23px;}.detalhe{padding:18px;}}
+  </style>
+</head>
+<body>
+
+<header class="app-header" role="banner">
+  <a href="rf-painel.html" class="logo-link" aria-label="Moneta Go — página inicial">
+    <img src="Logo.jpeg" alt="Logotipo Moneta Go">
+    <span class="brand-name">MONETA<span class="go">GO</span></span>
+  </a>
+  <div class="header-right">
+    <div class="user-pill hidden" id="user-pill" aria-live="polite">
+      <i class="fa-solid fa-circle-user" id="user-icon" aria-hidden="true"></i>
+      <span id="user-name"></span>
+    </div>
+    <button class="btn-sair hidden" id="btn-sair" aria-label="Sair da conta">
+      <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Sair
+    </button>
+  </div>
+</header>
+
+<main id="main" role="main">
+
+  <!-- Sem sessão -->
+  <div class="no-session hidden" id="no-session">
+    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+    <h2>Acesso necessário</h2>
+    <p>Faça login para acessar as trilhas de aprendizado.</p>
+    <a href="Autenticação/rf01-login.html" class="btn-login">
+      <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Fazer Login
+    </a>
+  </div>
+
+  <!-- Lista de trilhas -->
+  <div id="view-lista" class="hidden">
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <a href="rf-painel.html"><i class="fa-solid fa-house"></i> Início</a> &rsaquo; Trilhas de Aprendizado
+    </nav>
+    <div class="page-head">
+      <span class="kicker"><i class="fa-solid fa-route" aria-hidden="true"></i> RF-04 · Trilhas de Aprendizado</span>
+      <h1 id="titulo-saudacao">Trilhas de Aprendizado</h1>
+      <p id="subtitulo-perfil">Aprenda no seu ritmo sobre orçamento, poupança, crédito, consumo consciente e investimentos.</p>
+    </div>
+
+    <section class="overview" aria-label="Resumo de progresso">
+      <div class="ov-card"><span class="ov-emoji">📚</span><div><div class="ov-val" id="ov-trilhas">0/5</div><div class="ov-lbl">Trilhas concluídas</div></div></div>
+      <div class="ov-card"><span class="ov-emoji">✅</span><div><div class="ov-val" id="ov-licoes">0</div><div class="ov-lbl">Lições concluídas</div></div></div>
+      <div class="ov-card"><span class="ov-emoji">⭐</span><div><div class="ov-val" id="ov-xp">0 XP</div><div class="ov-lbl">Experiência acumulada</div></div></div>
+    </section>
+
+    <div class="trilhas-grid" id="trilhas-grid"></div>
+  </div>
+
+  <!-- Detalhe da trilha -->
+  <div id="view-detalhe" class="hidden">
+    <button class="btn-voltar" id="btn-voltar"><i class="fa-solid fa-arrow-left"></i> Voltar às trilhas</button>
+    <div class="detalhe">
+      <div class="detalhe-head">
+        <div class="trilha-icon" id="det-icon"></div>
+        <div>
+          <h2 id="det-titulo"></h2>
+          <p id="det-desc" style="color:var(--muted);font-size:14px;"></p>
+        </div>
+      </div>
+      <div id="det-licoes"></div>
+      <div class="quiz">
+        <h3>📝 Quiz da trilha</h3>
+        <p class="q-sub">Responda para concluir a trilha e ganhar XP.</p>
+        <div id="det-quiz"></div>
+        <button class="btn-primario" id="btn-concluir" disabled>Concluir trilha</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="componentes/rf08-feedback.js"></script>
+<script>
+/* ── RF-04 · Trilhas de Aprendizado ───────────────────────────────────────
+   Dados em localStorage: monetago_trilhas = { <id>: { licoes:[idx...], concluida:bool } }
+   Integra com RF-08 (feedback) e RF-03 (linguagem por perfil).                */
+
+const SAUDACAO = {
+  crianca:    { titulo:'Suas aventuras de aprendizado! 🚀', sub:'Lições curtinhas e divertidas para aprender a cuidar do seu dinheiro.' },
+  adolescente:{ titulo:'Trilhas pra dominar suas finanças', sub:'Conteúdo direto, com desafios reais sobre dinheiro, metas e consumo.' },
+  jovemAdulto:{ titulo:'Trilhas de Aprendizado', sub:'Desenvolva orçamento, poupança, crédito, consumo consciente e investimentos.' },
+  autonomo:   { titulo:'Trilhas de Aprendizado', sub:'Organize ganhos, reserva e decisões financeiras com conteúdo objetivo.' },
+  educador:   { titulo:'Trilhas de Aprendizado', sub:'Conheça as trilhas que seus alunos percorrem e use-as como recurso pedagógico.' },
+};
+
+const TRILHAS = [
+  {
+    id:'orcamento', titulo:'Orçamento', cor:'#2980B9', icon:'fa-wallet',
+    desc:'Aprenda a planejar suas entradas e saídas e a manter o orçamento no controle.',
+    licoes:[
+      { t:'O que é orçamento', d:'Orçamento é o plano que organiza quanto você ganha e quanto pode gastar em um período. Ele evita surpresas no fim do mês.' },
+      { t:'A regra 50/30/20', d:'Use 50% da renda para necessidades, 30% para desejos e 20% para poupar ou investir. É um ponto de partida simples e eficaz.' },
+      { t:'Registrar é controlar', d:'Anotar cada gasto, mesmo os pequenos, revela para onde o dinheiro vai e onde dá para economizar.' },
+    ],
+    quiz:[
+      { q:'Na regra 50/30/20, quanto vai para poupança/investimento?', op:['50%','30%','20%'], correta:2 },
+      { q:'Para que serve um orçamento?', op:['Planejar entradas e saídas','Gastar mais','Esconder dívidas'], correta:0 },
+    ],
+  },
+  {
+    id:'poupanca', titulo:'Poupança', cor:'#2ECC71', icon:'fa-piggy-bank',
+    desc:'Crie o hábito de guardar dinheiro e construa sua reserva de emergência.',
+    licoes:[
+      { t:'Por que poupar', d:'Poupar cria segurança para imprevistos e liberdade para realizar objetivos sem depender de dívidas.' },
+      { t:'Reserva de emergência', d:'O ideal é guardar o equivalente a 3 a 6 meses das suas despesas fixas, em um lugar de fácil acesso.' },
+      { t:'Pequenos valores somam', d:'Guardar um pouco todo dia vira um valor relevante no fim do ano. O hábito vale mais que o valor.' },
+    ],
+    quiz:[
+      { q:'Qual o tamanho ideal de uma reserva de emergência?', op:['3 a 6 meses de despesas','1 dia de salário','Não é preciso reserva'], correta:0 },
+      { q:'Qual o segredo de poupar?', op:['Esperar sobrar','Criar o hábito e guardar sempre','Só poupar valores grandes'], correta:1 },
+    ],
+  },
+  {
+    id:'credito', titulo:'Crédito', cor:'#E67E22', icon:'fa-credit-card',
+    desc:'Entenda juros, dívidas e como usar o crédito a seu favor.',
+    licoes:[
+      { t:'O que é crédito', d:'Crédito é dinheiro emprestado que você devolve depois, geralmente com juros. Pode ajudar, mas exige cuidado.' },
+      { t:'Juros compostos', d:'Em dívidas, os juros incidem sobre juros e a conta cresce rápido. O que parece pequeno pode virar uma bola de neve.' },
+      { t:'Crédito consciente', d:'Use o crédito para necessidades planejadas e pague o total da fatura para evitar juros do rotativo.' },
+    ],
+    quiz:[
+      { q:'O que acontece quando você paga só o mínimo do cartão?', op:['Nada muda','Entra no rotativo com juros altos','Ganha desconto'], correta:1 },
+      { q:'Crédito é...', op:['Dinheiro de graça','Dinheiro emprestado a ser devolvido','Sua renda mensal'], correta:1 },
+    ],
+  },
+  {
+    id:'consumo', titulo:'Consumo Consciente', cor:'#1ABC9C', icon:'fa-cart-shopping',
+    desc:'Diferencie necessidade de desejo e faça compras planejadas.',
+    licoes:[
+      { t:'Necessidade x desejo', d:'Necessidade é o essencial para viver bem; desejo é o que queremos mas podemos adiar. Reconhecer a diferença evita compras por impulso.' },
+      { t:'Compra planejada', d:'Faça uma lista, compare preços e espere 24h antes de comprar algo caro por impulso.' },
+      { t:'Impacto do consumo', d:'Consumir com consciência economiza dinheiro, reduz desperdício e ajuda o meio ambiente.' },
+    ],
+    quiz:[
+      { q:'O que é uma "necessidade"?', op:['Algo essencial para viver bem','Tudo que vemos em anúncio','Sempre o item mais caro'], correta:0 },
+      { q:'Boa prática contra compra por impulso:', op:['Comprar na hora','Esperar 24h e comparar','Ignorar o preço'], correta:1 },
+    ],
+  },
+  {
+    id:'investimentos', titulo:'Investimentos Básicos', cor:'#F1C40F', icon:'fa-chart-line',
+    desc:'Conheça onde seu dinheiro pode render e a diferença para apostas.',
+    licoes:[
+      { t:'Por que investir', d:'Investir faz o dinheiro trabalhar por você, protegendo do efeito da inflação ao longo do tempo.' },
+      { t:'Investimento x aposta', d:'Investimento tem regras e tende a crescer no longo prazo; aposta é jogo de azar com expectativa de perda. São coisas diferentes.' },
+      { t:'Comece pelo simples', d:'Renda fixa (como Tesouro e CDB) é um bom começo: previsível e de baixo risco para quem está aprendendo.' },
+    ],
+    quiz:[
+      { q:'Qual a diferença entre investir e apostar?', op:['Não há diferença','Investir tende a crescer; aposta tende a perder','Aposta é mais segura'], correta:1 },
+      { q:'Bom investimento para iniciantes:', op:['Renda fixa de baixo risco','Apostas online','Empréstimo no cartão'], correta:0 },
+    ],
+  },
+];
+
+const XP_LICAO = 20;
+const XP_TRILHA = 100;
+
+/* ── Sessão / perfil ── */
+function getSessao(){ try{ return JSON.parse(localStorage.getItem('monetago_sessao')||'null'); }catch(_){ return null; } }
+function getProgresso(){ try{ return JSON.parse(localStorage.getItem('monetago_trilhas')||'{}'); }catch(_){ return {}; } }
+function salvarProgresso(p){ localStorage.setItem('monetago_trilhas', JSON.stringify(p)); }
+
+const sessao = getSessao();
+const perfil = (sessao && sessao.perfil) || 'jovemAdulto';
+
+const elMain = document.getElementById('main');
+if(!sessao || !sessao.nome){
+  document.getElementById('no-session').classList.remove('hidden');
+}else{
+  iniciar();
+}
+
+function iniciar(){
+  const nome = (sessao.nome||'').split(' ')[0];
+  document.getElementById('user-pill').classList.remove('hidden');
+  document.getElementById('btn-sair').classList.remove('hidden');
+  document.getElementById('user-name').textContent = nome;
+  document.getElementById('btn-sair').addEventListener('click', ()=>{
+    localStorage.removeItem('monetago_sessao');
+    window.location.href = 'Autenticação/rf01-login.html';
+  });
+
+  const s = SAUDACAO[perfil] || SAUDACAO.jovemAdulto;
+  document.getElementById('titulo-saudacao').textContent = s.titulo;
+  document.getElementById('subtitulo-perfil').textContent = s.sub;
+
+  document.getElementById('view-lista').classList.remove('hidden');
+  document.getElementById('btn-voltar').addEventListener('click', mostrarLista);
+  renderLista();
+}
+
+function calcTotais(){
+  const prog = getProgresso();
+  let trilhas=0, licoes=0, xp=0;
+  TRILHAS.forEach(tr=>{
+    const p = prog[tr.id]||{licoes:[],concluida:false};
+    licoes += (p.licoes||[]).length;
+    xp += (p.licoes||[]).length * XP_LICAO;
+    if(p.concluida){ trilhas++; xp += XP_TRILHA; }
+  });
+  return {trilhas, licoes, xp};
+}
+
+function renderLista(){
+  const prog = getProgresso();
+  const tot = calcTotais();
+  document.getElementById('ov-trilhas').textContent = `${tot.trilhas}/${TRILHAS.length}`;
+  document.getElementById('ov-licoes').textContent = tot.licoes;
+  document.getElementById('ov-xp').textContent = `${tot.xp} XP`;
+
+  const grid = document.getElementById('trilhas-grid');
+  grid.innerHTML = '';
+  TRILHAS.forEach(tr=>{
+    const p = prog[tr.id]||{licoes:[],concluida:false};
+    const feitas = (p.licoes||[]).length;
+    const pct = Math.round((feitas/tr.licoes.length)*100);
+    const btn = document.createElement('button');
+    btn.className='trilha-card';
+    btn.setAttribute('aria-label', `Abrir trilha ${tr.titulo}, ${pct}% concluída`);
+    btn.innerHTML = `
+      <div class="trilha-top">
+        <div class="trilha-icon" style="background:${tr.cor}"><i class="fa-solid ${tr.icon}"></i></div>
+        <div style="flex:1">
+          <h3>${tr.titulo}</h3>
+          ${p.concluida?'<span class="badge-done"><i class="fa-solid fa-check"></i> Concluída</span>':''}
+        </div>
+      </div>
+      <p class="desc">${tr.desc}</p>
+      <div class="prog-wrap">
+        <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
+        <div class="prog-meta"><span>${feitas}/${tr.licoes.length} lições</span><span>${pct}%</span></div>
+      </div>`;
+    btn.addEventListener('click', ()=>abrirTrilha(tr.id));
+    grid.appendChild(btn);
+  });
+}
+
+let trilhaAtual=null;
+let respostasCorretas={};
+
+function abrirTrilha(id){
+  trilhaAtual = TRILHAS.find(t=>t.id===id);
+  respostasCorretas={};
+  const prog = getProgresso();
+  const p = prog[id]||{licoes:[],concluida:false};
+
+  document.getElementById('det-icon').style.background = trilhaAtual.cor;
+  document.getElementById('det-icon').innerHTML = `<i class="fa-solid ${trilhaAtual.icon}"></i>`;
+  document.getElementById('det-titulo').textContent = trilhaAtual.titulo;
+  document.getElementById('det-desc').textContent = trilhaAtual.desc;
+
+  // Lições
+  const cont = document.getElementById('det-licoes');
+  cont.innerHTML='';
+  trilhaAtual.licoes.forEach((l,i)=>{
+    const feita = (p.licoes||[]).includes(i);
+    const div = document.createElement('div');
+    div.className='licao';
+    div.innerHTML = `
+      <h4><i class="fa-solid ${feita?'fa-circle-check ck':'fa-circle-dot'}"></i> ${l.t}</h4>
+      <p>${l.d}</p>
+      <button class="btn-primario lic-btn" data-i="${i}" style="margin-top:12px;padding:9px 18px;font-size:13px;"
+        ${feita?'disabled':''}>${feita?'Concluída ✓':'Marcar como lida'}</button>`;
+    cont.appendChild(div);
+  });
+  cont.querySelectorAll('.lic-btn').forEach(b=>{
+    b.addEventListener('click', ()=>concluirLicao(parseInt(b.dataset.i), b));
+  });
+
+  // Quiz
+  const quiz = document.getElementById('det-quiz');
+  quiz.innerHTML='';
+  trilhaAtual.quiz.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className='pergunta';
+    div.innerHTML = `<div class="enunciado">${qi+1}. ${q.q}</div>
+      <div class="opcoes">${q.op.map((o,oi)=>
+        `<button class="opcao" data-q="${qi}" data-o="${oi}">${o}</button>`).join('')}</div>`;
+    quiz.appendChild(div);
+  });
+  quiz.querySelectorAll('.opcao').forEach(op=>{
+    op.addEventListener('click', ()=>responder(op));
+  });
+
+  document.getElementById('btn-concluir').disabled = true;
+  document.getElementById('btn-concluir').onclick = concluirTrilha;
+
+  document.getElementById('view-lista').classList.add('hidden');
+  document.getElementById('view-detalhe').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function concluirLicao(i, botao){
+  const prog = getProgresso();
+  const p = prog[trilhaAtual.id]||{licoes:[],concluida:false};
+  if(!p.licoes.includes(i)) p.licoes.push(i);
+  prog[trilhaAtual.id]=p;
+  salvarProgresso(prog);
+  botao.disabled=true; botao.textContent='Concluída ✓';
+  botao.closest('.licao').querySelector('h4 i').className='fa-solid fa-circle-check ck';
+}
+
+function responder(btn){
+  const qi = parseInt(btn.dataset.q), oi = parseInt(btn.dataset.o);
+  const q = trilhaAtual.quiz[qi];
+  const grupo = btn.parentElement.querySelectorAll('.opcao');
+  grupo.forEach(b=>b.disabled=true);
+  if(oi===q.correta){
+    btn.classList.add('correta');
+    respostasCorretas[qi]=true;
+    if(window.mostrarFeedback) mostrarFeedback('quiz_correto');
+  }else{
+    btn.classList.add('errada');
+    grupo[q.correta].classList.add('correta');
+    respostasCorretas[qi]=false;
+    if(window.mostrarFeedback) mostrarFeedback('quiz_errado');
+  }
+  // habilita concluir quando todas respondidas corretamente
+  const todasCertas = trilhaAtual.quiz.every((_,i)=>respostasCorretas[i]===true);
+  document.getElementById('btn-concluir').disabled = !todasCertas;
+}
+
+function concluirTrilha(){
+  const prog = getProgresso();
+  const p = prog[trilhaAtual.id]||{licoes:[],concluida:false};
+  // marca todas as lições como lidas ao concluir
+  p.licoes = trilhaAtual.licoes.map((_,i)=>i);
+  const jaConcluida = p.concluida;
+  p.concluida = true;
+  prog[trilhaAtual.id]=p;
+  salvarProgresso(prog);
+  if(window.mostrarFeedback) mostrarFeedback('trilha_concluida',{pontos:XP_TRILHA});
+  if(!jaConcluida) document.getElementById('btn-concluir').textContent='Trilha concluída! 🎉';
+  setTimeout(mostrarLista, 600);
+}
+
+function mostrarLista(){
+  document.getElementById('view-detalhe').classList.add('hidden');
+  document.getElementById('view-lista').classList.remove('hidden');
+  renderLista();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
