@@ -120,7 +120,7 @@ const CONTEUDOS = {
         href: 'planejamento-compras.html', cta: 'Começar',
       },
       {
-        icon: 'fa-ant', cor: '#2980b9',
+        icon: 'fa-bug', cor: '#2980b9',
         title: 'Gastos Formiga',
         desc: 'Descubra para onde vão os trocados e aprenda a guardá-los.',
         href: 'rf09-gastos-formiga.html', cta: 'Descobrir',
@@ -162,7 +162,7 @@ const CONTEUDOS = {
         href: 'rf07-cofre-magico.html', cta: 'Definir meta',
       },
       {
-        icon: 'fa-ant', cor: '#2980b9',
+        icon: 'fa-bug', cor: '#2980b9',
         title: 'Gastos Formiga',
         desc: 'R$5 por dia podem virar R$1.825 por ano. Veja onde o dinheiro escapa.',
         href: 'rf09-gastos-formiga.html', cta: 'Analisar gastos',
@@ -210,7 +210,7 @@ const CONTEUDOS = {
     secaoIcon: 'fa-chart-line',
     cards: [
       {
-        icon: 'fa-ant', cor: '#2980b9',
+        icon: 'fa-bug', cor: '#2980b9',
         title: 'Gastos Formiga',
         desc: 'Rastreie pequenas despesas recorrentes e identifique padrões.',
         href: 'rf09-gastos-formiga.html', cta: 'Ver gastos',

@@ -13,7 +13,9 @@
     <div class="dashboard-container">
         <aside class="sidebar">
             <h2 class="brand">
-                <span class="moneta">MONETA</span><span class="go">GO</span>
+                <a href="rf-painel.html" aria-label="Moneta Go — página inicial" style="text-decoration:none;">
+                    <span class="moneta">MONETA</span><span class="go">GO</span>
+                </a>
             </h2>
             <nav>
                 <ul>
@@ -137,6 +139,31 @@
     <div class="toast" id="toast"></div>
 
     <script src="Autenticação/painel.js"></script>
+    <script>
+    /* Navegação da barra lateral: scroll suave + destaque do item ativo */
+    (function () {
+        const links = document.querySelectorAll('.sidebar nav ul li a[href^="#"]');
+
+        function ativar(link) {
+            document.querySelectorAll('.sidebar nav ul li a').forEach(a => a.classList.remove('active'));
+            link.classList.add('active');
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                e.preventDefault();
+                ativar(this);
+                if (href === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+                const alvo = document.querySelector(href);
+                if (alvo) alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    })();
+    </script>
 </body>
 
 </html>
