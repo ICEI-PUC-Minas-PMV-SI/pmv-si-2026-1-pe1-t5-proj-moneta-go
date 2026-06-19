@@ -91,3 +91,32 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | escola | Texto ou nulo | Escola/instituição, preenchida apenas para perfil educador. | Escola Estadual Central |
 | area | Texto ou nulo | Área de ensino, preenchida apenas para perfil educador. | medio |
 | criadoEm | Data/hora em texto | Data e hora do cadastro em formato ISO. | 2026-06-17T14:20:00.000Z |
+
+
+
+## RF-02 — Painel do Educador
+
+**Chave:** `gomoneta_estado`
+
+### turmas
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| id | Texto | Identificador único da turma, gerado automaticamente. | "mqindye7tsp" |
+| nome | Texto | Nome da turma informado pelo educador. | "turma 1" |
+
+### alunos
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| id | Texto | Identificador único do aluno, gerado automaticamente. | "mqingzujymz" |
+| nome | Texto | Nome completo do aluno informado pelo educador. | "Leticia do Carmo Barbosa" |
+| turmaId | Texto | Referência ao id da turma à qual o aluno pertence. | "mqindye7tsp" |
+
+### perfis
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| alunoId | Texto | Referência ao id do aluno vinculado ao perfil. | "mqingzujymz" |
+| perfil | Texto | Perfil de aprendizado atribuído ao aluno. | "Leitura/Escrita" |
+
