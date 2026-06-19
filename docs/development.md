@@ -52,3 +52,71 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
 | Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
 
+### RF-14 — Planejamento de Compras
+
+#### Chave: monetago_rf14_planejamento
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| carrinhoIds | Lista de textos | IDs dos produtos adicionados ao carrinho. | ["arroz", "frango"] |
+| trilhaAtual | Número inteiro | Etapa atual da trilha de aprendizagem. Varia de 1 a 6. | 3 |
+| atualizadoEm | Data/hora em texto | Data e hora da última atualização do planejamento | 2026-06-17T15:10:00.000Z |
+
+#### Chave: monetago_rf14_historico
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| id | Número inteiro | Identificador único do resultado finalizado | 1718640600000 |
+| finalizadoEm | Data/hora em texto | Data e hora da finalização da compra | 2026-06-17T15:15:00.000Z |
+| orcamento | Número decimal | Valor máximo disponível para a compra. | 150 |
+| total | Número decimal | Soma dos produtos escolhidos. | 38 |
+| sobra | Número decimal | Diferença entre orçamento e total. Pode ser negativa se ultrapassar o orçamento. | 112 |
+| score | Número inteiro | Pontuação de consumo consciente, de 0 a 100. | 95 |
+| itens | Lista de objetos | Produtos comprados no planejamento finalizado. | [{"id":"arroz","nome":"Arroz 5kg","preco":22,"tipo":"necessidade","smart":true}] |
+
+
+
+### RF-01 — Cadastro e Login
+
+#### Chave: `monetago_usuarios`
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| id | Número inteiro | Identificador único do usuário | 1718640000000 |
+| nome | Texto | Nome completo informado no cadastro. | Patricia Silva |
+| email | Texto | E-mail usado para login. | patricia@email.com |
+| senha | Texto | Senha codificada | MTIzNDU2 |
+| dataNascimento | Data em texto | Data de nascimento no formato `AAAA-MM-DD`. | 2000-01-01 |
+| perfil | Texto | Perfil do usuário: `crianca`, `adolescente`, `jovemAdulto`, `autonomo` ou `educador`. | jovemAdulto |
+| escola | Texto ou nulo | Escola/instituição, preenchida apenas para perfil educador. | Escola Estadual Central |
+| area | Texto ou nulo | Área de ensino, preenchida apenas para perfil educador. | medio |
+| criadoEm | Data/hora em texto | Data e hora do cadastro em formato ISO. | 2026-06-17T14:20:00.000Z |
+
+
+
+## RF-02 — Painel do Educador
+
+**Chave:** `gomoneta_estado`
+
+### turmas
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| id | Texto | Identificador único da turma, gerado automaticamente. | "mqindye7tsp" |
+| nome | Texto | Nome da turma informado pelo educador. | "turma 1" |
+
+### alunos
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| id | Texto | Identificador único do aluno, gerado automaticamente. | "mqingzujymz" |
+| nome | Texto | Nome completo do aluno informado pelo educador. | "Leticia do Carmo Barbosa" |
+| turmaId | Texto | Referência ao id da turma à qual o aluno pertence. | "mqindye7tsp" |
+
+### perfis
+
+| Nome | Tipo | Descrição | Exemplo |
+|------|------|-----------|---------|
+| alunoId | Texto | Referência ao id do aluno vinculado ao perfil. | "mqingzujymz" |
+| perfil | Texto | Perfil de aprendizado atribuído ao aluno. | "Leitura/Escrita" |
+

@@ -240,3 +240,133 @@ body {
         padding: 8px 14px;
     }
 }
+.box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.box-header h2 {
+    margin-bottom: 0;
+}
+
+.add-expense-btn {
+    background: #2ecc71;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 14px;
+    white-space: nowrap;
+}
+
+.add-expense-btn:hover {
+    background: #27ae60;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    padding: 32px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+.modal-content h2 {
+    color: #24384d;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #64748b;
+    line-height: 1.45;
+    margin-bottom: 22px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 16px 0 8px;
+    color: #24384d;
+    font-weight: bold;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.erro-gasto {
+    display: none;
+    margin-top: 10px;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+.erro-gasto.show {
+    display: block;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.cancel-btn,
+.confirm-btn {
+    flex: 1;
+    padding: 13px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #475569;
+}
+
+.confirm-btn {
+    border: 1px solid #2ecc71;
+    background: #2ecc71;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background: #27ae60;
+}

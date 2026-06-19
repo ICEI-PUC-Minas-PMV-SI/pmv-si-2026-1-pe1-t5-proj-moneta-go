@@ -13,12 +13,18 @@
     <header class="navbar">
         <a href="rf-painel.html" class="logo-area">
             <img src="Logo.jpeg" alt="Logotipo Moneta Go">
-            <div class="logo-text">MONETA<span>GO</span></div>
+
+            <div class="logo-text">
+                MONETA<span>GO</span>
+            </div>
         </a>
 
         <div class="navbar-right">
             <div class="help">❔ Ajuda</div>
-            <a href="Autenticação/rf01-login.html" class="login-btn">Entrar</a>
+
+            <a href="Autenticação/rf01-login.html" class="login-btn">
+                Entrar
+            </a>
         </div>
     </header>
 
@@ -34,59 +40,74 @@
             <div class="card">
                 <div class="icon">☕</div>
                 <h3>Cafés</h3>
-                <strong>R$ 85</strong>
+                <strong id="total-cafes">R$ 85,00</strong>
             </div>
 
             <div class="card">
                 <div class="icon">🍔</div>
                 <h3>Delivery</h3>
-                <strong>R$ 230</strong>
+                <strong id="total-delivery">R$ 230,00</strong>
             </div>
 
             <div class="card">
                 <div class="icon">🚕</div>
                 <h3>Transporte</h3>
-                <strong>R$ 120</strong>
+                <strong id="total-transporte">R$ 120,00</strong>
             </div>
 
             <div class="card">
                 <div class="icon">🛒</div>
                 <h3>Compras rápidas</h3>
-                <strong>R$ 95</strong>
+                <strong id="total-mercado">R$ 95,00</strong>
             </div>
 
         </section>
 
         <section class="alert">
-            <p>
-                ⚠️ Você gastou <strong>R$ 530</strong> em pequenos gastos este mês.
-                Se economizar 20%, pode guardar cerca de <strong>R$ 106</strong>.
+            <p id="texto-alerta">
+                ⚠️ Você gastou <strong>R$ 530,00</strong> em pequenos gastos este mês.
+                Se economizar 20%, pode guardar cerca de <strong>R$ 106,00</strong>.
             </p>
         </section>
 
         <section class="content">
 
             <div class="box">
-                <h2>Últimos gastos identificados</h2>
 
-                <div class="expense">
-                    <span>☕ Café da manhã</span>
-                    <span class="value">R$ 12</span>
+                <div class="box-header">
+                    <h2>Últimos gastos identificados</h2>
+
+                    <button
+                        class="add-expense-btn"
+                        id="btn-adicionar-gasto"
+                        type="button"
+                    >
+                        + Adicionar gasto
+                    </button>
                 </div>
 
-                <div class="expense">
-                    <span>🍔 Lanche por aplicativo</span>
-                    <span class="value">R$ 39</span>
-                </div>
+                <div id="lista-gastos">
 
-                <div class="expense">
-                    <span>🚕 Corrida curta</span>
-                    <span class="value">R$ 18</span>
-                </div>
+                    <div class="expense">
+                        <span>☕ Café da manhã</span>
+                        <span class="value">R$ 12,00</span>
+                    </div>
 
-                <div class="expense">
-                    <span>🛒 Compra rápida no mercado</span>
-                    <span class="value">R$ 21</span>
+                    <div class="expense">
+                        <span>🍔 Lanche por aplicativo</span>
+                        <span class="value">R$ 39,00</span>
+                    </div>
+
+                    <div class="expense">
+                        <span>🚕 Corrida curta</span>
+                        <span class="value">R$ 18,00</span>
+                    </div>
+
+                    <div class="expense">
+                        <span>🛒 Compra rápida no mercado</span>
+                        <span class="value">R$ 21,00</span>
+                    </div>
+
                 </div>
             </div>
 
@@ -96,40 +117,56 @@
                 <div class="bar-item">
                     <div class="bar-info">
                         <span>Delivery</span>
-                        <span>45%</span>
+                        <span id="percentual-delivery">43%</span>
                     </div>
+
                     <div class="bar">
-                        <div class="bar-fill delivery"></div>
+                        <div
+                            class="bar-fill delivery"
+                            id="barra-delivery"
+                        ></div>
                     </div>
                 </div>
 
                 <div class="bar-item">
                     <div class="bar-info">
                         <span>Cafés</span>
-                        <span>25%</span>
+                        <span id="percentual-cafes">16%</span>
                     </div>
+
                     <div class="bar">
-                        <div class="bar-fill cafe"></div>
+                        <div
+                            class="bar-fill cafe"
+                            id="barra-cafes"
+                        ></div>
                     </div>
                 </div>
 
                 <div class="bar-item">
                     <div class="bar-info">
                         <span>Transporte</span>
-                        <span>18%</span>
+                        <span id="percentual-transporte">23%</span>
                     </div>
+
                     <div class="bar">
-                        <div class="bar-fill transporte"></div>
+                        <div
+                            class="bar-fill transporte"
+                            id="barra-transporte"
+                        ></div>
                     </div>
                 </div>
 
                 <div class="bar-item">
                     <div class="bar-info">
-                        <span>Mercado</span>
-                        <span>12%</span>
+                        <span>Compras rápidas</span>
+                        <span id="percentual-mercado">18%</span>
                     </div>
+
                     <div class="bar">
-                        <div class="bar-fill mercado"></div>
+                        <div
+                            class="bar-fill mercado"
+                            id="barra-mercado"
+                        ></div>
                     </div>
                 </div>
 
@@ -139,5 +176,75 @@
 
     </main>
 
+    <section class="modal" id="modal-gasto" aria-hidden="true">
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="btn-fechar-modal"
+                type="button"
+                aria-label="Fechar janela"
+            >
+                ×
+            </button>
+
+            <h2>Registrar gasto</h2>
+
+            <p>
+                Digite uma despesa e o sistema identificará automaticamente
+                a categoria mais provável.
+            </p>
+
+            <form id="form-gasto">
+
+                <label for="descricao-gasto">
+                    Descrição do gasto
+                </label>
+
+                <input
+                    type="text"
+                    id="descricao-gasto"
+                    placeholder="Ex.: Uber para a faculdade"
+                    required
+                >
+
+                <label for="valor-gasto">
+                    Valor
+                </label>
+
+                <input
+                    type="number"
+                    id="valor-gasto"
+                    min="0.01"
+                    step="0.01"
+                    placeholder="Ex.: 18,50"
+                    required
+                >
+
+                <span class="erro-gasto" id="erro-gasto">
+                    Informe uma descrição e um valor válido.
+                </span>
+
+                <div class="modal-actions">
+
+                    <button
+                        class="cancel-btn"
+                        id="btn-cancelar"
+                        type="button"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button class="confirm-btn" type="submit">
+                        Registrar gasto
+                    </button>
+
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <script src="componentes/rf09-gastos-formiga.js"></script>
 </body>
 </html>
